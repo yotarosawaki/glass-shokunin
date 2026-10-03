@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
-<meta name="theme-color" content="#2b211b">
-<title>めざせ！ガラス職人</title>
+<meta name="theme-color" content="#24323d">
+<title>めざせ！ガラスのプロ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff6e9;--ink:#4a3428;--paper:#fffdf8;--accent:#e8613c;--blue:#3b7dd8;--muted:#8a7565;--green:#4caf6a;--yellow:#ffd166}
+:root{--bg:#f3f7fa;--ink:#3d3a40;--paper:#fffefb;--accent:#e8613c;--blue:#2f78c4;--muted:#7d7a85;--green:#3fae6a;--yellow:#ffd166;--head:#dff0fa}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;height:100%;background:#2b211b}
+html,body{margin:0;height:100%;background:#24323d}
 body{font-family:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;color:var(--ink);overscroll-behavior:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
 #app{max-width:480px;margin:0 auto;height:100vh;height:100dvh;background:var(--bg);position:relative;overflow:hidden;display:flex;flex-direction:column}
 .scroll{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:16px 16px calc(24px + env(safe-area-inset-bottom))}
@@ -21,47 +21,38 @@ body{font-family:"M PLUS Rounded 1c","Hiragino Maru Gothic ProN","Yu Gothic",san
 .btn.small{font-size:15px;padding:8px 12px;border-radius:14px;box-shadow:0 4px 0 var(--ink)}
 .btn:disabled{opacity:.45;pointer-events:none}
 .btn.wide{width:100%}
-.card{background:var(--paper);border:3px solid var(--ink);border-radius:20px;padding:14px;box-shadow:0 4px 0 rgba(74,52,40,.25)}
+.card{background:var(--paper);border:3px solid var(--ink);border-radius:20px;padding:14px;box-shadow:0 4px 0 rgba(61,58,64,.2)}
 h1,h2,h3{margin:0}
 .chibi{display:block;width:100%;height:auto}
 .muted{color:var(--muted)}
 .row{display:flex;gap:10px;align-items:center}
 .col{display:flex;flex-direction:column;gap:12px}
-
-/* title */
-.title{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:28px 20px calc(28px + env(safe-area-inset-bottom));background:radial-gradient(circle at 50% 38%,#ffe3b8 0,#fff6e9 55%,#f3dfc4 100%)}
+.title{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:28px 20px calc(28px + env(safe-area-inset-bottom));background:radial-gradient(circle at 50% 40%,#ffffff 0,#e6f3fb 55%,#cfe3ef 100%)}
 .logo{text-align:center}
-.logo .sub{font-size:14px;font-weight:800;letter-spacing:.15em;color:var(--accent)}
-.logo h1{font-size:44px;line-height:1.1;margin-top:6px;color:#2f6fb8;text-shadow:3px 3px 0 #fff,5px 5px 0 var(--ink);letter-spacing:.02em}
+.logo .sub{font-size:14px;font-weight:800;letter-spacing:.12em;color:var(--blue)}
+.logo h1{font-size:44px;line-height:1.1;margin-top:6px;color:#2f78c4;text-shadow:3px 3px 0 #fff,5px 5px 0 var(--ink)}
 .logo .tag{margin-top:10px;font-size:13px;font-weight:800;background:var(--ink);color:#fff;display:inline-block;padding:4px 12px;border-radius:99px}
-.hero{width:min(300px,80vw)}
+.hero{width:min(320px,84vw)}
 .titlebtns{display:flex;flex-direction:column;gap:14px;width:100%;max-width:320px}
-
-/* dialog */
-.dlg{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:16px 16px calc(20px + env(safe-area-inset-bottom));background:linear-gradient(#f6e7d2,#ecd5b6);cursor:pointer}
+.dlg{flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:16px 16px calc(20px + env(safe-area-inset-bottom));background:linear-gradient(#e9f1f6,#cfdbe3);cursor:pointer}
 .dlg .who{width:210px;margin:0 auto -10px;animation:bob 2.4s ease-in-out infinite}
 .dlg .box{position:relative;background:#fff;border:3px solid var(--ink);border-radius:20px;padding:22px 18px 18px;font-size:18px;font-weight:800;line-height:1.6;min-height:130px}
 .dlg .name{position:absolute;top:-16px;left:16px;background:var(--accent);color:#fff;border:3px solid var(--ink);border-radius:12px;padding:2px 12px;font-size:14px}
 .dlg .next{position:absolute;right:14px;bottom:8px;font-size:13px;color:var(--muted);animation:blink 1s infinite}
 @keyframes bob{50%{transform:translateY(-6px)}}
 @keyframes blink{50%{opacity:.2}}
-
-/* header */
-.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;padding-top:calc(12px + env(safe-area-inset-top));border-bottom:3px solid var(--ink);background:#ffe9c7}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;padding-top:calc(12px + env(safe-area-inset-top));border-bottom:3px solid var(--ink);background:var(--head)}
 .topbar h2{font-size:18px}
-
-/* select */
 .pcard{display:flex;gap:12px;align-items:center;cursor:pointer;position:relative}
-.pcard canvas{width:96px;height:77px;flex:none;background:#f4ecdf;border-radius:14px;border:2px solid rgba(74,52,40,.2)}
+.pcard canvas{width:96px;height:77px;flex:none;background:#eaf1f5;border-radius:14px;border:2px solid rgba(61,58,64,.15)}
 .pcard .lv{font-size:13px;color:var(--accent);font-weight:800}
-.pcard h3{font-size:19px}
+.pcard .fac{display:inline-block;font-size:11px;font-weight:800;background:#e3f1ff;border:2px solid var(--ink);border-radius:8px;padding:0 6px;margin-left:4px;color:var(--ink)}
+.pcard h3{font-size:18px}
 .pcard p{margin:4px 0 0;font-size:13px;line-height:1.45;color:var(--muted)}
 .pcard .best{position:absolute;top:-10px;right:-6px;width:42px;height:42px;border-radius:50%;border:3px solid var(--ink);background:#fff;display:grid;place-items:center;font-weight:800;font-size:20px}
 .pcard.locked{opacity:.55;filter:grayscale(.7)}
-.rankS{color:#e0a100}.rankA{color:#e8613c}.rankB{color:#3b7dd8}.rankC{color:#4caf6a}.rankD{color:#8a7565}
-
-/* order */
-.order{background:#fff;border:3px solid var(--ink);border-radius:8px;padding:16px;position:relative;box-shadow:6px 6px 0 rgba(74,52,40,.2)}
+.rankS{color:#e0a100}.rankA{color:#e8613c}.rankB{color:#2f78c4}.rankC{color:#3fae6a}.rankD{color:#7d7a85}
+.order{background:#fff;border:3px solid var(--ink);border-radius:8px;padding:16px;position:relative;box-shadow:6px 6px 0 rgba(61,58,64,.18)}
 .order .stamp{position:absolute;right:12px;top:10px;border:3px solid #d0453a;color:#d0453a;border-radius:50%;width:58px;height:58px;display:grid;place-items:center;font-weight:800;font-size:13px;transform:rotate(-12deg);line-height:1.1;text-align:center}
 .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:10px}
 .chip{border:2.5px solid var(--ink);border-radius:99px;padding:4px 10px;font-size:14px;font-weight:800;background:#fff}
@@ -72,15 +63,11 @@ h1,h2,h3{margin:0}
 .bub{position:relative;background:#fff;border:3px solid var(--ink);border-radius:16px;padding:10px 12px;font-weight:800;font-size:15px;line-height:1.55}
 .bub:before{content:"";position:absolute;left:-12px;bottom:14px;border:8px solid transparent;border-right:10px solid var(--ink)}
 .bub small{display:block;font-size:12px;color:var(--accent)}
-
-/* tip */
-.tipsec{border-top:2px dashed rgba(74,52,40,.25);padding-top:10px;margin-top:10px}
+.tipsec{border-top:2px dashed rgba(61,58,64,.25);padding-top:10px;margin-top:10px}
 .tipsec b{display:inline-block;font-size:13px;color:#fff;background:var(--ink);border-radius:8px;padding:1px 8px;margin-bottom:4px}
 .tipsec.kotsu b{background:var(--accent)}
 .tipsec p{margin:2px 0 0;font-size:16px;line-height:1.6;font-weight:800}
-
-/* game */
-.ghead{padding:10px 12px 6px;padding-top:calc(10px + env(safe-area-inset-top));background:#ffe9c7;border-bottom:3px solid var(--ink)}
+.ghead{padding:10px 12px 6px;padding-top:calc(10px + env(safe-area-inset-top));background:var(--head);border-bottom:3px solid var(--ink)}
 .ghead .flow{margin-top:0;gap:4px}
 .ghead .chip{font-size:11px;padding:2px 7px}
 .ghead .sname{font-size:17px;font-weight:800;margin-top:6px;display:flex;justify-content:space-between}
@@ -89,28 +76,24 @@ h1,h2,h3{margin:0}
 .coach .bub{flex:1;font-size:14px;padding:6px 10px;min-height:38px;display:flex;align-items:center}
 .coach .bub:before{bottom:10px}
 .stage{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;position:relative}
-.stage canvas{display:block;border-radius:16px;border:3px solid var(--ink);touch-action:none;background:#f6e7d2}
-.ctrl{padding:8px 14px calc(14px + env(safe-area-inset-bottom));border-top:3px solid var(--ink);background:#ffe9c7}
+.stage canvas{display:block;border-radius:16px;border:3px solid var(--ink);touch-action:none;background:#e7eef3}
+.ctrl{padding:8px 14px calc(14px + env(safe-area-inset-bottom));border-top:3px solid var(--ink);background:var(--head)}
 .ctrl .how{font-size:13px;font-weight:800;text-align:center;margin-bottom:8px;line-height:1.4}
 .ctrl .btns{display:flex;gap:10px}
 .ctrl .btns .btn{flex:1;font-size:19px;padding:14px 8px;touch-action:none}
-.ctrl .btns .btn.sub{flex:.55;font-size:16px}
-
-/* results */
+.ctrl .btns .btn.sub{flex:.6;font-size:16px}
 .score{font-size:64px;font-weight:800;line-height:1;text-align:center}
 .score small{font-size:20px}
 .stars{text-align:center;font-size:34px;letter-spacing:4px;color:#f2b705;text-shadow:2px 2px 0 var(--ink)}
-.stars .off{color:#e6d8c6}
+.stars .off{color:#dfe5ea}
 .rankbig{font-size:96px;font-weight:800;line-height:1;text-align:center;text-shadow:4px 4px 0 var(--ink)}
 .steplist{width:100%;border-collapse:collapse;font-weight:800;font-size:15px}
-.steplist td{padding:6px 4px;border-bottom:2px dashed rgba(74,52,40,.2)}
-.steplist td:last-child{text-align:right}
-.bar{height:10px;background:#efe3d3;border-radius:6px;overflow:hidden;border:2px solid var(--ink)}
+.steplist td{padding:6px 4px;border-bottom:2px dashed rgba(61,58,64,.18)}
+.steplist td:last-child{text-align:right;white-space:nowrap}
+.bar{height:10px;background:#e3e9ee;border-radius:6px;overflow:hidden;border:2px solid var(--ink)}
 .bar i{display:block;height:100%;background:var(--accent)}
-.prodview{display:flex;gap:10px;align-items:stretch}
-.prodview canvas{border:3px solid var(--ink);border-radius:16px;background:#f4ecdf;width:100%;height:auto}
-.badge{display:inline-block;padding:3px 12px;border-radius:99px;border:3px solid var(--ink);font-weight:800;font-size:15px}
-.setrow{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:2px dashed rgba(74,52,40,.2);font-weight:800;gap:10px}
+.badge{display:inline-block;padding:3px 12px;border-radius:99px;border:3px solid var(--ink);font-weight:800;font-size:15px;margin:2px}
+.setrow{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:2px dashed rgba(61,58,64,.2);font-weight:800;gap:10px}
 .toggle{width:60px;height:34px;border-radius:99px;border:3px solid var(--ink);background:#ddd;position:relative;flex:none;cursor:pointer}
 .toggle:after{content:"";position:absolute;top:3px;left:3px;width:22px;height:22px;border-radius:50%;background:#fff;border:2px solid var(--ink);transition:left .15s}
 .toggle.on{background:#9be0a8}.toggle.on:after{left:29px}
@@ -125,26 +108,27 @@ h1,h2,h3{margin:0}
 <script>
 'use strict';
 /* ============================================================
-   めざせ！ガラス職人  — 池田硝子 新人研修ゲーム
+   めざせ！ガラスのプロ — 板ガラス工場 新人研修ゲーム
    ============================================================ */
 const $=s=>document.querySelector(s);
 const app=$('#app');
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const lerp=(a,b,t)=>a+(b-a)*t;
 const rand=(a,b)=>a+Math.random()*(b-a);
-const L='#4a3428';
+let clockFn=()=>performance.now()/1000;const now=()=>clockFn();
+const L='#3d3a40';
 const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 function mulberry(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 
 /* ---------------- sound ---------------- */
-let AC=null,soundOn=store.get('glass_sound',true);
+let AC=null,soundOn=store.get('plate_sound',true);
 function ac(){if(!AC){try{AC=new(window.AudioContext||window.webkitAudioContext)()}catch(e){}}if(AC&&AC.state==='suspended')AC.resume();return AC}
 function tone(f,d=.12,type='sine',vol=.15,slide=0,delay=0){if(!soundOn)return;const a=ac();if(!a)return;const t0=a.currentTime+delay;const o=a.createOscillator(),g=a.createGain();o.type=type;o.frequency.setValueAtTime(f,t0);if(slide)o.frequency.exponentialRampToValueAtTime(Math.max(30,f+slide),t0+d);g.gain.setValueAtTime(vol,t0);g.gain.exponentialRampToValueAtTime(.001,t0+d);o.connect(g).connect(a.destination);o.start(t0);o.stop(t0+d+.02)}
 let noiseBuf=null;
 function getNoise(a){if(!noiseBuf){noiseBuf=a.createBuffer(1,a.sampleRate*2,a.sampleRate);const d=noiseBuf.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1}return noiseBuf}
 function noiseBurst(d=.25,vol=.3,freq=3000){if(!soundOn)return;const a=ac();if(!a)return;const s=a.createBufferSource();s.buffer=getNoise(a);const f=a.createBiquadFilter();f.type='highpass';f.frequency.value=freq;const g=a.createGain();g.gain.setValueAtTime(vol,a.currentTime);g.gain.exponentialRampToValueAtTime(.001,a.currentTime+d);s.connect(f).connect(g).connect(a.destination);s.start();s.stop(a.currentTime+d)}
-let hissSrc=null,hissGain=null;
-function hiss(level){const a=AC;if(!a)return;if(!hissSrc){if(level<=0)return;hissSrc=a.createBufferSource();hissSrc.buffer=getNoise(a);hissSrc.loop=true;const f=a.createBiquadFilter();f.type='bandpass';f.frequency.value=900;f.Q.value=.6;hissGain=a.createGain();hissGain.gain.value=0;hissSrc.connect(f).connect(hissGain).connect(a.destination);hissSrc.start()}hissGain.gain.setTargetAtTime(soundOn?level*.06:0,a.currentTime,.06)}
+let hissSrc=null,hissGain=null,hissFilt=null;
+function hiss(level,freq=900){const a=AC;if(!a)return;if(!hissSrc){if(level<=0)return;hissSrc=a.createBufferSource();hissSrc.buffer=getNoise(a);hissSrc.loop=true;hissFilt=a.createBiquadFilter();hissFilt.type='bandpass';hissFilt.Q.value=.7;hissGain=a.createGain();hissGain.gain.value=0;hissSrc.connect(hissFilt).connect(hissGain).connect(a.destination);hissSrc.start()}hissFilt.frequency.setTargetAtTime(freq,a.currentTime,.05);hissGain.gain.setTargetAtTime(soundOn?level*.06:0,a.currentTime,.06)}
 const SFX={
   tap(){tone(660,.08,'triangle',.12)},
   good(){tone(784,.12,'triangle',.14);tone(1046,.2,'triangle',.14,0,.09)},
@@ -152,42 +136,39 @@ const SFX={
   bad(){tone(240,.28,'sawtooth',.07,-90)},
   crack(){noiseBurst(.18,.35,2500);tone(1800,.08,'square',.05,-900)},
   pop(){tone(300,.15,'sine',.2,500)},
+  clunk(){tone(140,.18,'square',.08,-40)},
   fanfare(){[523,659,784,1046].forEach((f,i)=>tone(f,.22,'triangle',.13,0,i*.12));tone(1318,.5,'triangle',.13,0,.5)},
 };
 
 /* ---------------- characters (2D deformed) ---------------- */
 function chibi(who,mood='normal'){
   const skin='#ffe2c6';
-  const cfg={boss:{jacket:'#46638f',hair:'#d4d4d4'},pres:{jacket:'#eef2f7',hair:'#3a2a22'},me:{jacket:'#5fae73',hair:'#6b4430'}}[who];
+  const cfg={boss:{jacket:'#3f6e8f',hair:'#cfcfcf'},pres:{jacket:'#46505c',hair:'#3a2a22'},me:{jacket:'#5b8fc9',hair:'#6b4430'}}[who];
   let s=`<svg viewBox="0 0 100 112" xmlns="http://www.w3.org/2000/svg" class="chibi" aria-hidden="true">`;
   s+=`<path d="M20 111 Q20 78 50 76 Q80 78 80 111 Z" fill="${cfg.jacket}" stroke="${L}" stroke-width="3" stroke-linejoin="round"/>`;
-  if(who==='pres')s+=`<path d="M41 77 L50 91 L59 77" fill="#fff" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/><path d="M50 86 L45.5 104 L50 109 L54.5 104 Z" fill="#c0392b" stroke="${L}" stroke-width="2" stroke-linejoin="round"/><path d="M28 92 L36 92" stroke="${L}" stroke-width="2"/>`;
-  else if(who==='boss')s+=`<path d="M40 78 L50 89 L60 78" fill="#fff" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/><rect x="58" y="92" width="12" height="9" rx="2" fill="none" stroke="${L}" stroke-width="2"/>`;
-  else s+=`<path d="M40 78 L50 88 L60 78" fill="none" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/><rect x="29" y="92" width="14" height="8" rx="2" fill="#fff" stroke="${L}" stroke-width="2"/>`;
+  if(who==='pres')s+=`<path d="M41 77 L50 91 L59 77" fill="#fff" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/><path d="M50 86 L45.5 104 L50 109 L54.5 104 Z" fill="#2f78c4" stroke="${L}" stroke-width="2" stroke-linejoin="round"/><path d="M36 79 L44 98 M64 79 L56 98" stroke="${L}" stroke-width="2.2"/>`;
+  else s+=`<path d="M40 78 L50 88 L60 78" fill="none" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/><rect x="${who==='boss'?58:29}" y="92" width="13" height="9" rx="2" fill="#fff" stroke="${L}" stroke-width="2"/><path d="M24 100 H76" stroke="#ffd166" stroke-width="3" opacity=".9"/>`;
   s+=`<circle cx="19" cy="49" r="6" fill="${skin}" stroke="${L}" stroke-width="2.5"/><circle cx="81" cy="49" r="6" fill="${skin}" stroke="${L}" stroke-width="2.5"/>`;
   s+=`<circle cx="50" cy="45" r="31" fill="${skin}" stroke="${L}" stroke-width="3"/>`;
+  const helmet=(col,mark)=>`<path d="M18 37 Q17 8 50 7 Q83 8 82 37 Z" fill="${col}" stroke="${L}" stroke-width="3" stroke-linejoin="round"/><path d="M50 8 V36" stroke="rgba(0,0,0,.12)" stroke-width="5"/><path d="M13 37 Q50 30 87 37 Q88 42 82 42 Q50 36 18 42 Q12 42 13 37 Z" fill="${col}" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/>${mark}`;
   if(who==='boss'){
-    s+=`<path d="M20 46 Q16 30 26 22 L31 37 Z" fill="${cfg.hair}" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/><path d="M80 46 Q84 30 74 22 L69 37 Z" fill="${cfg.hair}" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/>`;
-    s+=`<path d="M21 33 Q50 15 79 33 L79 41 Q50 25 21 41 Z" fill="#fff" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/><path d="M23 36 Q50 20 77 36" stroke="#3b7dd8" stroke-width="2.5" fill="none"/>`;
-    s+=`<ellipse cx="84" cy="34" rx="6" ry="4" fill="#fff" stroke="${L}" stroke-width="2"/><path d="M86 37 L92 45 L86 44 Z" fill="#fff" stroke="${L}" stroke-width="2" stroke-linejoin="round"/>`;
+    s+=`<path d="M20 47 Q16 36 22 30 L30 40 Z" fill="${cfg.hair}" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/><path d="M80 47 Q84 36 78 30 L70 40 Z" fill="${cfg.hair}" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/>`;
+    s+=helmet('#fff',`<rect x="45" y="14" width="10" height="18" rx="1" fill="#2e9e5b"/><rect x="41" y="18" width="18" height="10" rx="1" fill="#2e9e5b"/>`);
   }else if(who==='pres'){
     s+=`<path d="M18 47 Q14 12 50 12 Q86 12 82 47 Q79 30 66 25 Q52 35 31 28 Q22 34 18 47 Z" fill="${cfg.hair}" stroke="${L}" stroke-width="3" stroke-linejoin="round"/>`;
   }else{
-    s+=`<path d="M20 45 Q20 27 30 24 L70 24 Q80 27 80 45 Q72 34 56 36 L50 30 L44 36 Q28 34 20 45 Z" fill="${cfg.hair}" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/>`;
-    s+=`<path d="M21 30 Q22 7 50 7 Q78 7 79 30 Z" fill="#5fae73" stroke="${L}" stroke-width="3" stroke-linejoin="round"/><path d="M17 30 Q50 22 88 31 Q90 36 83 36 Q50 30 17 36 Z" fill="#478f5b" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/>`;
-    s+=`<rect x="31" y="15" width="16" height="10" rx="5" fill="#8fd3f4" stroke="${L}" stroke-width="2.2"/><rect x="53" y="15" width="16" height="10" rx="5" fill="#8fd3f4" stroke="${L}" stroke-width="2.2"/><path d="M47 20 L53 20" stroke="${L}" stroke-width="2.2"/>`;
+    s+=`<path d="M21 46 Q20 34 28 32 L72 32 Q80 34 79 46 Q72 38 58 40 L50 35 L42 40 Q28 38 21 46 Z" fill="${cfg.hair}" stroke="${L}" stroke-width="2.5" stroke-linejoin="round"/>`;
+    s+=helmet('#ffd166',`<circle cx="50" cy="22" r="7" fill="#fff" stroke="${L}" stroke-width="2"/><path d="M47 22 L50 18 L53 22 L50 26 Z" fill="#3fae6a"/>`);
   }
-  // eyes
-  const ey=who==='boss'?49:48;
+  const ey=who==='boss'?50:49;
   if(mood==='happy')s+=`<path d="M35 ${ey+1} Q40 ${ey-6} 45 ${ey+1}" fill="none" stroke="${L}" stroke-width="3" stroke-linecap="round"/><path d="M55 ${ey+1} Q60 ${ey-6} 65 ${ey+1}" fill="none" stroke="${L}" stroke-width="3" stroke-linecap="round"/>`;
   else if(mood==='surprise')s+=`<circle cx="40" cy="${ey}" r="4.5" fill="#fff" stroke="${L}" stroke-width="2.5"/><circle cx="60" cy="${ey}" r="4.5" fill="#fff" stroke="${L}" stroke-width="2.5"/><circle cx="40" cy="${ey}" r="1.8" fill="${L}"/><circle cx="60" cy="${ey}" r="1.8" fill="${L}"/>`;
   else s+=`<ellipse cx="40" cy="${ey}" rx="3.2" ry="4.2" fill="${L}"/><ellipse cx="60" cy="${ey}" rx="3.2" ry="4.2" fill="${L}"/><circle cx="41" cy="${ey-1.5}" r="1.2" fill="#fff"/><circle cx="61" cy="${ey-1.5}" r="1.2" fill="#fff"/>`;
-  if(mood==='worried')s+=`<path d="M34 ${ey-10} L45 ${ey-7}" stroke="${L}" stroke-width="2.5" stroke-linecap="round"/><path d="M66 ${ey-10} L55 ${ey-7}" stroke="${L}" stroke-width="2.5" stroke-linecap="round"/>`;
-  else if(who!=='boss')s+=`<path d="M35 ${ey-9} Q40 ${ey-12} 45 ${ey-9}" fill="none" stroke="${L}" stroke-width="2.2" stroke-linecap="round"/><path d="M55 ${ey-9} Q60 ${ey-12} 65 ${ey-9}" fill="none" stroke="${L}" stroke-width="2.2" stroke-linecap="round"/>`;
-  if(who==='boss')s+=`<circle cx="40" cy="49" r="8.5" fill="rgba(255,255,255,.25)" stroke="${L}" stroke-width="2.3"/><circle cx="60" cy="49" r="8.5" fill="rgba(255,255,255,.25)" stroke="${L}" stroke-width="2.3"/><path d="M48.5 49 L51.5 49" stroke="${L}" stroke-width="2.3"/>`;
-  s+=`<ellipse cx="31" cy="57" rx="5" ry="3" fill="#ff9f9f" opacity=".55"/><ellipse cx="69" cy="57" rx="5" ry="3" fill="#ff9f9f" opacity=".55"/>`;
-  const my=who==='boss'?64:60;
-  if(who==='boss')s+=`<path d="M38 60 Q44 55 50 58.5 Q56 55 62 60 Q56 63 50 61 Q44 63 38 60 Z" fill="${cfg.hair}" stroke="${L}" stroke-width="2" stroke-linejoin="round"/>`;
+  if(mood==='worried')s+=`<path d="M34 ${ey-9} L45 ${ey-6}" stroke="${L}" stroke-width="2.5" stroke-linecap="round"/><path d="M66 ${ey-9} L55 ${ey-6}" stroke="${L}" stroke-width="2.5" stroke-linecap="round"/>`;
+  if(who==='boss')s+=`<circle cx="40" cy="50" r="8.5" fill="rgba(255,255,255,.25)" stroke="${L}" stroke-width="2.3"/><circle cx="60" cy="50" r="8.5" fill="rgba(255,255,255,.25)" stroke="${L}" stroke-width="2.3"/><path d="M48.5 50 L51.5 50" stroke="${L}" stroke-width="2.3"/>`;
+  s+=`<ellipse cx="31" cy="58" rx="5" ry="3" fill="#ff9f9f" opacity=".55"/><ellipse cx="69" cy="58" rx="5" ry="3" fill="#ff9f9f" opacity=".55"/>`;
+  const my=who==='boss'?65:61;
+  if(who==='boss')s+=`<path d="M38 61 Q44 56 50 59.5 Q56 56 62 61 Q56 64 50 62 Q44 64 38 61 Z" fill="${cfg.hair}" stroke="${L}" stroke-width="2" stroke-linejoin="round"/>`;
   if(mood==='happy')s+=`<path d="M43 ${my} Q50 ${my+10} 57 ${my} Z" fill="#d9534f" stroke="${L}" stroke-width="2.3" stroke-linejoin="round"/>`;
   else if(mood==='worried')s+=`<path d="M44 ${my+2} Q47 ${my-1} 50 ${my+2} Q53 ${my+5} 56 ${my+2}" fill="none" stroke="${L}" stroke-width="2.3" stroke-linecap="round"/>`;
   else if(mood==='surprise')s+=`<ellipse cx="50" cy="${my+2}" rx="3.5" ry="4.5" fill="#d9534f" stroke="${L}" stroke-width="2.3"/>`;
@@ -197,668 +178,647 @@ function chibi(who,mood='normal'){
 const NAMES={boss:'工場長',pres:'社長',me:'新人（あなた）'};
 
 /* ---------------- game data ---------------- */
-const T_HEAT='heat',T_ROT='rotate',T_BLOW='blow',T_JOIN='join',T_BRANCH='branch',T_COIL='coil',T_ANNEAL='anneal',T_CUT='cut';
-const ANNEAL_STEP={type:T_ANNEAL,name:'徐冷（アニール）',what:'加工が終わったらアニール炉に入れ、ゆっくり温度を下げて、加工でガラスにたまった「歪み」を取りのぞく。',kotsu:'炉の温度はすぐには変わらない。目標の線を少し先読みして操作しよう。とくに冷やす区間は急がずゆっくり。',how:'画面を上下になぞって炉の設定温度を操作。点線（目標）に沿わせよう',p:{dur:17}};
+const ST={
+ cut:{type:'score',name:'切断',what:'大きな板ガラスの表面にカッターで「切り筋」を入れ、折って必要な大きさに切り分ける。',kotsu:'カッターは同じ力・同じ速さで、端から端まで一度で引き切る。途中で止めたり二度引きしたりすると、割れ方が乱れて欠けの原因になる。',how:'左端の▶から右端まで、点線の上を一定の速さでなぞる',p:{}},
+ grind:{type:'grind',name:'面取り（研磨）',what:'切ったばかりの切り口は刃物のように鋭い。砥石に当てて角を落とし、なめらかにする。',kotsu:'押し付けが弱いと削り残し、強すぎると欠ける。ザラついた所は少し強めに。手に伝わる感触で加減する。',how:'長押しで砥石に押し付ける。圧力を緑の範囲に。オレンジのザラザラ部分は強めに',p:{dur:14,secs:[[.22,.36],[.6,.74]]}},
+ print:{type:'print',name:'セラミック印刷',what:'スクリーン印刷で、ガラスの縁に黒い枠などの模様を、焼き付け用のインクで印刷する。',kotsu:'まず位置合わせ（トンボ合わせ）を正確に。スキージ（へら）は一定の速さで。速いとかすれ、遅いとにじむ。',how:'① ガラスをドラッグして＋を○に合わせ「合わせOK」 ② スキージを左から右へ一定の速さでなぞる',p:{band:[130,260]}},
+ temper:{type:'temper',name:'強化（加熱・風冷）',what:'強化炉でガラスを約650℃まで加熱し、一気に風を吹き付けて急冷する。表面に圧縮層ができ、強さが3〜5倍になる。',kotsu:'取り出しが早いと強度不足、遅いとガラスが波打つ。取り出したら、すかさず風冷。ためらいは禁物。',how:'温度が緑の範囲で「取り出す！」→ すぐに「風冷」を長押し（約2秒）',p:{tau:3.3,meter:true}},
+ temperPro:{type:'temper',name:'強化（加熱・風冷）',what:'強化炉でガラスを約650℃まで加熱し、一気に風を吹き付けて急冷する。学校用は、割れても粒状になる安全性が特に大事。',kotsu:'今回はメーター無し。炉の中のガラスの「色」で温度を見極める上級編。取り出したら、すかさず風冷。',how:'めやすの色になったら「取り出す！」→ すぐに「風冷」を長押し（約2秒）',p:{tau:2.8,meter:false}},
+ drill:{type:'drill',name:'孔あけ',what:'取っ手や金具をつけるための孔を、ダイヤモンドドリルで開ける。',kotsu:'表から半分ちょっと削ったら裏返し、裏からも削って貫通させる。片側から一気に抜くと裏側が欠ける。水で冷やし、休み休み削る。',how:'長押しで削る（摩擦熱に注意）。点線まで削ったら「裏返す」→ 裏から貫通まで削る',p:{}},
+ butyl:{type:'seal',name:'一次シール（ブチル）',what:'乾燥剤の入ったアルミスペーサーの周りに、すき間なくブチルを塗る。これで2枚のガラスの間の空気を乾いたまま閉じ込める。',kotsu:'同じ速さで塗れば同じ太さになる。止まるとダマになり、速いと細くなってすき間ができる。',how:'▶からなぞって一周。白い点（ペースメーカー）と同じ速さで',p:{shape:'rect',flow:1100,band:[7.5,10.5],dur:16}},
+ hang:{type:'align',name:'2枚目を重ねる',what:'吸盤リフトで吊り上げたもう1枚のガラスを、下のガラスの上にぴったり重ねる。',kotsu:'急に動かすとガラスが揺れる。ゆっくり動かし、揺れがおさまってから下ろす。',how:'画面を左右になぞってクレーンを動かす。揺れが止まってピッタリの時に「下ろす」',p:{count:2}},
+ hangL:{type:'align',name:'2枚目を重ねる',what:'中間膜をはさんだガラスの上に、もう1枚のガラスをずれないように重ねる。',kotsu:'ずれたまま重ねると、合わせガラスの縁がそろわない。揺れがおさまるのを待つ我慢も技術のうち。',how:'画面を左右になぞってクレーンを動かす。揺れが止まってピッタリの時に「下ろす」',p:{count:1}},
+ film:{type:'bubble',name:'中間膜の貼り合わせ',what:'ガラスの上に、透明で丈夫な中間膜を敷く。間に空気が残ると気泡の不良になる。',kotsu:'中心から外へ、ゆっくり空気を押し出す。急いでこするとしわになる。',how:'画面をなぞって気泡をガラスの外へ押し出す（速すぎるとしわ）',p:{n:9,dur:16,vmax:1300}},
+ autoclave:{type:'curve',name:'加熱圧着（オートクレーブ）',what:'オートクレーブ（圧力釜）で熱と圧力をかけ、ガラスと中間膜を一体にする。',kotsu:'釜の温度はすぐには変わらない。目標の線を少し先読みして操作する。冷やす時はゆっくり。',how:'画面を上下になぞって設定温度を操作。点線（目標）に沿わせよう',p:{dur:17,max:160,step:20,pts:[[0,25],[.24,135],[.58,135],[.92,45],[1,40]],mark:[135,'圧着温度 135℃'],crit:[.58,.92],name:'釜内'}},
+ urethane:{type:'seal',name:'接着剤の塗布',what:'自動車メーカーの生産ラインに納めるガラスに、取り付け用のウレタン接着剤を塗る。',kotsu:'ビード（接着剤の盛り）の太さは厳しく決まっている。カーブでも速さを変えない。',how:'▶からなぞって一周。白い点（ペースメーカー）と同じ速さで',p:{shape:'wind',flow:1150,band:[8,10.5],dur:17}},
+ assemble:{type:'assemble',name:'部品の組付け',what:'ミラー台座やセンサー台座、モールの留め具を、決められた位置に取り付ける。',kotsu:'位置は治具の印にぴったり。押さえる時間は規定どおり。時計を見ずに体で覚える。',how:'部品をドラッグして点線の位置へ → 「押さえる」を規定の秒数だけ長押し',p:{}},
+ inspect:{type:'inspect',name:'検査',what:'光にかざして、傷・気泡・欠け・異物がないか、一枚ずつ自分の目で確かめる。',kotsu:'光を斜めから当てると、小さな傷が浮かび上がる。見逃しは、お客様に不良品を届けてしまうこと。',how:'画面をなぞってライトを動かし、不良を見つけたらタップ。終わったら「検査完了」',p:{}},
+};
 const PRODUCTS=[
- {id:'tube',name:'試験管',lv:1,desc:'理化学ガラスの基本。ガラス管を切って、底を丸く閉じる。',order:'実験室で使う試験管の注文です。まずは基本の工程をひと通り覚えましょう。',steps:[
-  {type:T_CUT,name:'切断',what:'ガラス管にヤスリで傷をつけ、必要な長さで折って切る。',kotsu:'傷は管に対して直角に、印の位置に一度で入れる。斜めや迷い傷は切り口が欠ける原因に。',how:'白い印の上を、上から下へまっすぐスワイプ',p:{}},
-  {type:T_HEAT,name:'予熱',what:'バーナーの炎でガラスを作業できる温度まで温める。',kotsu:'冷たいガラスをいきなり炎の中心に入れると、熱の差で割れる。最初は炎の外側で“あぶる”ように少しずつ。',how:'長押しで炎に近づける／はなすと遠ざかる。温度を緑の範囲に保とう',p:{band:[.5,.66],rateLimit:.13,dur:14,warm:5}},
-  {type:T_ROT,name:'回しながら絞る',what:'やわらかくなったガラスを回し続けながら、端を閉じていく。',kotsu:'やわらかいガラスは、回す手を止めた瞬間に垂れる。速すぎてもねじれる。一定の速さを保つのが職人の手。',how:'画面を指でくるくるなぞって回す。メーターを緑の範囲に',p:{band:[.4,.68],dur:12}},
-  {type:T_BLOW,name:'底止め',what:'閉じた端に息を吹き込み、管と同じ太さのきれいな半球の底にする。',kotsu:'ガラスは薄くなるほど急に膨らむ。一気に吹かず、短く何回かに分けると肉厚が均一になる。',how:'長押しで吹く。点線にぴったり合ったら「完成」',p:{shape:'bottom',r0:.72,k:.22,tol:.07,burst:1.3,even:.3,dur:12}},
-  ANNEAL_STEP]},
- {id:'dome',name:'気象用保護ドーム',lv:2,desc:'気象観測機器を守るガラスドーム。肉厚が均一で、傷も汚れも無いことが求められる。',order:'気象観測用の保護ドームの注文です。肉厚の均一さが命です。',steps:[
-  {type:T_HEAT,name:'予熱',what:'ドームにするガラスを、割らないようにじっくり温める。',kotsu:'大きく膨らませる分、ムラなく全体を温めておく。温度が高すぎるとダレて形が崩れる。',how:'長押しで炎に近づける／はなすと遠ざかる。温度を緑の範囲に保とう',p:{band:[.56,.7],rateLimit:.11,dur:14,warm:5}},
-  {type:T_ROT,name:'均一に回して軟化',what:'回しながら全体を均一にやわらかくする。',kotsu:'回転ムラはそのまま肉厚ムラになる。ドームは特に一定のリズムが大事。',how:'画面を指でくるくるなぞって回す。メーターを緑の範囲に',p:{band:[.45,.66],dur:12}},
-  {type:T_BLOW,name:'吹いてドーム形成',what:'息を吹き込んで、ドームの型（点線）の大きさに膨らませる。',kotsu:'短い息を何度も重ねて、少しずつ大きくする。長く吹くと薄い所だけが伸びて肉厚がバラつく。',how:'長押しで吹く。点線にぴったり合ったら「完成」',p:{shape:'dome',r0:.5,k:.42,tol:.05,burst:1.22,even:.5,dur:13}},
-  ANNEAL_STEP]},
- {id:'coil',name:'蛇管冷却器',lv:3,desc:'長いガラス管をコイル状に巻いた「蛇管」を外管に収めた冷却器。熱交換に使う、理化学ガラスならではの形。',order:'エバポレーター用の冷却器です。蛇管のピッチをそろえてください。',steps:[
-  {type:T_COIL,name:'蛇管巻き',what:'軟らかくしたガラス管を、回転する芯棒に巻きつけてコイルにする。',kotsu:'ピッチ（巻きの間隔）と断面形状を変えずに巻くのが腕の見せ所。回転の速さの変化に、送りを合わせる。',how:'画面を左右になぞって送り位置を動かす。点線の「目標」に合わせ続けよう',p:{turns:7,pitch:36,dur:15}},
-  {type:T_HEAT,name:'予熱',what:'外管と蛇管の端を、封じに備えて温める。',kotsu:'蛇管が入った外管は熱の伝わりが複雑。あわてず少しずつ温める。',how:'長押しで炎に近づける／はなすと遠ざかる。温度を緑の範囲に保とう',p:{band:[.52,.66],rateLimit:.12,dur:13,warm:5}},
-  {type:T_JOIN,name:'封じ',what:'外管に入れた蛇管の両端に口をつけ、冷却水を流せるようにする。',kotsu:'ガラスの「色」で溶け具合を見極める。早いとくっつかず、遅いとダレる。手際よく確実に。',how:'ちょうどいい色になった瞬間に「つなぐ！」',p:{kind:'seal',count:3,speed:.5,sweet:[.62,.78],meter:true}},
-  ANNEAL_STEP]},
- {id:'adapter',name:'大型接続器',lv:4,desc:'本体の四方に枝管を溶接した接続器。偏芯した位置に正確に穴を開けるのがカギ。',order:'四方に枝管がつく大型接続器です。穴あけ位置に注意してください。',steps:[
-  {type:T_HEAT,name:'予熱',what:'太い本体管を旋盤で回しながら温める。',kotsu:'太い管ほど温まるのに時間がかかる。焦って急に入れると割れる。',how:'長押しで炎に近づける／はなすと遠ざかる。温度を緑の範囲に保とう',p:{band:[.5,.64],rateLimit:.1,dur:14,warm:6}},
-  {type:T_BRANCH,name:'枝付け（偏芯）',what:'本体を中心からずらして旋盤に固定し、枝管をつける位置に炎で穴を開ける。',kotsu:'偏芯した本体は大きく振り回されるように回る。本体の動きに惑わされず、赤い印だけを追うこと。',how:'赤い印が炎の先（真上）に来た瞬間に「穴あけ！」',p:{count:4,ecc:30,speed:2.1}},
-  {type:T_JOIN,name:'枝管の溶接',what:'開けた穴に枝管を溶接する。',kotsu:'今回はメーター無し。炎の中のガラスの色だけで見極める、職人の目が試される。',how:'ちょうどいい色になった瞬間に「つなぐ！」',p:{kind:'branch',count:4,speed:.6,sweet:[.62,.78],meter:false}},
-  ANNEAL_STEP]},
- {id:'tray',name:'平底ガラス槽',lv:5,desc:'大口径のガラス管に、丸く切ったガラス板を溶接して平らな底をつくる。',order:'洗浄用の平底ガラス槽です。板が変形しないよう、慎重にお願いします。',steps:[
-  {type:T_HEAT,name:'余熱',what:'大口径の管とガラス板を、溶接の前によく余熱する。',kotsu:'ガラス板は急な熱で変形・破損しやすい。いつも以上にゆっくり、しっかり温める。',how:'長押しで炎に近づける／はなすと遠ざかる。温度を緑の範囲に保とう',p:{band:[.55,.67],rateLimit:.085,dur:16,warm:6}},
-  {type:T_JOIN,name:'板付け',what:'丸いガラス板を管の端に当て、ぐるりと一周溶接する。',kotsu:'場所によって溶ける速さが違う。毎回、色をよく見て。メーター無しの上級編。',how:'ちょうどいい色になった瞬間に「つなぐ！」',p:{kind:'plate',count:4,speed:.72,sweet:[.63,.77],meter:false}},
-  {type:T_ROT,name:'回して形を整える',what:'溶接部を温めながら回し、底をまっすぐ平らに整える。',kotsu:'重い大口径は特に垂れやすい。最後まで回転を止めない。',how:'画面を指でくるくるなぞって回す。メーターを緑の範囲に',p:{band:[.45,.65],dur:12}},
-  ANNEAL_STEP]},
+ {id:'fridge',name:'冷蔵庫用 強化ガラス',fac:'川越工場',lv:1,desc:'家電の扉に使う、縁に黒い印刷をほどこした強化ガラス。産業用ガラスの代表選手。',order:'家電メーカーさんから、冷蔵庫の扉用ガラスの注文です。まずは基本の流れを覚えましょう。',steps:[ST.cut,ST.grind,ST.print,ST.temper,ST.inspect]},
+ {id:'school',name:'学校用 強化ガラス',fac:'川本工場',lv:2,desc:'子どもたちが過ごす学校の窓や扉に。万一割れても粒状になる、安全なガラス。',order:'学校の扉に使う強化ガラスです。子どもたちの安全がかかっています。',steps:[ST.cut,ST.drill,ST.grind,ST.temperPro,ST.inspect]},
+ {id:'igu',name:'複層ガラス（エコガラス）',fac:'川本工場',lv:3,desc:'2枚のガラスの間に乾いた空気の層をつくり、熱を伝えにくくした省エネガラス。',order:'オフィスビルの窓に使う複層ガラスです。密封がしっかりしていないと結露の原因になります。',steps:[ST.cut,ST.butyl,ST.hang,ST.inspect]},
+ {id:'lami',name:'合わせ・防犯ガラス',fac:'川本工場',lv:4,desc:'2枚のガラスの間に強い中間膜をはさんで圧着。割れても破片が飛び散らない。',order:'店舗の入口に使う防犯ガラスです。気泡ひとつ残さないようにお願いします。',steps:[ST.film,ST.hangL,ST.autoclave,ST.inspect]},
+ {id:'auto',name:'自動車用ガラス アッセンブリー',fac:'太田工場',lv:5,desc:'フロントガラスに接着剤を塗り、部品を取り付けて、自動車の生産ラインへ届ける。',order:'自動車の生産ラインに納めるフロントガラスです。規格は厳しいですよ。',steps:[ST.urethane,ST.assemble,ST.inspect]},
 ];
-const STEP_ICON={heat:'🔥',rotate:'🔄',blow:'💨',join:'🤝',branch:'🎯',coil:'🌀',anneal:'♨️',cut:'📏'};
+const ICON={score:'📏',grind:'⚙️',print:'🖨️',temper:'🔥',drill:'🔩',seal:'🖊️',align:'🏗️',bubble:'🫧',curve:'♨️',assemble:'🔧',inspect:'🔍'};
 const COMMENTS={
- heat:['急に熱すると割れる。最初は炎の外であぶるくらいでいい。','温度が少しブレたな。炎の出し入れはこまめにな。','炎との距離感がいい。温度がピタッと安定してたぞ。'],
- rotate:['回す手を止めると、やわらかいガラスはすぐ垂れる。手を止めるな。','回転にムラがあったな。少し形がゆがんだぞ。','回転が一定で、ガラスがまっすぐだ。いい手つきだ。'],
- blow:['膨らみは途中から急に速くなる。吹きすぎに注意だ。','大きさは惜しい。短く何回かに分けて吹くと肉厚がそろうぞ。','見事な膨らみだ。肉厚も均一だな。'],
- join:['早いとくっつかず、遅いとダレる。色で見極めるんだ。','タイミングが少しずれたな。色の変化をよく見ろ。','ちょうどいい色でつないだな。継ぎ目がきれいだ。'],
- branch:['本体の大きな動きに惑わされたな。印だけを追うんだ。','少し位置がずれたな。印の動きのリズムをつかめ。','回る本体に惑わされず、ぴったりの位置だ。'],
- coil:['ピッチがバラバラだ。送りを回転の速さに合わせろ。','ピッチが少し乱れたな。回転の変化を先読みしろ。','ピッチのそろった見事な蛇管だ。'],
- anneal:['急に冷やすと歪みが残って、あとで割れる原因になるぞ。','少し温度がずれたな。炉は遅れて反応するからな。','温度管理が完璧だ。歪みはほとんど無いぞ。'],
- cut:['傷が曲がると切り口がガタガタになる。管に直角にな。','少し斜めだったな。印にまっすぐ入れよう。','まっすぐな傷だ。切り口がきれいだぞ。'],
+ score:['切り筋が乱れていたな。同じ速さで、一度で引き切るんだ。','少し速さにムラがあったな。手首じゃなく体ごと動かしてみろ。','まっすぐで均一な切り筋だ。きれいに割れたな。'],
+ grind:['押し付けの加減がバラバラだ。欠けや削り残しはクレームのもとだぞ。','だいたいいいが、ザラザラの所で力が足りなかったな。','手の感覚がいいな。なめらかな面取りだ。'],
+ print:['位置もスキージもずれていたな。印刷は準備が9割だ。','惜しい。スキージの速さが少しブレたな。','トンボもぴったり、刷りムラもない。見事だ。'],
+ temper:['取り出しか風冷のタイミングが遅れたな。強化は一瞬が勝負だ。','もう少しで完璧だ。取り出したら迷わず風冷だぞ。','温度もタイミングも完璧だ。いい強化ガラスになった。'],
+ drill:['削りすぎか熱の持たせすぎだな。裏欠けは一番多い失敗だ。','いい感じだ。表からの深さをもう少しそろえよう。','表と裏できれいに抜けたな。孔の縁もきれいだ。'],
+ seal:['太さがバラバラだ。すき間があると中に湿気が入るぞ。','少しムラがあるな。ペースメーカーを意識しろ。','同じ太さで一周、見事なビードだ。'],
+ align:['ずれたまま下ろしたな。急いで動かすと揺れが止まらないぞ。','少しずれたな。揺れがおさまるまで待つのも仕事だ。','ピタリと重なったな。落ち着いた操作だ。'],
+ bubble:['気泡がたくさん残ったな。中心から外へ、ゆっくりだ。','あと少しだ。しわを作らないように丁寧にな。','気泡もしわもなし。透き通ったいい仕上がりだ。'],
+ curve:['温度が線から大きく外れたな。釜は遅れて反応するぞ。','少しずれたな。先読みを意識しよう。','温度管理が完璧だ。中間膜がしっかり密着したぞ。'],
+ assemble:['位置か押さえる時間が規定から外れていたな。規格は絶対だ。','おしい。時間の感覚をもう少し体にしみこませよう。','位置も時間もぴったり。ラインに安心して流せるな。'],
+ inspect:['見逃しや見まちがいがあったな。検査はお客様の手前の最後のとりでだ。','だいたい見つけられたな。光の当て方を工夫しよう。','不良を見逃さない、いい目をしているな。'],
 };
 const FINAL={
  S:{boss:['happy','文句なしだ！もう一人前の仕事だな。わしも鼻が高いぞ。'],pres:['happy','素晴らしい！これならお客様に自信を持ってお届けできます。君に任せてよかった！']},
  A:{boss:['happy','いい仕事だ。細かいところまで気を配れてるな。'],pres:['happy','よくできています！この調子でどんどん腕を磨いてください。']},
  B:{boss:['normal','まずまずだな。コツはつかめてきたぞ。'],pres:['normal','製品として出荷できますね。次はもっと上を目指しましょう。']},
- C:{boss:['worried','まだまだだな。でも最初はみんなそうだ。'],pres:['normal','1つの仕事は何度も繰り返して身につけるもの。もう一度挑戦してみましょう。']},
- D:{boss:['worried','今回は出荷できないな…。どこでつまずいたか振り返ろう。'],pres:['normal','失敗も大事な経験です。焦らず、ひとつずつ覚えていきましょう。']},
+ C:{boss:['worried','まだまだだな。でも最初はみんなそうだ。'],pres:['normal','失敗も挑戦の証です。挑戦し続けることで、人も会社も成長します。もう一度やってみましょう。']},
+ D:{boss:['worried','今回は出荷できないな…。どこでつまずいたか振り返ろう。'],pres:['normal','焦らなくて大丈夫。ひとつずつ覚えていけば、必ずできるようになりますよ。']},
 };
 const rankOf=s=>s>=90?'S':s>=75?'A':s>=60?'B':s>=40?'C':'D';
 const RANK_ORDER='DCBAS';
-
-/* ---------------- state ---------------- */
-const S={prod:null,stepIdx:0,scores:[],strain:.5,best:store.get('glass_best',{}),unlockAll:store.get('glass_unlock',false)};
+const S={prod:null,stepIdx:0,scores:[],best:store.get('plate_best',{}),unlockAll:store.get('plate_unlock',false),temperScore:null};
 function isUnlocked(i){if(i===0||S.unlockAll)return true;const b=S.best[PRODUCTS[i-1].id];return !!b&&RANK_ORDER.indexOf(b.rank)>=2}
 
 /* ---------------- canvas helpers ---------------- */
 const CW=360,CH=440;
-function rr(c,x,y,w,h,r){r=Math.min(r,w/2,h/2);c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath()}
-const GSTOPS=[[0,[205,236,250,.6]],[.4,[255,178,115,.85]],[.62,[255,138,42,.95]],[.8,[255,212,78,1]],[1,[255,252,228,1]]];
+function rr(c,x,y,w,h,r){r=Math.max(0,Math.min(r,w/2,h/2));c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath()}
+const GSTOPS=[[0,[200,232,248,.6]],[.4,[255,178,115,.85]],[.62,[255,138,42,.95]],[.8,[255,212,78,1]],[1,[255,252,228,1]]];
 function glassRGB(h){h=clamp(h,0,1);for(let i=1;i<GSTOPS.length;i++){if(h<=GSTOPS[i][0]){const[a,ca]=GSTOPS[i-1],[b,cb]=GSTOPS[i];const k=(h-a)/(b-a);return ca.map((v,j)=>v+(cb[j]-v)*k)}}return GSTOPS[GSTOPS.length-1][1]}
 function glassCol(h,am=1){const m=glassRGB(h);return`rgba(${m[0]|0},${m[1]|0},${m[2]|0},${(m[3]*am).toFixed(3)})`}
+const GLASS='rgba(190,228,246,.78)';
 const FONT=(sz,w=800)=>`${w} ${sz}px "M PLUS Rounded 1c","Hiragino Maru Gothic ProN",sans-serif`;
 function txt(c,s,x,y,sz=16,col=L,align='center',stroke=null){c.font=FONT(sz);c.textAlign=align;c.textBaseline='middle';if(stroke){c.lineWidth=5;c.strokeStyle=stroke;c.lineJoin='round';c.strokeText(s,x,y)}c.fillStyle=col;c.fillText(s,x,y)}
 function label(c,s,x,y,sz=14,bg='#fff',col=L){c.font=FONT(sz);const w=c.measureText(s).width+18;rr(c,x-w/2,y-sz*.8,w,sz*1.6,sz*.8);c.fillStyle=bg;c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();txt(c,s,x,y+1,sz,col)}
-function drawBg(c){
-  const g=c.createLinearGradient(0,0,0,CH);g.addColorStop(0,'#f6e7d2');g.addColorStop(1,'#ead2b2');c.fillStyle=g;c.fillRect(0,0,CW,CH);
-  c.strokeStyle='rgba(74,52,40,.06)';c.lineWidth=2;for(let y=44;y<380;y+=44){c.beginPath();c.moveTo(0,y);c.lineTo(CW,y);c.stroke()}
-  c.fillStyle='#b9825a';c.fillRect(0,380,CW,60);c.fillStyle='#d39a6c';c.fillRect(0,380,CW,9);
+function drawBg(c,dark=false){
+  const g=c.createLinearGradient(0,0,0,CH);g.addColorStop(0,dark?'#3a4652':'#eef3f6');g.addColorStop(1,dark?'#2c3640':'#d6e1e8');c.fillStyle=g;c.fillRect(0,0,CW,CH);
+  c.strokeStyle=dark?'rgba(255,255,255,.05)':'rgba(61,58,64,.07)';c.lineWidth=6;for(let x=40;x<CW;x+=100){c.beginPath();c.moveTo(x,0);c.lineTo(x,380);c.stroke()}
+  c.fillStyle='#98a3ad';c.fillRect(0,384,CW,56);
+  c.save();c.beginPath();c.rect(0,380,CW,9);c.clip();c.fillStyle='#ffd166';c.fillRect(0,380,CW,9);c.fillStyle=L;for(let x=-10;x<CW;x+=18){c.beginPath();c.moveTo(x,389);c.lineTo(x+9,380);c.lineTo(x+16,380);c.lineTo(x+7,389);c.fill()}c.restore();
   c.strokeStyle=L;c.lineWidth=3;c.beginPath();c.moveTo(0,380);c.lineTo(CW,380);c.stroke();
-  c.strokeStyle='rgba(74,52,40,.18)';c.lineWidth=2;for(let x=30;x<CW;x+=70){c.beginPath();c.moveTo(x,395);c.lineTo(x+30,395);c.stroke()}
 }
-function drawFlame(c,x,y,ang,len,w,t,power=1){
-  if(power<=0.01)return;len*=power;w*=Math.max(.5,power);
-  const fl=1+.07*Math.sin(t*37)+.05*Math.sin(t*23+1);
-  c.save();c.translate(x,y);c.rotate(ang);
-  const L1=len*fl;
-  let g=c.createLinearGradient(0,0,0,-L1);g.addColorStop(0,'rgba(255,190,110,.9)');g.addColorStop(.55,'rgba(255,110,60,.6)');g.addColorStop(1,'rgba(255,80,60,0)');
-  c.beginPath();c.moveTo(-w,0);c.quadraticCurveTo(-w*1.1,-L1*.5,0,-L1);c.quadraticCurveTo(w*1.1,-L1*.5,w,0);c.quadraticCurveTo(0,w*.5,-w,0);c.fillStyle=g;c.fill();
-  const L2=len*.48*(1+.05*Math.sin(t*41));
-  g=c.createLinearGradient(0,0,0,-L2);g.addColorStop(0,'rgba(60,120,255,.95)');g.addColorStop(1,'rgba(130,190,255,.15)');
-  c.beginPath();c.moveTo(-w*.5,0);c.quadraticCurveTo(-w*.55,-L2*.5,0,-L2);c.quadraticCurveTo(w*.55,-L2*.5,w*.5,0);c.closePath();c.fillStyle=g;c.fill();
-  c.restore();
+function plate(c,x,y,w,h,fill=GLASS,r=4){
+  rr(c,x,y,w,h,r);c.fillStyle=fill;c.fill();
+  c.save();rr(c,x,y,w,h,r);c.clip();c.strokeStyle='rgba(255,255,255,.75)';c.lineWidth=10;c.beginPath();c.moveTo(x+w*.12,y+h);c.lineTo(x+w*.12+h*.6,y);c.stroke();c.lineWidth=4;c.beginPath();c.moveTo(x+w*.12+26,y+h);c.lineTo(x+w*.12+26+h*.6,y);c.stroke();c.restore();
+  rr(c,x,y,w,h,r);c.lineWidth=3;c.strokeStyle=L;c.stroke();
 }
-function drawBurner(c,x,topY,t,power=1,len=95,w=20){
-  rr(c,x-30,356,60,26,8);c.fillStyle='#8d99a6';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
-  rr(c,x-9,topY,18,360-topY,4);c.fillStyle='#b8c2cc';c.fill();c.stroke();
-  rr(c,x-13,topY-6,26,12,4);c.fillStyle='#6f7b88';c.fill();c.stroke();
-  rr(c,x+14,366,22,10,4);c.fillStyle='#e8613c';c.fill();c.stroke();
-  drawFlame(c,x,topY-6,0,len,w,t,power);
-}
-function drawBurnerDown(c,x,botY,t,len,power=1){
-  rr(c,x-9,0,18,botY,4);c.fillStyle='#b8c2cc';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
-  rr(c,x-13,botY-6,26,12,4);c.fillStyle='#6f7b88';c.fill();c.stroke();
-  drawFlame(c,x,botY+6,Math.PI,len,15,t,power);
-}
-function drawHand(c,x,y,dir=1){
-  c.save();c.translate(x,y);c.scale(dir,1);
-  rr(c,-48,-14,36,28,8);c.fillStyle='#5fae73';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
-  c.beginPath();c.arc(-6,0,15,0,Math.PI*2);c.fillStyle='#ffe2c6';c.fill();c.stroke();
-  c.beginPath();c.arc(4,-9,6,0,Math.PI*2);c.fill();c.stroke();
-  c.restore();
-}
-function tubeH(c,x1,x2,y,r,heat=0,hx=180,hw=60){
-  rr(c,x1,y-r,x2-x1,r*2,Math.min(r,10));c.fillStyle=glassCol(0);c.fill();
-  if(heat>.02){c.save();c.clip();const g=c.createLinearGradient(hx-hw,0,hx+hw,0);g.addColorStop(0,glassCol(heat,0));g.addColorStop(.5,glassCol(heat));g.addColorStop(1,glassCol(heat,0));c.fillStyle=g;c.fillRect(hx-hw,y-r,hw*2,r*2);c.restore()}
-  c.strokeStyle='rgba(255,255,255,.85)';c.lineWidth=3;c.lineCap='round';c.beginPath();c.moveTo(x1+10,y-r*.55);c.lineTo(x2-10,y-r*.55);c.stroke();
-  rr(c,x1,y-r,x2-x1,r*2,Math.min(r,10));c.strokeStyle=L;c.lineWidth=3;c.stroke();
-}
-function thermo(c,x,y,h,v,band,title='温度'){
+function table(c,y=345){rr(c,16,y,328,16,5);c.fillStyle='#8b96a1';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();[30,316].forEach(x=>{rr(c,x,y+16,14,380-y-16,3);c.fill();c.stroke()})}
+function gauge(c,x,y,h,v,band,title){
   rr(c,x-12,y,24,h,12);c.fillStyle='#fff';c.fill();
-  if(band){c.fillStyle='rgba(76,175,106,.45)';c.fillRect(x-12,y+h*(1-band[1]),24,h*(band[1]-band[0]))}
-  const vv=clamp(v,0,1);const col=vv<band[0]?'#5aa0e6':vv<=band[1]?'#4caf6a':'#e8413c';
+  if(band){c.fillStyle='rgba(63,174,106,.45)';c.fillRect(x-12,y+h*(1-band[1]),24,h*(band[1]-band[0]))}
+  const vv=clamp(v,0,1);const col=band&&vv<band[0]?'#5aa0e6':band&&vv<=band[1]?'#3fae6a':'#e8413c';
   rr(c,x-6,y+h*(1-vv)+2,12,Math.max(4,h*vv-2),6);c.fillStyle=col;c.fill();
   rr(c,x-12,y,24,h,12);c.lineWidth=3;c.strokeStyle=L;c.stroke();
-  c.beginPath();c.arc(x,y+h+10,14,0,Math.PI*2);c.fillStyle=col;c.fill();c.stroke();
   txt(c,title,x,y-14,12);
 }
-function timerBar(c,frac,lbl='のこり'){
-  rr(c,60,12,240,14,7);c.fillStyle='#fff';c.fill();
-  if(frac>0){rr(c,60,12,240*clamp(frac,0,1),14,7);c.fillStyle=frac<.25?'#e8613c':'#ffb347';c.fill()}
-  rr(c,60,12,240,14,7);c.lineWidth=2.5;c.strokeStyle=L;c.stroke();txt(c,lbl,34,19,12);
+function hbar(c,x,y,w,v,band,title,max=1){
+  rr(c,x,y,w,14,7);c.fillStyle='#fff';c.fill();
+  if(band){c.fillStyle='rgba(63,174,106,.5)';c.fillRect(x+w*band[0]/max,y,w*(band[1]-band[0])/max,14)}
+  rr(c,x,y,w,14,7);c.lineWidth=2.5;c.strokeStyle=L;c.stroke();
+  const ix=x+w*clamp(v/max,0,1);c.beginPath();c.moveTo(ix,y-2);c.lineTo(ix-7,y-12);c.lineTo(ix+7,y-12);c.closePath();c.fillStyle=L;c.fill();
+  if(title)txt(c,title,x-6,y+7,12,L,'right');
 }
-function crackLines(c,x,y,amt,seed=3){if(amt<=0)return;const r=mulberry(seed);c.save();c.strokeStyle=`rgba(255,255,255,${clamp(amt,0,1)})`;c.lineWidth=2;for(let k=0;k<4;k++){c.beginPath();let px=x+(r()-.5)*40,py=y+(r()-.5)*16;c.moveTo(px,py);for(let i=0;i<4;i++){px+=(r()-.5)*22*amt;py+=(r()-.5)*18*amt;c.lineTo(px,py)}c.stroke()}c.restore()}
+function timerBar(c,frac,lbl='のこり',lc=L){
+  rr(c,64,12,236,14,7);c.fillStyle='#fff';c.fill();
+  if(frac>0){rr(c,64,12,236*clamp(frac,0,1),14,7);c.fillStyle=frac<.25?'#e8613c':'#ffb347';c.fill()}
+  rr(c,64,12,236,14,7);c.lineWidth=2.5;c.strokeStyle=L;c.stroke();txt(c,lbl,36,19,12,lc);
+}
+function hand(c,x,y,glove='#5b8fc9'){c.beginPath();c.arc(x,y,13,0,Math.PI*2);c.fillStyle=glove;c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();c.beginPath();c.arc(x+9,y-8,5,0,Math.PI*2);c.fill();c.stroke()}
+// shapes for sealing / assembly
+function resample(P,step=4){const out=[P[0]];let acc=0;for(let i=1;i<P.length;i++){let[ax,ay]=out[out.length-1];const[bx,by]=P[i];let d=Math.hypot(bx-ax,by-ay);while(d>=step){const k=step/d;ax=ax+(bx-ax)*k;ay=ay+(by-ay)*k;out.push([ax,ay]);d=Math.hypot(bx-ax,by-ay)}}const cum=[0];for(let i=1;i<out.length;i++)cum.push(cum[i-1]+Math.hypot(out[i][0]-out[i-1][0],out[i][1]-out[i-1][1]));return{pts:out,cum,total:cum[cum.length-1]}}
+function rectShape(x,y,w,h,r){const P=[];const arc=(cx,cy,a0)=>{for(let i=0;i<=8;i++){const a=a0+i/8*Math.PI/2;P.push([cx+Math.cos(a)*r,cy+Math.sin(a)*r])}};
+  P.push([x,y+h-r]);arc(x+r,y+r,Math.PI);arc(x+w-r,y+r,-Math.PI/2);arc(x+w-r,y+h-r,0);arc(x+r,y+h-r,Math.PI/2);P.push([x,y+h-r]);return P}
+function windShape(){const P=[];const q=(a,b,c,n)=>{for(let i=0;i<n;i++){const t=i/n;P.push([(1-t)**2*a[0]+2*(1-t)*t*b[0]+t*t*c[0],(1-t)**2*a[1]+2*(1-t)*t*b[1]+t*t*c[1]])}};
+  const BL=[40,320],TL=[86,140],TR=[274,140],BR=[320,320];q(BL,[54,230],TL,30);q(TL,[180,104],TR,50);q(TR,[306,230],BR,30);q(BR,[180,346],BL,50);P.push(BL.slice());return P}
+function pathFill(c,P){c.beginPath();P.forEach((p,i)=>i?c.lineTo(p[0],p[1]):c.moveTo(p[0],p[1]));c.closePath()}
 
 /* ---------------- coach bubble ---------------- */
 let coachLast=0,coachText='';
 function coach(text,mood='normal',force=false){
-  const now=performance.now();if(text===coachText)return;if(!force&&now-coachLast<1300)return;
-  coachLast=now;coachText=text;const b=$('#coachText'),f=$('#coachFace');if(!b)return;
+  const n=performance.now();if(text===coachText)return;if(!force&&n-coachLast<1300)return;
+  coachLast=n;coachText=text;const b=$('#coachText'),f=$('#coachFace');if(!b)return;
   b.textContent=text;f.innerHTML=chibi('boss',mood);b.classList.remove('fade');void b.offsetWidth;b.classList.add('fade');
 }
+function ctrlShow(k,on){const b=document.querySelector(`#btns [data-k="${k}"]`);if(b)b.style.display=on?'':'none'}
+function ctrlLabel(k,t){const b=document.querySelector(`#btns [data-k="${k}"]`);if(b)b.textContent=t}
 
 /* ---------------- mini-game base ---------------- */
 class Mini{
-  constructor(p){this.p=p;this.t=0;this.done=false;this.fx=[];this.parts=[];this.touch=false;this.hint=null}
-  down(x,y){}move(x,y){}up(x,y){}btn(k,d){}update(dt){}draw(c){}
+  constructor(p){this.p=p;this.t=0;this.done=false;this.fx=[];this.parts=[];this.touch=false}
+  start(){}down(x,y){}move(x,y){}up(x,y){}btn(k,d){}update(dt){}draw(c){}
   finish(score){if(this.done)return;this.done=true;this.score=Math.round(clamp(score,0,100));hiss(0)}
-  pop(text,x,y,color='#e8613c',sz=22){this.fx.push({text,x,y,life:1.1,color,sz})}
+  pop(text,x,y,color='#e8613c',sz=24){this.fx.push({text,x,y,life:1.1,color,sz})}
   spark(x,y,n=12,col='#ffb347'){for(let i=0;i<n;i++)this.parts.push({x,y,vx:rand(-90,90),vy:rand(-160,-30),life:rand(.4,.9),col})}
   tickFx(dt){this.fx.forEach(f=>{f.life-=dt;f.y-=28*dt});this.fx=this.fx.filter(f=>f.life>0);this.parts.forEach(p=>{p.life-=dt;p.x+=p.vx*dt;p.y+=p.vy*dt;p.vy+=320*dt});this.parts=this.parts.filter(p=>p.life>0)}
   drawFx(c){this.parts.forEach(p=>{c.globalAlpha=clamp(p.life*1.6,0,1);c.fillStyle=p.col;c.beginPath();c.arc(p.x,p.y,3,0,Math.PI*2);c.fill()});c.globalAlpha=1;
     this.fx.forEach(f=>{c.globalAlpha=clamp(f.life*1.5,0,1);txt(c,f.text,f.x,f.y,f.sz,f.color,'center','#fff')});c.globalAlpha=1}
+  judge(s,x=180,y=120){const[w,col]=s>=90?['パーフェクト！','#e0a100']:s>=70?['グッド！','#e8613c']:s>=40?['おしい','#2f78c4']:['ミス…','#7d7a85'];this.pop(w,x,y,col,26);if(s>=90)SFX.perfect();else if(s>=70)SFX.good();else SFX.bad()}
 }
-function judgeWord(s){return s>=90?['パーフェクト！','#e0a100']:s>=70?['グッド！','#e8613c']:s>=40?['おしい','#3b7dd8']:['ミス…','#8a7565']}
 
-/* --- 加熱 --- */
-class Heat extends Mini{
-  constructor(p){super(p);this.T=.03;this.pos=0;this.hold=false;this.stress=0;this.inBand=0;this.counted=0;this.over=0;this.cracked=false;this.rate=0;this.spin=0}
-  down(){this.hold=true}up(){this.hold=false}btn(k,d){if(k==='hold')this.hold=d}
-  update(dt){
-    const p=this.p;this.t+=dt;this.spin+=dt*5;
-    this.pos+=((this.hold?1:0)-this.pos)*Math.min(1,dt*5);
-    const heatIn=this.pos*this.pos*.32,cool=(this.T-.03)*.13;
-    this.rate=heatIn-cool;this.T=clamp(this.T+this.rate*dt,0,1.15);
-    hiss(.4+this.pos*.6);
-    if(this.T<.4&&this.rate>p.rateLimit&&!this.cracked){this.stress+=(this.rate-p.rateLimit)*dt*9}else this.stress=Math.max(0,this.stress-dt*.04);
-    if(this.stress>=1&&!this.cracked){this.cracked=true;SFX.crack();this.pop('ピキッ！',180,170,'#d0453a',28);coach('あっ…急に熱しすぎて割れが入った！','worried',true)}
-    const[lo,hi]=p.band;
-    if(this.t>p.warm){this.counted+=dt;if(this.T>=lo&&this.T<=hi)this.inBand+=dt;if(this.T>hi+.1)this.over+=dt}
-    if(!this.cracked){
-      if(this.T<.4&&this.rate>p.rateLimit*.8)coach('あわてるな！最初は少しずつ炎に入れろ','surprise');
-      else if(this.T>hi+.04)coach('熱すぎる！ガラスがダレるぞ','surprise');
-      else if(this.T>=lo&&this.T<=hi)coach('いい色だ、その温度をキープ！','happy');
-      else if(this.t>p.warm-1&&this.T<lo)coach('もう少し温めていいぞ','normal');
-      else if(this.t<2)coach('まずは炎の外側で、あぶるように','normal');
-    }
-    if(this.t>=p.dur){
-      let s=this.counted>0?this.inBand/this.counted*100:0;
-      s-=Math.min(1,this.stress)*25;s-=this.over*5;if(this.cracked)s=Math.min(s,25);
-      this.finish(s);
-    }
+/* --- 切断（切り筋入れ） --- */
+class Score extends Mini{
+  constructor(p){super(p);this.pts=[];this.state='aim';this.snap=0;this.drawing=false;this.back=0;this.speeds=[]}
+  down(x,y){if(this.state!=='aim')return;if(x>90){coach('左端の▶からスタートだ！','surprise',true);return}this.drawing=true;this.pts=[{x,y,t:now()}];this.back=0;SFX.tap()}
+  move(x,y){if(!this.drawing)return;const l=this.pts[this.pts.length-1];if(x<l.x-3)this.back++;this.pts.push({x,y,t:now()});hiss(.5,2400);if(x>=318)this.release()}
+  up(){if(this.drawing)this.release()}
+  release(){
+    this.drawing=false;hiss(0);const P=this.pts,x0=P[0].x,x1=Math.max(...P.map(p=>p.x));
+    if(x1-x0<80){this.pts=[];coach('短すぎる！端から端まで一気に引くんだ','surprise',true);return}
+    const dev=P.reduce((a,p)=>a+Math.abs(p.y-240),0)/P.length;
+    const sp=[];for(let i=1;i<P.length;i++){const dt=P[i].t-P[i-1].t;if(dt>.004)sp.push({x:P[i].x,v:(P[i].x-P[i-1].x)/dt})}
+    const mid=sp.filter(s=>s.x>x0+(x1-x0)*.1&&s.x<x0+(x1-x0)*.9);
+    let cv=.6;if(mid.length>3){const m=mid.reduce((a,s)=>a+s.v,0)/mid.length;const sd=Math.sqrt(mid.reduce((a,s)=>a+(s.v-m)**2,0)/mid.length);cv=m>0?sd/m:1}
+    this.speeds=sp;const cov=clamp((x1-Math.max(30,x0))/(318-30),0,1);
+    let s=100-dev*2.4-Math.max(0,cv-.12)*70-this.back*4;if(cov<.97)s=s*cov*.7;
+    this.sc=clamp(s,0,100);this.state='snap';SFX.crack();this.judge(this.sc,180,110);
+    coach(this.sc>=85?'きれいに割れた！いい切り筋だ':cov<.97?'途中で止めたな。割れ方が乱れたぞ':cv>.35?'速さにムラがあったな':'線から少しずれたな',this.sc>=85?'happy':'worried',true);
   }
+  update(dt){this.t+=dt;if(this.state==='snap'){this.snap=Math.min(1,this.snap+dt*1.6);if(this.snap>=1){this.wait=(this.wait||0)+dt;if(this.wait>1.2)this.finish(this.sc)}}else if(!this.drawing&&this.t>1)coach('左端から右端へ、同じ速さで一気に引け','normal')}
   draw(c){
-    const p=this.p;drawBg(c);timerBar(c,1-this.t/p.dur);
-    drawBurner(c,180,300,this.t,1,100,22);
-    const y=lerp(150,250,this.pos);
-    tubeH(c,46,286,y,18,this.T,180,lerp(40,70,this.T));
-    c.save();rr(c,46,y-18,240,36,10);c.clip();c.strokeStyle='rgba(74,52,40,.13)';c.lineWidth=3;
-    for(let i=0;i<9;i++){const xx=46+((i*30+this.spin*18)%270);c.beginPath();c.moveTo(xx,y-18);c.lineTo(xx-10,y+18);c.stroke()}c.restore();
-    crackLines(c,180,y,this.stress*.9);
-    drawHand(c,46,y,1);drawHand(c,286,y,-1);
-    thermo(c,330,70,250,this.T,p.band);
-    txt(c,Math.round(20+this.T*1180)+'℃',330,356,14,L,'center','#fff');
-    if(this.T<.4&&this.rate>p.rateLimit&&!this.cracked)label(c,'⚠ 急加熱！',110,60,15,'#ffd9cc','#d0453a');
-    else if(this.t<p.warm)label(c,'ゆっくり温めよう',110,60,14);
-    else label(c,'緑の温度をキープ',110,60,14,'#dff3e3');
+    drawBg(c);table(c,345);
+    const top=150,bot=330;
+    if(this.state==='aim'){plate(c,30,top,290,bot-top)}
+    else{const o=this.snap*16;
+      c.save();c.beginPath();c.rect(0,0,CW,240);c.clip();plate(c,30,top,290,bot-top);c.restore();
+      c.save();c.translate(0,o);c.beginPath();c.rect(0,240,CW,200);c.clip();plate(c,30,top,290,bot-top);c.restore();
+      c.beginPath();const P=this.pts;P.forEach((p,i)=>i?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y));c.strokeStyle='rgba(255,255,255,.9)';c.lineWidth=2;c.stroke();
+      if(this.sc<70){c.strokeStyle=L;c.lineWidth=1.5;for(let i=0;i<6;i++){const x=40+i*48;c.beginPath();c.moveTo(x,240+o/2);c.lineTo(x+6,232+o/2);c.lineTo(x+12,244+o/2);c.stroke()}}
+    }
+    c.setLineDash([7,6]);c.beginPath();c.moveTo(30,240);c.lineTo(320,240);c.strokeStyle='#2f78c4';c.lineWidth=2.5;c.stroke();c.setLineDash([]);
+    c.beginPath();c.moveTo(16,232);c.lineTo(30,240);c.lineTo(16,248);c.closePath();c.fillStyle='#e8613c';c.fill();c.strokeStyle=L;c.lineWidth=2;c.stroke();
+    if(this.state==='aim'&&this.pts.length>1){c.beginPath();this.pts.forEach((p,i)=>i?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y));c.strokeStyle='rgba(255,255,255,.95)';c.lineWidth=2.5;c.stroke()}
+    if(this.drawing){const p=this.pts[this.pts.length-1];c.save();c.translate(p.x,p.y);rr(c,-6,-58,12,46,5);c.fillStyle='#e8613c';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();c.beginPath();c.arc(0,-6,7,0,Math.PI*2);c.fillStyle='#c9d2da';c.fill();c.stroke();c.restore()}
+    if(this.state==='aim'&&!this.drawing){const k=(this.t*.8)%1;c.globalAlpha=1-k;c.beginPath();c.arc(40+k*270,240,11,0,Math.PI*2);c.fillStyle='#fff';c.fill();c.strokeStyle=L;c.lineWidth=2;c.stroke();c.globalAlpha=1}
+    if(this.state==='snap'&&this.speeds.length>2){
+      rr(c,30,44,300,84,10);c.fillStyle='#fff';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();txt(c,'速さの記録（平らなほど◎）',180,58,12);
+      const vs=this.speeds.map(s=>s.v);const mx=Math.max(...vs,1);c.beginPath();this.speeds.forEach((s,i)=>{const x=30+(s.x-30)/290*300,y=120-clamp(s.v/mx,0,1)*54;i?c.lineTo(x,y):c.moveTo(x,y)});c.strokeStyle='#e8613c';c.lineWidth=2.5;c.stroke();
+    }
   }
 }
-/* --- 回転 --- */
-class Rotate extends Mini{
-  constructor(p){super(p);this.v=0;this.sag=0;this.twist=0;this.ang=0;this.inBand=0;this.counted=0;this.trail=[];this.lx=null}
-  down(x,y){this.touch=true;this.lx=x;this.ly=y}
-  move(x,y){if(!this.touch)return;const d=Math.hypot(x-this.lx,y-this.ly);this.v=Math.min(1.3,this.v+d/360*.42);this.lx=x;this.ly=y;this.trail.push({x,y,life:.4})}
-  up(){this.touch=false}
+/* --- 面取り（研磨） --- */
+class Grind extends Mini{
+  constructor(p){super(p);this.P=0;this.hold=false;this.inB=0;this.cnt=0;this.chips=0;this.chipAcc=0;this.res=[];this.spin=0}
+  rough(u){return this.p.secs.some(([a,b])=>u>=a&&u<=b)}
+  band(u){return this.rough(u)?[.62,.8]:[.36,.54]}
+  down(){this.hold=true}up(){this.hold=false}btn(k,d){if(k==='press')this.hold=d}
   update(dt){
-    const p=this.p;this.t+=dt;this.v*=Math.exp(-1.1*dt);this.ang+=this.v*dt*14;hiss(.7);
-    this.trail.forEach(q=>q.life-=dt);this.trail=this.trail.filter(q=>q.life>0);
-    const[lo,hi]=p.band;
-    if(this.t>1.5){this.counted+=dt;
-      if(this.v<lo){this.sag+=(lo-this.v)*dt*.55}else if(this.v>hi){this.twist+=(this.v-hi)*dt*.9}else{this.inBand+=dt;this.sag=Math.max(0,this.sag-dt*.02)}
-    }
-    if(this.v<lo*.75&&this.t>1.5)coach('回転が遅い！ガラスが垂れてきたぞ','surprise');
-    else if(this.v>hi*1.08)coach('速すぎる！ねじれるぞ','surprise');
-    else if(this.v>=lo&&this.v<=hi)coach('いいリズムだ、そのまま一定に','happy');
-    if(this.t>=p.dur)this.finish((this.counted?this.inBand/this.counted*100:0)-this.sag*45-this.twist*35);
+    const p=this.p;this.t+=dt;this.spin+=dt*14;const u=this.t/p.dur;
+    this.P=clamp(this.P+(this.hold?1.05:-.95)*dt,0,1);hiss(.3+this.P*.7,1800);
+    const[lo,hi]=this.band(u);let r='ok';
+    if(this.P>hi+.1){this.chipAcc+=dt;r='over';if(this.chipAcc>.3){this.chipAcc=0;this.chips++;r='chip';SFX.crack();this.pop('欠け！',140,170,'#d0453a',20);coach('押しすぎ！欠けたぞ','surprise',true)}}
+    else if(this.P<lo){r='rough'}else{this.inB+=dt;this.chipAcc=Math.max(0,this.chipAcc-dt)}
+    this.cnt+=dt;this.res.push({u,r});
+    if(this.P<lo-.05)coach(this.rough(u)?'ザラザラの所だ、もう少し強く！':'押し付けが弱い、削り残しになるぞ','surprise');
+    else if(this.P>hi+.05)coach('強すぎる！欠けるぞ','surprise');
+    else if(this.P>=lo&&this.P<=hi)coach('いい手ごたえだ、その調子','happy');
+    if(u>=1)this.finish(this.inB/this.cnt*100-this.chips*7);
   }
   draw(c){
-    const p=this.p;drawBg(c);timerBar(c,1-this.t/p.dur);
-    // speed gauge
-    const gx=180,gy=150,gr=78,toA=v=>Math.PI+clamp(v/1.1,0,1)*Math.PI;
-    c.lineCap='butt';c.lineWidth=18;c.strokeStyle='#fff';c.beginPath();c.arc(gx,gy,gr,Math.PI,0);c.stroke();
-    c.strokeStyle='#8fd3a0';c.beginPath();c.arc(gx,gy,gr,toA(p.band[0]),toA(p.band[1]));c.stroke();
-    c.lineWidth=3;c.strokeStyle=L;c.beginPath();c.arc(gx,gy,gr+9,Math.PI,0);c.stroke();c.beginPath();c.arc(gx,gy,gr-9,Math.PI,0);c.stroke();
-    const a=toA(this.v);c.lineWidth=5;c.lineCap='round';c.beginPath();c.moveTo(gx,gy);c.lineTo(gx+Math.cos(a)*(gr-4),gy+Math.sin(a)*(gr-4));c.stroke();
-    c.beginPath();c.arc(gx,gy,8,0,Math.PI*2);c.fillStyle=L;c.fill();
-    txt(c,'おそい',gx-gr+4,gy+18,12,'#3b7dd8');txt(c,'はやい',gx+gr-4,gy+18,12,'#d0453a');txt(c,'回転',gx,gy-30,14);
-    // tube (bendable)
-    const y=262,droop=this.sag*110+(this.v<p.band[0]?Math.sin(this.t*3)*2:0);
-    drawBurner(c,180,330,this.t,.8,70,20);
-    const path=()=>{c.beginPath();c.moveTo(56,y);c.quadraticCurveTo(180,y+droop*2,304,y)};
-    c.lineCap='round';path();c.lineWidth=40;c.strokeStyle=L;c.stroke();path();c.lineWidth=34;c.strokeStyle=glassCol(0,1.3);c.stroke();
-    const g=c.createLinearGradient(100,0,260,0);g.addColorStop(0,glassCol(.68,0));g.addColorStop(.5,glassCol(.68));g.addColorStop(1,glassCol(.68,0));path();c.strokeStyle=g;c.stroke();
-    c.strokeStyle='rgba(74,52,40,.22)';c.lineWidth=3;
-    for(let i=0;i<8;i++){const tt=((i/8+this.ang*.05)%1);const x=56+tt*248;const yy=y+droop*2*2*tt*(1-tt);const sl=6+this.twist*30;c.beginPath();c.moveTo(x-sl,yy-14);c.lineTo(x+sl,yy+14);c.stroke()}
-    drawHand(c,56,y,1);drawHand(c,304,y,-1);
-    this.trail.forEach(q=>{c.globalAlpha=q.life*1.8;c.beginPath();c.arc(q.x,q.y,10,0,Math.PI*2);c.fillStyle='#fff';c.fill()});c.globalAlpha=1;
-    if(this.t<3)label(c,'👆 くるくるなぞって回す',180,198,14);
+    const p=this.p;drawBg(c);timerBar(c,1-this.t/p.dur,'のこり');
+    const u=this.t/p.dur,W=640,wx=180,wy=262,px=wx-u*W,py=150+this.P*6,ph=60;
+    // plate (moving left)
+    plate(c,px,py,W,ph);
+    c.save();rr(c,px,py,W,ph,4);c.clip();
+    for(const[a,b]of p.secs){const x0=px+a*W,x1=px+b*W;if(x1<wx){continue}c.fillStyle='rgba(255,154,90,.55)';c.fillRect(Math.max(x0,wx),py+ph-12,x1-Math.max(x0,wx),12);c.strokeStyle='#e8613c';c.lineWidth=2;for(let x=Math.max(x0,wx);x<x1;x+=8){c.beginPath();c.moveTo(x,py+ph);c.lineTo(x+4,py+ph-10);c.stroke()}}
+    c.restore();
+    // processed edge result
+    c.lineWidth=4;for(let i=1;i<this.res.length;i+=2){const r=this.res[i],x=px+r.u*W;if(x<0||x>wx)continue;c.strokeStyle=r.r==='ok'?'#3fae6a':r.r==='rough'?'#e8a33c':'#d0453a';c.beginPath();c.moveTo(x,py+ph-1);c.lineTo(x+3,py+ph-1);c.stroke()}
+    c.lineWidth=2;c.strokeStyle=L;c.fillStyle='#fff';
+    // wheel
+    c.save();c.translate(wx,wy+ (py-150));c.rotate(this.spin);c.beginPath();c.arc(0,0,48,0,Math.PI*2);c.fillStyle='#8b96a1';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
+    c.beginPath();c.arc(0,0,40,0,Math.PI*2);c.fillStyle='#b9c3cc';c.fill();c.stroke();for(let i=0;i<8;i++){const a=i/8*Math.PI*2;c.beginPath();c.arc(Math.cos(a)*44,Math.sin(a)*44,2.5,0,Math.PI*2);c.fillStyle='#fff';c.fill()}
+    c.beginPath();c.arc(0,0,10,0,Math.PI*2);c.fillStyle=L;c.fill();c.restore();
+    // water
+    c.fillStyle='rgba(80,160,230,.7)';for(let i=0;i<6;i++){const k=(this.t*2+i/6)%1;c.beginPath();c.arc(wx-30+k*20+i*6,wy-60+k*40,2.5,0,Math.PI*2);c.fill()}
+    gauge(c,334,70,250,this.P,this.band(u),'押し付け');
+    const ahead=p.secs.find(([a])=>a>u&&a-u<.1);
+    if(this.rough(u))label(c,'ザラザラ → 強めに！',110,90,14,'#ffe3d6','#d0453a');else if(ahead)label(c,'この先ザラザラ',110,90,14,'#fff3d6');else label(c,'一定の力で',110,90,14,'#dff3e3');
+    txt(c,'欠け '+this.chips,60,360,14,this.chips?'#d0453a':L,'center','#fff');
   }
 }
-/* --- 吹く --- */
-class Blow extends Mini{
-  constructor(p){super(p);this.r=p.r0;this.hold=false;this.press=0;this.puffs=[];this.cur=0;this.burst=false;this.uneven=0}
-  down(){this.hold=true}up(){this.hold=false}
-  btn(k,d){if(k==='hold')this.hold=d;if(k==='done'&&d&&!this.done){if(this.puffs.length===0&&this.cur===0){coach('まだ一度も吹いてないぞ！','surprise',true);return}this.end()}}
-  end(){if(this.cur>0){this.puffs.push(this.cur);this.cur=0}
-    const p=this.p;if(this.burst){this.finish(10);return}
-    const err=Math.abs(this.r-1),size=clamp(100-err/p.tol*45,0,100);
-    const even=clamp(100-this.uneven*70,0,100);const s=size*(1-p.even)+even*p.even;
-    const[w,col]=judgeWord(s);this.pop(w,250,110,col,26);if(s>=70)SFX.good();this.finish(s)}
-  update(dt){
-    const p=this.p;this.t+=dt;
-    this.press+=((this.hold?1:0)-this.press)*Math.min(1,dt*9);
-    const visc=1+this.t/9;
-    this.r+=this.press*p.k*Math.pow(this.r,2.2)/visc*dt;
-    if(this.hold){this.cur+=dt;if(this.cur>.55)this.uneven+=dt*.9}else if(this.cur>0){this.puffs.push(this.cur);this.cur=0}
-    if(this.r>=p.burst&&!this.burst){this.burst=true;SFX.pop();this.spark(250,230,24,'#bfe6f7');coach('パン！ 吹きすぎて割れてしまった…','worried',true);this.hold=false;setTimeout(()=>this.end(),400)}
-    if(!this.burst){
-      if(this.hold&&this.cur>.55)coach('長く吹きすぎ！短く区切って','surprise');
-      else if(this.r>1+p.tol)coach('大きすぎる！','surprise');
-      else if(Math.abs(this.r-1)<p.tol*.5)coach('ぴったりだ！「完成」を押せ','happy');
-      else if(this.r>.9)coach('もうすぐだ、ちょっとずつな','normal');
-      else if(this.t>3)coach('ガラスが冷める前に吹くんだ','normal');
-    }
-    if(this.t>=p.dur&&!this.done)this.end();
-  }
+/* --- セラミック印刷 --- */
+class Print extends Mini{
+  constructor(p){super(p);this.phase='align';this.ox=rand(-36,36)||20;this.oy=rand(-26,26)||-15;if(Math.hypot(this.ox,this.oy)<18){this.ox=24;this.oy=-18}this.sx=40;this.bins=new Array(26).fill(null);this.lx=0;this.ly=0;this.lt=0;this.v=0}
+  start(){ctrlShow('ok',true)}
+  down(x,y){this.touch=true;this.lx=x;this.ly=y;this.lt=now()}
+  move(x,y){if(!this.touch)return;const t=now();
+    if(this.phase==='align'){this.ox+=x-this.lx;this.oy+=y-this.ly}
+    else if(this.phase==='squee'){if(x>this.sx&&Math.abs(x-this.sx)<70){const dt=Math.max(.008,t-this.lt);const v=(x-this.sx)/dt;this.v=lerp(this.v,v,.5);
+      for(let b=0;b<26;b++){const bx=50+b*10;if(bx>=this.sx&&bx<x&&this.bins[b]==null)this.bins[b]=this.v}this.sx=x;hiss(.6,500);if(this.sx>=310)this.endSq()}}
+    this.lx=x;this.ly=y;this.lt=t}
+  up(){this.touch=false;hiss(0)}
+  btn(k,d){if(k==='ok'&&d&&this.phase==='align'){const e=Math.hypot(this.ox,this.oy);this.sA=clamp(100-Math.max(0,e-1.5)*6,0,100);this.judge(this.sA,180,110);coach(e<3?'トンボぴったりだ！次はスキージ':'少しずれたな…次はスキージだ',e<3?'happy':'worried',true);this.phase='squee';ctrlShow('ok',false)}}
+  endSq(){this.phase='end';hiss(0);const[lo,hi]=this.p.band;let g=0;this.bins.forEach(v=>{if(v==null)return;if(v>=lo&&v<=hi)g+=1;else{const d=v<lo?(lo-v)/lo:(v-hi)/hi;g+=Math.max(0,1-d*2.2)}});
+    this.sB=g/26*100;const s=this.sA*.35+this.sB*.65;this.judge(this.sB,180,110);this.score0=s;this.wait=1.4}
+  update(dt){this.t+=dt;
+    if(this.phase==='align'){if(this.t>.5)coach('ガラスを動かして、＋を○に重ねろ','normal')}
+    else if(this.phase==='squee'){if(this.t>40)this.endSq();const[lo,hi]=this.p.band;if(this.touch&&this.sx>50){if(this.v>hi*1.15)coach('速い！かすれるぞ','surprise');else if(this.v<lo*.85)coach('遅い！にじむぞ','surprise');else coach('いい速さだ','happy')}else coach('スキージを左から右へ、一定の速さで','normal');this.v*=Math.exp(-dt*3)}
+    else{this.wait-=dt;if(this.wait<=0)this.finish(this.score0)}}
   draw(c){
-    const p=this.p;drawBg(c);timerBar(c,1-this.t/p.dur,'冷める');
-    const cy=232,puff=this.press;
-    // blower chibi
-    const fx=46,fy=128;
-    c.lineWidth=3;c.strokeStyle=L;
-    c.beginPath();c.moveTo(fx+22,fy+16);c.bezierCurveTo(fx+40,fy+70,30,cy,p.shape==='dome'?60:84,cy);c.lineWidth=8;c.strokeStyle='#b5562e';c.stroke();
-    c.beginPath();c.arc(fx,fy,28,0,Math.PI*2);c.fillStyle='#ffe2c6';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
-    c.beginPath();c.arc(fx,fy-12,28,Math.PI*1.05,Math.PI*1.95);c.lineTo(fx+28,fy-12);c.fillStyle='#5fae73';c.fill();c.stroke();
-    c.fillStyle=L;c.beginPath();c.ellipse(fx-8,fy-2,2.5,3.5,0,0,Math.PI*2);c.ellipse(fx+10,fy-2,2.5,3.5,0,0,Math.PI*2);c.fill();
-    const ch=5+puff*6;c.fillStyle='rgba(255,150,150,.7)';c.beginPath();c.arc(fx-14,fy+8,ch,0,Math.PI*2);c.arc(fx+16,fy+8,ch,0,Math.PI*2);c.fill();
-    c.beginPath();c.arc(fx+3,fy+12,3+puff*2,0,Math.PI*2);c.fillStyle='#d9534f';c.fill();c.stroke();
-    if(puff>.3){c.strokeStyle='rgba(74,52,40,.4)';c.lineWidth=2;for(let i=0;i<3;i++){const o=(this.t*60+i*12)%36;c.beginPath();c.moveTo(fx+30+o,fy+10-i*6);c.lineTo(fx+38+o,fy+10-i*6);c.stroke()}}
-    if(p.shape==='bottom'){
-      const R=46,xe=236;
-      tubeH(c,84,xe,cy,R,.15,xe,60);
-      const rr2=R*this.r;
-      c.save();c.beginPath();c.ellipse(xe,cy,Math.max(10,rr2*.95),Math.max(R,rr2),0,-Math.PI/2,Math.PI/2);c.closePath();
-      c.fillStyle=glassCol(.66);c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();c.restore();
-      const wall=clamp(16/(this.r*this.r)-6,3,14);c.save();c.beginPath();c.ellipse(xe,cy,Math.max(4,rr2*.95-wall*(1+this.uneven*.5)),Math.max(R,rr2)-wall,0,-Math.PI/2,Math.PI/2);c.strokeStyle='rgba(255,255,255,.7)';c.lineWidth=2.5;c.stroke();c.restore();
-      c.setLineDash([7,6]);c.beginPath();c.arc(xe,cy,R,-Math.PI/2,Math.PI/2);c.lineWidth=3;c.strokeStyle='#2f6fb8';c.stroke();c.setLineDash([]);
-      label(c,'めやす（管と同じ丸み）',xe+10,cy-R-26,12,'#e3f1ff');
-    }else{
-      const R=80,x0=170,r0=24;tubeH(c,60,x0+10,cy,r0,.2,x0,40);
-      const br=R*this.r,bx=x0+br*.92;
-      c.beginPath();for(let k=0;k<=40;k++){const a=k/40*Math.PI*2;const w=1+this.uneven*.05*Math.sin(a*5+1.3);const xx=bx+Math.cos(a)*br*w,yy=cy+Math.sin(a)*br*w;k?c.lineTo(xx,yy):c.moveTo(xx,yy)}c.closePath();
-      c.fillStyle=glassCol(.64);c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
-      const wall=Math.min(br*.3,clamp(14/(this.r*this.r),3,30));
-      for(let k=0;k<24;k++){const a1=k/24*Math.PI*2,a2=(k+1)/24*Math.PI*2;const w=wall*(1+this.uneven*1.2*Math.sin(k*1.9+.7));c.beginPath();c.arc(bx,cy,Math.max(2,br-w/2-2),a1,a2);c.lineWidth=Math.max(1,w);c.strokeStyle='rgba(255,236,190,.55)';c.stroke()}
-      c.setLineDash([7,6]);c.beginPath();c.arc(x0+R*.92,cy,R,0,Math.PI*2);c.lineWidth=3;c.strokeStyle='#2f6fb8';c.stroke();c.setLineDash([]);
-      label(c,'ドームの型',x0+R*.92,cy-R-18,12,'#e3f1ff');
-      c.strokeStyle='rgba(255,255,255,.85)';c.lineWidth=4;c.lineCap='round';c.beginPath();c.arc(bx,cy,br*.75,Math.PI*1.15,Math.PI*1.45);c.stroke();
-    }
-    txt(c,'大きさ '+Math.round(this.r*100)+'%',300,370,14,Math.abs(this.r-1)<=p.tol?'#2e8b57':L,'center','#fff');
-    // puffs log
-    const evenTxt=this.uneven<.25?'均一':this.uneven<.7?'ややムラ':'ムラあり';
-    label(c,'肉厚：'+evenTxt,90,370,13,this.uneven<.25?'#dff3e3':'#ffe3d6');
+    drawBg(c);table(c,345);const X=50,Y=150,W=260,H=170;
+    const gx=X+(this.phase==='align'?this.ox:this.ox),gy=Y+this.oy;
+    plate(c,gx,gy,W,H);
+    // printed ink
+    const[lo,hi]=this.p.band;
+    c.save();rr(c,gx,gy,W,H,4);c.clip();
+    this.bins.forEach((v,b)=>{if(v==null)return;const bx=X+b*10;const fast=v>hi,slow=v<lo;
+      c.fillStyle=fast?'rgba(40,40,46,.45)':'rgba(30,30,34,.92)';
+      const band=(x,y,w,h)=>{c.fillRect(x,y,w,h);if(slow){c.fillStyle='rgba(30,30,34,.35)';c.fillRect(x-2,y-3,w+4,h+6);c.fillStyle='rgba(30,30,34,.92)'}};
+      band(bx,Y+10,10,18);band(bx,Y+H-28,10,18);if(bx<X+28)band(bx,Y+28,10,H-56);if(bx>=X+W-30)band(bx,Y+28,10,H-56);
+      if(fast){c.fillStyle='rgba(255,255,255,.7)';for(let k=0;k<5;k++)c.fillRect(bx+rand(0,8),Y+10+rand(0,H-20),2,2)}});
+    c.restore();
+    // screen frame + register marks
+    rr(c,X-14,Y-14,W+28,H+28,6);c.lineWidth=10;c.strokeStyle='rgba(120,130,140,.85)';c.stroke();
+    c.save();rr(c,X,Y,W,H,0);c.clip();c.strokeStyle='rgba(61,58,64,.07)';c.lineWidth=1;for(let x=X;x<X+W;x+=6){c.beginPath();c.moveTo(x,Y);c.lineTo(x,Y+H);c.stroke()}c.restore();
+    const marks=[[X+14,Y+40],[X+W-14,Y+40],[X+14,Y+H-40],[X+W-14,Y+H-40]];
+    marks.forEach(([mx,my])=>{c.beginPath();c.arc(mx,my,8,0,Math.PI*2);c.strokeStyle='#e8413c';c.lineWidth=2.5;c.stroke();
+      const px=mx+this.ox,py=my+this.oy;c.beginPath();c.moveTo(px-9,py);c.lineTo(px+9,py);c.moveTo(px,py-9);c.lineTo(px,py+9);c.strokeStyle='#2f78c4';c.lineWidth=2.5;c.stroke()});
+    if(this.phase!=='align'){const sx=this.sx;rr(c,sx-8,Y-24,16,H+48,6);c.fillStyle='#e8613c';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();rr(c,sx-14,Y-36,28,16,6);c.fillStyle='#ffd166';c.fill();c.stroke();
+      hbar(c,110,74,200,this.v,this.p.band,'速さ',420);txt(c,'← にじみ',110,98,11,'#7d7a85','left');txt(c,'かすれ →',310,98,11,'#7d7a85','right')}
+    else{label(c,'① 位置合わせ（トンボ）',180,80,14,'#e3f1ff');txt(c,'ずれ '+Math.hypot(this.ox,this.oy).toFixed(1)+' mm',180,110,13)}
   }
 }
-/* --- 接合（封じ/溶接/板付け） --- */
-class Join extends Mini{
-  constructor(p){super(p);this.i=0;this.res=[];this.newJoint()}
-  newJoint(){this.T=0;this.spd=this.p.speed*rand(.78,1.25);this.phase='heat';this.wait=0;this.slide=0}
-  down(){this.tap()}btn(k,d){if(k==='tap'&&d)this.tap()}
-  tap(){
-    if(this.phase!=='heat'||this.T<.08)return;
-    const[a,b]=this.p.sweet,c=(a+b)/2,h=(b-a)/2,d=Math.abs(this.T-c);
-    let s=d<=h?100-d/h*22:Math.max(0,78-(d-h)/.22*78);
-    if(this.T<a-.15)s=Math.min(s,25);
-    this.res.push(s);this.phase='joined';this.wait=1;this.lastS=s;
-    const[w,col]=judgeWord(s);this.pop(w,180,150,col,26);
-    if(s>=90)SFX.perfect();else if(s>=70)SFX.good();else SFX.bad();
-    this.spark(this.jx||180,this.jy||230,s>=70?16:6);
-    if(this.T<a)coach('早すぎる！まだ溶けてないぞ','surprise',true);else if(this.T>b)coach('遅い！ダレかけてたぞ','surprise',true);else coach(s>=90?'完璧な色だ！':'いい色だ！','happy',true);
-  }
-  update(dt){
-    this.t+=dt;
-    if(this.phase==='heat'){hiss(.9);this.T+=this.spd*dt*(.55+this.T*.9);
-      if(this.T>=1){this.res.push(0);this.phase='fail';this.wait=1.1;SFX.bad();this.pop('ダレた…',180,150,'#8a7565',24);coach('溶けすぎてダレた！もっと早く','worried',true)}}
-    else{hiss(.3);this.slide=Math.min(1,this.slide+dt*5);this.wait-=dt;if(this.wait<=0){this.i++;if(this.i>=this.p.count){this.finish(this.res.reduce((a,b)=>a+b,0)/this.res.length)}else this.newJoint()}}
-  }
+/* --- 強化（加熱→風冷） --- */
+class Temper extends Mini{
+  constructor(p){super(p);this.phase='heat';this.T=20;this.ht=0;this.osc=0;this.air=false;this.mx=0;this.react=null;this.held=0}
+  start(){ctrlShow('air',true)}
+  btn(k,d){if(k==='out'&&d&&this.phase==='heat'){this.takeOut()}if(k==='air'){this.air=d;if(d&&this.phase==='quench'&&this.react==null)this.react=this.t-this.q0}}
+  takeOut(){const d=Math.abs(this.T-640);this.sT=d<=20?100-d*.5:Math.max(0,90-(d-20)*2.6);this.phase='move';this.mt=0;SFX.clunk();
+    coach(this.T<620?'早い！温度が足りないぞ':this.T>660?'遅い！波打ちが出るぞ':'いい温度だ！すぐ風冷！',this.T>=620&&this.T<=660?'happy':'surprise',true)}
+  update(dt){const p=this.p;this.t+=dt;
+    if(this.phase==='heat'){this.ht+=dt;this.T=20+740*(1-Math.exp(-this.ht/p.tau));this.osc+=dt;hiss(.5,300);
+      if(this.T>715){this.takeOut()}else if(this.T>560&&this.T<620)coach('そろそろだ…よく見ろ','normal');else if(this.T<560)coach('ローラーの上でガラスを温めている','normal');}
+    else if(this.phase==='move'){this.mt+=dt;if(this.mt>=.45){this.phase='quench';this.q0=this.t;if(this.air&&this.react==null)this.react=0}}
+    else if(this.phase==='quench'){hiss(this.air?1:.1,2000);if(this.air&&this.react!=null)this.held+=dt;
+      const el=this.t-this.q0;if(this.react==null&&el>.6)coach('風冷が遅い！','surprise');
+      if(this.held>=2||el>4.5){this.phase='test';this.tt=0;hiss(0);
+        const r=this.react==null?99:this.react,rs=r<=.35?100:Math.max(0,100-(r-.35)*120),hf=clamp(this.held/2,0,1);
+        this.s=this.sT*.55+rs*.3+hf*15;this.frag=Math.round(20+this.s*1.6);this.ok=this.frag>=100;S.temperScore=this.s;this.judge(this.s,180,100)}}
+    else{this.tt+=dt;if(this.tt>2.2)this.finish(this.s)}}
   draw(c){
     const p=this.p;drawBg(c);
-    const heat=this.phase==='heat'?this.T:this.phase==='fail'?1:.55;
-    const k=p.kind,joined=this.phase==='joined';
-    const sl=joined?this.slide:0;
-    if(k==='seal'){
-      this.jx=180;this.jy=240;drawBurner(c,180,330,this.t,1,80,20);
-      tubeH(c,20,170+sl*6,240,40,heat,170,30);
-      c.save();rr(c,20,200,150,80,10);c.clip();c.strokeStyle='rgba(74,52,40,.35)';c.lineWidth=5;for(let x=30;x<170;x+=22){c.beginPath();c.ellipse(x,240,8,30,0,0,Math.PI*2);c.stroke()}c.restore();
-      tubeH(c,196-sl*20,330,240,14,heat,196,22);
-      drawHand(c,330,240,-1);
-    }else if(k==='branch'){
-      this.jx=180;this.jy=268;
-      tubeH(c,20,340,300,38,heat*.9,180,40);
-      c.beginPath();c.ellipse(180,262,16,6,0,0,Math.PI*2);c.fillStyle=glassCol(heat);c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();
-      const by=180+sl*44;rr(c,166,by-110,28,110,8);c.fillStyle=glassCol(0);c.fill();
-      const g=c.createLinearGradient(0,by-30,0,by);g.addColorStop(0,glassCol(heat,0));g.addColorStop(1,glassCol(heat));c.fillStyle=g;c.fillRect(166,by-30,28,30);
-      rr(c,166,by-110,28,110,8);c.lineWidth=3;c.strokeStyle=L;c.stroke();
-      drawFlame(c,90,250,.9,70,16,this.t,1);drawFlame(c,270,250,-.9,70,16,this.t,1);
-      rr(c,40,232,22,28,6);c.fillStyle='#b8c2cc';c.fill();c.stroke();rr(c,298,232,22,28,6);c.fill();c.stroke();
-    }else{
-      this.jx=196;this.jy=230;drawBurner(c,196,345,this.t,1,90,22);
-      tubeH(c,10,190,230,72,heat,190,36);
-      const px=228-sl*30;c.beginPath();c.ellipse(px,230,13,76,0,0,Math.PI*2);c.fillStyle=glassCol(heat*.95);c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
-      c.strokeStyle='rgba(255,255,255,.8)';c.beginPath();c.moveTo(px-4,175);c.lineTo(px-4,205);c.stroke();
-      rr(c,px+12,222,90,16,6);c.fillStyle='#8d99a6';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
-    }
-    if(joined){const q=this.lastS/100;c.beginPath();c.arc(this.jx,this.jy,8+(1-q)*12,0,Math.PI*2);c.fillStyle=glassCol(.5,.8);c.fill();if(q<.6){c.strokeStyle=L;c.lineWidth=2;c.stroke()}}
-    // color reference & meter
-    rr(c,14,44,104,56,12);c.fillStyle='#fff';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();
-    txt(c,'めやすの色',66,58,12);rr(c,30,70,72,20,8);c.fillStyle=glassCol((p.sweet[0]+p.sweet[1])/2);c.fill();c.stroke();
-    if(p.meter){
-      const mx=140,my=56,mw=200;
-      const g=c.createLinearGradient(mx,0,mx+mw,0);for(let i=0;i<=10;i++)g.addColorStop(i/10,glassCol(i/10,1.4));
-      rr(c,mx,my,mw,18,9);c.fillStyle=g;c.fill();
-      c.fillStyle='rgba(76,175,106,.5)';c.fillRect(mx+mw*p.sweet[0],my-4,mw*(p.sweet[1]-p.sweet[0]),26);
-      rr(c,mx,my,mw,18,9);c.lineWidth=2.5;c.strokeStyle=L;c.stroke();
-      const ix=mx+mw*clamp(heat,0,1);c.beginPath();c.moveTo(ix,my-2);c.lineTo(ix-7,my-14);c.lineTo(ix+7,my-14);c.closePath();c.fillStyle=L;c.fill();
-      txt(c,'とけ具合',mx+mw/2,my+34,12);
-    }else{label(c,'色だけで見極めろ！',240,66,14,'#ffe3d6','#d0453a')}
-    // progress
-    for(let i=0;i<p.count;i++){const x=CW-22-(p.count-1-i)*26,y=120;c.beginPath();c.arc(x,y,10,0,Math.PI*2);const r=this.res[i];c.fillStyle=r==null?'#fff':r>=90?'#ffd166':r>=70?'#ff9a76':r>=40?'#8fd3f4':'#ccc';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke()}
-    txt(c,`接合 ${Math.min(this.i+1,p.count)}/${p.count}`,CW-22-(p.count-1)*13,96,13);
+    // furnace
+    rr(c,8,140,200,170,10);c.fillStyle='#6b7783';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
+    const glow=clamp((this.T-200)/700,0,1);rr(c,20,170,176,110,6);const g=c.createLinearGradient(0,170,0,280);g.addColorStop(0,`rgba(255,${160-glow*60|0},60,${.25+glow*.6})`);g.addColorStop(1,`rgba(255,90,40,${.3+glow*.5})`);c.fillStyle=this.phase==='heat'?g:'#4a545e';c.fill();c.stroke();
+    txt(c,'強化炉',108,156,13,'#fff');
+    // quench
+    rr(c,214,140,138,170,10);c.fillStyle='#c4ced6';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();txt(c,'風冷部',283,156,13);
+    for(let i=0;i<5;i++){const x=228+i*26;rr(c,x,170,14,18,3);c.fillStyle='#8b96a1';c.fill();c.stroke();rr(c,x,262,14,18,3);c.fill();c.stroke();
+      if(this.air&&this.phase!=='heat'){c.strokeStyle='rgba(47,120,196,.7)';c.lineWidth=2.5;for(let k=0;k<2;k++){const o=((this.t*90+k*14)%26);c.beginPath();c.moveTo(x+7,190+o);c.lineTo(x+7,198+o);c.stroke();c.beginPath();c.moveTo(x+7,260-o);c.lineTo(x+7,252-o);c.stroke()}}}
+    // rollers
+    for(let x=24;x<348;x+=22){c.beginPath();c.arc(x,240,6,0,Math.PI*2);c.fillStyle='#8b96a1';c.fill();c.lineWidth=2;c.strokeStyle=L;c.stroke()}
+    // glass
+    let gx=this.phase==='heat'?108+Math.sin(this.osc*2.2)*30:this.phase==='move'?lerp(108,283,this.mt/.45):283;
+    const hcol=glassCol(clamp((this.T-300)/600,0,1)*(this.phase==='heat'||this.phase==='move'?1:clamp(1-((this.t-(this.q0||this.t))*.8),0,1)));
+    rr(c,gx-70,224,140,10,3);c.fillStyle=hcol;c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();
+    if(this.phase==='heat'||this.phase==='move'){
+      if(p.meter){hbar(c,76,66,240,this.T,[620,660],'温度',760);txt(c,Math.round(this.T)+'℃',196,96,15,L,'center','#fff')}
+      else{rr(c,14,44,108,56,12);c.fillStyle='#fff';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();txt(c,'めやすの色',68,58,12);rr(c,30,70,76,20,8);c.fillStyle=glassCol((640-300)/600);c.fill();c.stroke();label(c,'色で見極めろ！',240,70,14,'#ffe3d6','#d0453a')}
+    }else if(this.phase==='quench'){label(c,this.air?'💨 風冷中…':'今だ！風冷！',180,80,18,this.air?'#e3f1ff':'#ffd166');rr(c,90,104,180,10,5);c.fillStyle='#fff';c.fill();c.stroke();rr(c,90,104,180*clamp(this.held/2,0,1),10,5);c.fillStyle='#2f78c4';c.fill()}
+    if(this.phase==='test'){c.fillStyle='rgba(36,50,61,.55)';c.fillRect(0,0,CW,CH);rr(c,50,100,260,220,16);c.fillStyle='#fff';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
+      txt(c,'破砕試験',180,126,18);drawFrag(c,90,145,180,110,this.frag);txt(c,`破片 ${this.frag}個（基準 100個以上）`,180,278,13);txt(c,this.ok?'合格 ◎':'不合格 ✕',180,302,18,this.ok?'#3fae6a':'#d0453a')}
   }
 }
-/* --- 枝付け（偏芯） --- */
-class Branch extends Mini{
-  constructor(p){super(p);this.i=0;this.res=[];this.theta=rand(0,6);this.phi0=rand(0,6);this.round()}
-  round(){const p=this.p;this.phi=this.phi0+this.i*Math.PI/2;this.dir=this.i%2?-1:1;this.w=p.speed*(1+.18*this.i);this.rt=0;this.phase='spin';this.R=66;
-    const e=p.ecc,R=this.R;this.rho=Math.sqrt(e*e+R*R+2*e*R*Math.cos(this.phi-0));this.off=Math.atan2(R*Math.sin(this.phi),e+R*Math.cos(this.phi))}
-  markAng(){return this.theta+this.off}
-  down(){this.tap()}btn(k,d){if(k==='tap'&&d)this.tap()}
-  tap(){if(this.phase!=='spin'||this.rt<.6)return;
-    let err=Math.atan2(Math.sin(this.markAng()+Math.PI/2),Math.cos(this.markAng()+Math.PI/2));const deg=Math.abs(err)*180/Math.PI;
-    const s=clamp(100-deg*3.2,0,100);this.res.push(s);this.phase='hit';this.wait=1.1;this.lastErr=err;
-    const[w,col]=judgeWord(s);this.pop(w,180,120,col,26);if(s>=90)SFX.perfect();else if(s>=70)SFX.good();else SFX.bad();
-    this.spark(180,this.ay-this.rho,12);
-    coach(s>=85?'ぴったりだ！':deg<20?'少しずれたな':'本体の動きに惑わされたな',s>=85?'happy':'worried',true);
-  }
-  update(dt){
-    this.t+=dt;this.ay=250;
-    if(this.phase==='spin'){hiss(.6);this.rt+=dt;this.theta+=this.dir*this.w*(1+.18*Math.sin(this.t*2.3))*dt;
-      if(this.rt>9){this.res.push(0);this.phase='hit';this.wait=1;this.lastErr=null;SFX.bad();coach('時間切れだ。印が真上に来たら押すんだ','worried',true)}
-      else if(this.rt>.6)coach('赤い印だけを見ろ。真上に来たら穴あけ！','normal');}
-    else{hiss(.2);this.wait-=dt;if(this.wait<=0){this.i++;if(this.i>=this.p.count)this.finish(this.res.reduce((a,b)=>a+b,0)/this.res.length);else this.round()}}
-  }
+function drawFrag(c,x,y,w,h,n){c.save();rr(c,x,y,w,h,4);c.fillStyle=GLASS;c.fill();c.clip();const k=Math.max(3,Math.round(Math.sqrt(n*w/h/1)));const cw=w/k,chh=h/Math.max(2,Math.round(n/k));const r=mulberry(n);const pts=[];
+  for(let j=0;j<=Math.round(h/chh);j++){const row=[];for(let i=0;i<=k;i++)row.push([x+i*cw+(i&&i<k?(r()-.5)*cw*.7:0),y+j*chh+(j?(r()-.5)*chh*.7:0)]);pts.push(row)}
+  c.strokeStyle='rgba(61,58,64,.55)';c.lineWidth=1.2;for(let j=0;j<pts.length;j++)for(let i=0;i<pts[j].length;i++){const p=pts[j][i];if(i<pts[j].length-1){c.beginPath();c.moveTo(p[0],p[1]);c.lineTo(pts[j][i+1][0],pts[j][i+1][1]);c.stroke()}if(j<pts.length-1){c.beginPath();c.moveTo(p[0],p[1]);c.lineTo(pts[j+1][i][0],pts[j+1][i][1]);c.stroke()}}
+  c.restore();rr(c,x,y,w,h,4);c.lineWidth=2.5;c.strokeStyle=L;c.stroke()}
+/* --- 孔あけ --- */
+class Drill extends Mini{
+  constructor(p){super(p);this.phase='front';this.f=0;this.b=0;this.h=0;this.maxH=0;this.hold=false;this.chip=false;this.crack=false;this.rot=0;this.fa=0}
+  start(){ctrlShow('flip',true)}
+  btn(k,d){if(k==='drill')this.hold=d;if(k==='flip'&&d&&this.phase==='front'){if(this.f<.15){coach('まだほとんど削れてないぞ','surprise',true);return}this.phase='flip';this.fa=0;this.hold=false;SFX.clunk();ctrlShow('flip',false)}}
+  down(){this.hold=true}up(){this.hold=false}
+  update(dt){this.t+=dt;const drilling=this.hold&&(this.phase==='front'||this.phase==='back')&&!this.crack;
+    if(drilling){this.rot+=dt*30;this.h+=dt*.42;hiss(.8,1400)}else{this.h=Math.max(0,this.h-dt*.55);hiss(0)}this.maxH=Math.max(this.maxH,this.h);
+    if(this.h>=1&&!this.crack){this.crack=true;SFX.crack();coach('熱を持たせすぎて割れた！休みながら削るんだ','worried',true);this.pop('ピキッ！',180,170,'#d0453a');this.endT=this.t}
+    if(this.phase==='front'&&drilling){this.f=Math.min(1,this.f+dt*.13);if(this.f>.75&&!this.chip){this.chip=true;SFX.crack();coach('削りすぎ！裏側が欠けた','worried',true);this.pop('裏欠け！',180,290,'#d0453a',20)}
+      if(this.f>.6&&this.f<.75)coach('そこまでだ！裏返せ','surprise');else if(this.h>.75)coach('熱くなってる！いったん離せ','surprise');else coach('水をかけながら、じっくり','normal')}
+    if(this.phase==='flip'){this.fa+=dt*2;if(this.fa>=1)this.phase='back'}
+    if(this.phase==='back'){if(drilling)this.b=Math.min(1,this.b+dt*.13);if(this.h>.75)coach('熱い！いったん離せ','surprise');else coach('裏からも削って貫通させろ','normal');
+      if(this.f+this.b>=1){this.phase='done';SFX.good();this.pop('貫通！',180,160,'#3fae6a');this.endT=this.t}}
+    if(this.t>40&&!this.endT){this.endT=this.t}
+    if(this.endT&&this.t-this.endT>1){let s=100-Math.max(0,Math.abs(this.f-.56)-.06)*260-(this.chip?35:0)-Math.max(0,this.maxH-.8)*80;if(this.crack)s=Math.min(s,20);if(this.phase!=='done'&&!this.crack)s*=.5;this.finish(s)}}
   draw(c){
-    const p=this.p;drawBg(c);const ax=180,ay=250,e=p.ecc,R=this.R;
-    const th=this.theta,cx=ax+e*Math.cos(th),cy=ay+e*Math.sin(th);
-    // lathe
-    c.beginPath();c.arc(ax,ay,R+e+16,0,Math.PI*2);c.setLineDash([4,8]);c.strokeStyle='rgba(74,52,40,.25)';c.lineWidth=2;c.stroke();c.setLineDash([]);
-    // body
-    c.beginPath();c.arc(cx,cy,R,0,Math.PI*2);c.fillStyle=glassCol(.12,1.2);c.fill();c.lineWidth=4;c.strokeStyle=L;c.stroke();
-    c.beginPath();c.arc(cx,cy,R-10,0,Math.PI*2);c.lineWidth=2;c.strokeStyle='rgba(255,255,255,.8)';c.stroke();
-    // previous holes / branches
-    for(let j=0;j<this.res.length;j++){const ph=this.phi0+j*Math.PI/2;const hx=cx+R*Math.cos(th+ph),hy=cy+R*Math.sin(th+ph);
-      c.save();c.translate(hx,hy);c.rotate(th+ph);rr(c,-2,-11,30,22,6);c.fillStyle=glassCol(0,1.2);c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();c.restore()}
-    // chuck
-    c.save();c.translate(ax,ay);c.rotate(th);rr(c,-8,-8,e+8,16,6);c.fillStyle='#8d99a6';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();c.restore();
-    c.beginPath();c.arc(ax,ay,20,0,Math.PI*2);c.fillStyle='#6f7b88';c.fill();c.lineWidth=3;c.stroke();
-    for(let j=0;j<3;j++){const a=th+j*Math.PI*2/3;rr(c,ax+Math.cos(a)*14-5,ay+Math.sin(a)*14-5,10,10,3);c.fillStyle='#b8c2cc';c.fill();c.stroke()}
-    // mark
-    if(this.phase==='spin'){const ma=th+this.phi;const mx=cx+R*Math.cos(ma),my=cy+R*Math.sin(ma);c.beginPath();c.arc(mx,my,7,0,Math.PI*2);c.fillStyle='#e8413c';c.fill();c.lineWidth=2.5;c.strokeStyle='#fff';c.stroke()}
-    // burner
-    const fy=ay-this.rho;drawBurnerDown(c,ax,40,this.t,Math.max(20,fy-50),1);
-    c.setLineDash([3,5]);c.beginPath();c.moveTo(ax-40,fy);c.lineTo(ax+40,fy);c.strokeStyle='#e8413c';c.lineWidth=2;c.stroke();c.setLineDash([]);
-    txt(c,`穴 ${Math.min(this.i+1,p.count)}/${p.count}`,300,60,14,L,'center','#fff');
-    label(c,this.dir>0?'回転 ⟳':'回転 ⟲',60,60,13);
+    drawBg(c);const X=40,W=280,Y=210,T=70,cx=180;
+    label(c,'断面図',70,60,13);
+    const flipped=this.phase==='back'||this.phase==='done'||(this.phase==='flip'&&this.fa>.5);
+    const sc=this.phase==='flip'?Math.abs(Math.cos(this.fa*Math.PI)):1;
+    c.save();c.translate(0,Y+T/2);c.scale(1,sc);c.translate(0,-(Y+T/2));
+    rr(c,X,Y,W,T,4);c.fillStyle=GLASS;c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
+    const hw=22;const fdep=this.f*T,bdep=this.b*T;
+    c.fillStyle='#eef3f6';
+    if(!flipped){c.fillRect(cx-hw,Y-1,hw*2,fdep+1)}else{c.fillRect(cx-hw,Y+T-fdep,hw*2,fdep+1);c.fillRect(cx-hw,Y-1,hw*2,bdep+1)}
+    c.strokeStyle=L;c.lineWidth=2;c.strokeRect(cx-hw,flipped?Y+T-fdep:Y,hw*2,fdep);if(flipped&&bdep>0)c.strokeRect(cx-hw,Y,hw*2,bdep);
+    if(this.chip){const yb=flipped?Y:Y+T;c.fillStyle='#eef3f6';c.beginPath();c.moveTo(cx-hw-14,yb);c.lineTo(cx-hw,yb+(flipped?14:-14));c.lineTo(cx+hw,yb+(flipped?12:-12));c.lineTo(cx+hw+16,yb);c.closePath();c.fill();c.stroke()}
+    if(this.crack){c.strokeStyle='#fff';c.lineWidth=2;c.beginPath();c.moveTo(cx+hw,Y+20);c.lineTo(cx+70,Y+40);c.lineTo(cx+110,Y+28);c.stroke()}
+    c.restore();
+    if(this.phase==='front'){c.setLineDash([5,5]);c.beginPath();c.moveTo(X-6,Y+T*.56);c.lineTo(X+W+6,Y+T*.56);c.strokeStyle='#e8613c';c.lineWidth=2;c.stroke();c.setLineDash([]);txt(c,'めやす',X+W-24,Y+T*.56-10,11,'#e8613c')}
+    // drill
+    if(this.phase!=='flip'&&this.phase!=='done'){const dep=flipped?this.b*T:this.f*T,ty=Y+dep-(this.hold?0:12);
+      rr(c,cx-hw+3,ty-120,hw*2-6,120,4);c.fillStyle='#b9c3cc';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
+      c.strokeStyle='rgba(61,58,64,.35)';c.lineWidth=2;for(let i=0;i<5;i++){const yy=ty-110+((i*24+this.rot*8)%120);c.beginPath();c.moveTo(cx-hw+4,yy);c.lineTo(cx+hw-4,yy-8);c.stroke()}
+      rr(c,cx-30,ty-150,60,32,8);c.fillStyle='#e8613c';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
+      c.fillStyle='rgba(80,160,230,.75)';for(let i=0;i<5;i++){const k=(this.t*1.5+i/5)%1;c.beginPath();c.arc(cx-40+k*14,ty-40+k*40,2.5,0,Math.PI*2);c.fill()}}
+    gauge(c,336,70,230,this.h,[0,.75],'摩擦熱');
+    txt(c,flipped?'裏から':'表から',180,320,15,L,'center','#fff');
+    if(this.phase==='front')txt(c,`深さ ${Math.round(this.f*100)}%`,180,342,14);else if(this.phase==='back')txt(c,`のこり ${Math.max(0,Math.round((1-this.f-this.b)*100))}%`,180,342,14);
   }
 }
-/* --- 蛇管巻き --- */
-class Coil extends Mini{
-  constructor(p){super(p);this.th=0;this.x0=40;this.px=this.x0;this.pts=[];this.err=0;this.lx=null}
-  ideal(){return this.x0+this.p.pitch*this.th/(Math.PI*2)}
-  down(x){this.touch=true;this.lx=x}move(x){if(!this.touch)return;this.px=clamp(this.px+(x-this.lx)*1.0,20,340);this.lx=x}up(){this.touch=false}
-  update(dt){
-    const p=this.p;this.t+=dt;hiss(.5);
-    const base=p.turns*Math.PI*2/p.dur;const w=base*Math.max(.3,1+.5*Math.sin(1.1*this.t+.5)+.22*Math.sin(2.7*this.t));
-    this.th+=w*dt;this.wNow=w/base;
-    const id=this.ideal(),d=Math.abs(this.px-id);this.err+=d*dt;
-    this.pts.push({th:this.th,x:this.px,q:d});
-    if(d>p.pitch*.35)coach(this.px<id?'送りが遅れてる！右へ':'送りが先走ってる！左へ','surprise');
-    else if(d<p.pitch*.12)coach('いいピッチだ、その調子','happy');
-    if(this.th>=p.turns*Math.PI*2){const avg=this.err/this.t;this.finish(100-avg/p.pitch*170)}
-  }
+/* --- 塗布（ブチル / ウレタン） --- */
+class Seal extends Mini{
+  constructor(p){super(p);const raw=p.shape==='wind'?windShape():rectShape(70,150,220,170,18);this.raw=raw;this.path=resample(raw,3);this.w=new Array(this.path.pts.length).fill(null);this.i=0;this.active=false;this.lastProg=0;this.ideal=p.flow/((p.band[0]+p.band[1])/2)}
+  down(x,y){const[px,py]=this.path.pts[this.i];if(Math.hypot(x-px,y-py)<44){this.active=true;this.lpt=now();this.lastProg=this.t;if(this.t0==null)this.t0=this.t}else coach('ノズル（▶）の所から始めるんだ','surprise',true)}
+  move(x,y){if(!this.active)return;const P=this.path.pts,t=now();let best=-1,bd=40;
+    for(let j=this.i;j<Math.min(P.length,this.i+30);j++){const d=Math.hypot(P[j][0]-x,P[j][1]-y);if(d<bd){bd=d;best=j}}
+    if(best>this.i){const ds=this.path.cum[best]-this.path.cum[this.i],dt=Math.max(.008,t-this.lpt);this.lpt=t;const v=ds/dt;this.vs=this.vs==null?v:lerp(this.vs,v,.3);const w=clamp(this.p.flow/Math.max(this.vs,1),2,22);
+      for(let j=this.i+1;j<=best;j++)this.w[j]=w;this.i=best;this.lastProg=this.t;this.curW=w;hiss(.5,700)}
+    if(this.i>=P.length-2)this.end()}
+  up(){this.active=false;hiss(0)}
+  end(){if(this.ended)return;this.ended=true;this.active=false;hiss(0);const[lo,hi]=this.p.band;let good=0,laid=0;
+    this.w.forEach(w=>{if(w==null)return;laid++;if(w>=lo&&w<=hi)good++;else{const d=w<lo?lo-w:w-hi;good+=Math.max(0,1-d/2.5)}});
+    const cov=laid/this.w.length;this.s=good/this.w.length*100*Math.pow(cov,.5);this.judge(this.s,180,90);this.wait=1.2}
+  update(dt){const p=this.p;this.t+=dt;
+    if(this.ended){this.wait-=dt;if(this.wait<=0)this.finish(this.s);return}
+    if(this.active&&this.t-this.lastProg>.15){this.w[this.i]=Math.min(24,(this.w[this.i]||8)+dt*30);this.curW=this.w[this.i];coach('止まるとダマになるぞ！','surprise')}
+    else if(this.active&&this.curW!=null){const[lo,hi]=p.band;if(this.curW<lo)coach('速すぎる、細くなってるぞ','surprise');else if(this.curW>hi)coach('遅い、太くなってるぞ','surprise');else coach('いい太さだ、そのまま','happy')}
+    else if(this.t0==null)coach('▶のノズルに指を置いて、なぞり始めろ','normal');
+    if(this.t>=p.dur)this.end()}
   draw(c){
-    const p=this.p;drawBg(c);timerBar(c,1-this.th/(p.turns*Math.PI*2),'巻き');
-    const my=210,Rm=48;
-    // mandrel
-    rr(c,14,my-10,336,20,8);c.fillStyle='#9aa6b2';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
-    c.strokeStyle='rgba(74,52,40,.3)';c.lineWidth=2;for(let i=0;i<14;i++){const x=20+((i*26+this.th*30)%330);c.beginPath();c.moveTo(x,my-9);c.lineTo(x-5,my+9);c.stroke()}
-    // ruler
-    c.strokeStyle=L;c.lineWidth=2;for(let n=0;n<=p.turns;n++){const x=this.x0+n*p.pitch;c.beginPath();c.moveTo(x,300);c.lineTo(x,310);c.stroke()}
-    c.beginPath();c.moveTo(this.x0,310);c.lineTo(this.x0+p.turns*p.pitch,310);c.stroke();txt(c,'ピッチのめやす',this.x0+p.turns*p.pitch/2,326,11,'#8a7565');
-    // coil
-    // split the wound path into front / back half-turns and stroke each as one smooth run
-    const runs=[];let run=null;
-    for(let i=0;i<this.pts.length;i+=2){const q=this.pts[i],front=Math.sin(q.th)>0;
-      if(!run||run.front!==front){const prev=run?run.pts[run.pts.length-1]:null;run={front,pts:prev?[prev]:[]};runs.push(run)}run.pts.push(q)}
-    const path=r=>{c.beginPath();r.pts.forEach((q,i)=>{const y=my-Rm*Math.cos(q.th);i?c.lineTo(q.x,y):c.moveTo(q.x,y)})};
-    c.lineCap='round';c.lineJoin='round';
-    runs.filter(r=>!r.front).forEach(r=>{path(r);c.lineWidth=9;c.strokeStyle='rgba(120,160,180,.45)';c.stroke()});
-    runs.filter(r=>r.front).forEach(r=>{path(r);c.lineWidth=13;c.strokeStyle=L;c.stroke();path(r);c.lineWidth=7.5;const age=this.th-r.pts[r.pts.length-1].th;c.strokeStyle=glassCol(Math.max(0,.6-age*.15),1.3);c.stroke()});
-    // ideal guide
-    const id=this.ideal();c.setLineDash([6,6]);c.beginPath();c.moveTo(id,120);c.lineTo(id,290);c.lineWidth=2.5;c.strokeStyle='#2f6fb8';c.stroke();c.setLineDash([]);
-    label(c,'目標',id,284,12,'#e3f1ff');
-    // feed & flame
-    const fyy=my-Rm*Math.cos(this.th);
-    c.beginPath();c.moveTo(this.px,40);c.lineTo(this.px,Math.min(fyy,my-Rm+4));c.lineWidth=13;c.strokeStyle=L;c.stroke();c.lineWidth=8;c.strokeStyle=glassCol(.1,1.3);c.stroke();
-    drawFlame(c,this.px-50,my-Rm-8,1.2,46,12,this.t,1);
-    // carriage
-    const d=Math.abs(this.px-id),col=d<p.pitch*.15?'#9be0a8':d<p.pitch*.35?'#ffd166':'#ff9a76';
-    rr(c,this.px-30,342,60,28,12);c.fillStyle=col;c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();txt(c,'◀ 送り ▶',this.px,357,12);
-    c.beginPath();c.moveTo(this.px,342);c.lineTo(this.px,300);c.setLineDash([3,4]);c.lineWidth=2;c.stroke();c.setLineDash([]);
-    label(c,'回転 '+(this.wNow>1.25?'はやい':this.wNow<.75?'おそい':'ふつう'),80,60,13,this.wNow>1.25?'#ffe3d6':this.wNow<.75?'#e3f1ff':'#fff');
+    const p=this.p;drawBg(c);timerBar(c,1-this.t/p.dur);
+    if(p.shape==='wind'){pathFill(c,this.raw);c.fillStyle=GLASS;c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();c.save();pathFill(c,this.raw);c.clip();c.lineWidth=30;c.strokeStyle='rgba(30,30,34,.8)';c.stroke();c.restore();pathFill(c,this.raw);c.lineWidth=3;c.strokeStyle=L;c.stroke()}
+    else{plate(c,46,126,268,218);c.beginPath();const P=this.path.pts;P.forEach((q,i)=>i?c.lineTo(q[0],q[1]):c.moveTo(q[0],q[1]));c.lineWidth=16;c.strokeStyle='#c4ccd3';c.stroke();c.lineWidth=2;c.strokeStyle='rgba(61,58,64,.4)';c.stroke()}
+    const P=this.path.pts;c.setLineDash([5,7]);c.beginPath();P.forEach((q,i)=>i?c.lineTo(q[0],q[1]):c.moveTo(q[0],q[1]));c.lineWidth=2;c.strokeStyle=p.shape==='wind'?'#fff':'#2f78c4';c.stroke();c.setLineDash([]);
+    // bead
+    c.lineCap='round';const[lo,hi]=p.band;
+    for(let j=1;j<P.length;j++){const w=this.w[j];if(w==null)continue;c.beginPath();c.moveTo(P[j-1][0],P[j-1][1]);c.lineTo(P[j][0],P[j][1]);c.lineWidth=w+4;c.strokeStyle='#ffd166';c.stroke();c.beginPath();c.moveTo(P[j-1][0],P[j-1][1]);c.lineTo(P[j][0],P[j][1]);c.lineWidth=w;c.strokeStyle='#2b2b30';c.stroke()}
+    if(this.ended)for(let j=1;j<P.length;j+=2){const w=this.w[j];if(w!=null&&w>=lo&&w<=hi)continue;c.beginPath();c.arc(P[j][0],P[j][1],3,0,Math.PI*2);c.fillStyle='#e8413c';c.fill()}
+    // pacemaker
+    if(this.t0!=null&&!this.ended){const s=(this.t-this.t0)*this.ideal;let k=this.path.cum.findIndex(v=>v>=s);if(k<0)k=P.length-1;c.beginPath();c.arc(P[k][0],P[k][1],8,0,Math.PI*2);c.fillStyle='rgba(255,255,255,.85)';c.fill();c.strokeStyle='#2f78c4';c.lineWidth=2;c.stroke()}
+    // nozzle
+    const[nx,ny]=P[this.i];c.save();c.translate(nx,ny);c.beginPath();c.moveTo(0,0);c.lineTo(-8,-18);c.lineTo(8,-18);c.closePath();c.fillStyle='#ffd166';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();rr(c,-14,-48,28,30,8);c.fillStyle='#e8613c';c.fill();c.stroke();c.restore();
+    if(!this.active&&!this.ended){c.globalAlpha=.6+.4*Math.sin(this.t*6);c.beginPath();c.arc(nx,ny,16,0,Math.PI*2);c.strokeStyle='#e8613c';c.lineWidth=3;c.stroke();c.globalAlpha=1}
+    hbar(c,110,50,200,this.curW||0,p.band,'太さ',20);
   }
 }
-/* --- 徐冷 --- */
-class Anneal extends Mini{
-  constructor(p){super(p);this.F=20;this.set=20;this.err=0;this.hist=[];this.fast=0}
-  tgt(tn){if(tn<.2)return 20+540*tn/.2;if(tn<.42)return 560;if(tn<.85)return 560-260*(tn-.42)/.43;return 300-150*(tn-.85)/.15}
-  ty(T){return 340-T/700*270}xt(tn){return 52+tn*270}
-  down(x,y){this.touch=true;this.set=clamp((340-y)/270*700,0,700)}move(x,y){if(this.touch)this.set=clamp((340-y)/270*700,0,700)}up(){this.touch=false}
-  update(dt){
-    const p=this.p;this.t+=dt;const tn=this.t/p.dur;
-    this.F+=(this.set-this.F)*(1-Math.exp(-dt/.85));
-    const tg=this.tgt(tn),d=Math.abs(this.F-tg),crit=tn>.42&&tn<.85;
-    this.err+=d*dt*(crit?1.4:1);if(crit&&this.F<tg-30){this.fast+=dt;this.err+=(tg-30-this.F)*dt*.6}
-    this.hist.push({tn,F:this.F});
-    if(crit&&this.F<tg-30)coach('冷やしすぎ！急冷すると歪みが残るぞ','surprise');
-    else if(d>45)coach(this.F<tg?'温度が低い！設定を上げろ':'温度が高い！設定を下げろ','surprise');
-    else if(d<18)coach('いいぞ、線にピッタリだ','happy');
-    else if(tn>.38&&tn<.45)coach('そろそろゆっくり冷やし始めるぞ','normal');
-    if(this.t>=p.dur){const avg=this.err/p.dur;this.finish(100-avg/1.7)}
+/* --- クレーンで重ねる --- */
+class Align extends Mini{
+  constructor(p){super(p);this.i=0;this.res=[];this.round()}
+  round(){this.cx=rand(0,1)<.5?70:290;this.target=this.cx;this.vc=0;this.th=0;this.om=0;this.phase='move';this.rt=0;this.drop=0}
+  down(x){this.touch=true;this.lx=x}move(x){if(!this.touch)return;this.target=clamp(this.target+(x-this.lx)*1.1,40,320);this.lx=x}up(){this.touch=false}
+  gx(){return this.cx+120*Math.sin(this.th)}
+  btn(k,d){if(k==='drop'&&d&&this.phase==='move'){const off=Math.abs(this.gx()-180),sw=Math.abs(this.om)*120+Math.abs(this.th)*120;
+    const s=clamp(100-Math.max(0,off-1.5)*3.2-Math.max(0,sw-6)*.6,0,100);this.res.push(s);this.phase='drop';this.lastS=s;this.dx=this.gx();this.judge(s,180,90);
+    coach(s>=85?'ピタリだ！':sw>25?'揺れたまま下ろしたな…':'少しずれたな',s>=85?'happy':'worried',true)}}
+  update(dt){this.t+=dt;
+    if(this.phase==='move'){this.rt+=dt;const vt=clamp((this.target-this.cx)*3,-200,200);const v=this.vc+clamp(vt-this.vc,-520*dt,520*dt);const a=(v-this.vc)/Math.max(dt,1e-3);this.vc=v;this.cx+=v*dt;
+      const acc=-(900/120)*Math.sin(this.th)-(a/120)*Math.cos(this.th)-.9*this.om;this.om+=acc*dt;this.th+=this.om*dt;hiss(Math.abs(v)/240*.4,250);
+      const sw=Math.abs(this.om)*120+Math.abs(this.th)*120,off=Math.abs(this.gx()-180);
+      if(sw>30)coach('揺れてる！ゆっくり動かせ','surprise');else if(off<3&&sw<8)coach('今だ！下ろせ','happy');else if(off<20)coach('もう少し…揺れを止めてから','normal');else coach('ゆっくり、上のガラスを運べ','normal');
+      if(this.rt>18){this.res.push(0);this.phase='drop';this.lastS=0;this.dx=this.gx();coach('時間切れだ','worried',true)}}
+    else{hiss(0);this.drop+=dt;if(this.drop>1.3){this.i++;if(this.i>=this.p.count)this.finish(this.res.reduce((a,b)=>a+b,0)/this.res.length);else this.round()}}}
+  draw(c){
+    drawBg(c);
+    // rail & trolley
+    rr(c,10,34,340,12,4);c.fillStyle='#ffd166';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
+    const cx=this.cx;rr(c,cx-22,40,44,22,6);c.fillStyle='#e8613c';c.fill();c.stroke();
+    // bottom glass on table
+    table(c,330);plate(c,80,300,200,14,GLASS,2);if(this.p.count>1){rr(c,86,292,188,8,2);c.fillStyle='#b9c3cc';c.fill();c.lineWidth=2;c.stroke()}else{rr(c,82,296,196,4,1);c.fillStyle='rgba(160,220,170,.8)';c.fill()}
+    [80,280].forEach(x=>{c.beginPath();c.moveTo(x,284);c.lineTo(x-7,272);c.lineTo(x+7,272);c.closePath();c.fillStyle='#e8413c';c.fill();c.lineWidth=2;c.strokeStyle=L;c.stroke()});
+    // hanging glass
+    let gx=this.gx(),gy=62+120*Math.cos(this.th);if(this.phase==='drop'){gx=this.dx;gy=lerp(182,286-(this.p.count>1?8:4),clamp(this.drop/.8,0,1))}
+    c.beginPath();c.moveTo(cx,62);c.lineTo(gx,gy-24);c.lineWidth=3;c.strokeStyle=L;c.stroke();
+    c.save();c.translate(gx,gy);if(this.phase!=='drop')c.rotate(this.th*.4);
+    rr(c,-60,-30,120,12,4);c.fillStyle='#8b96a1';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();
+    [-44,-14,14,44].forEach(x=>{c.beginPath();c.arc(x,-12,7,Math.PI,0);c.fillStyle='#3d3a40';c.fill()});
+    plate(c,-100,-8,200,14,GLASS,2);c.restore();
+    const sw=Math.abs(this.om)*120+Math.abs(this.th)*120;
+    label(c,`ずれ ${Math.abs(this.gx()-180).toFixed(0)}mm`,90,90,13,'#fff');label(c,'揺れ '+(sw<8?'なし':sw<25?'少し':'大きい'),270,90,13,sw<8?'#dff3e3':sw<25?'#fff3d6':'#ffe3d6');
+    label(c,`${Math.min(this.i+1,this.p.count)}/${this.p.count}セット目`,180,412,13);
   }
+}
+/* --- 中間膜の気泡抜き --- */
+class Bubble extends Mini{
+  constructor(p){super(p);this.R={x:44,y:112,w:272,h:226};this.b=[];for(let i=0;i<p.n;i++)this.b.push({x:rand(80,280),y:rand(140,310),r:rand(7,15)});this.wr=[];this.lastWr=-9;this.trail=[]}
+  down(x,y){this.touch=true;this.lx=x;this.ly=y;this.lt=now()}
+  move(x,y){if(!this.touch)return;const t=now(),dx=x-this.lx,dy=y-this.ly,d=Math.hypot(dx,dy),dt=Math.max(.008,t-this.lt);const v=d/dt;
+    const slip=v>this.p.vmax;if(d>0&&!slip){for(const b of this.b){const ax=this.lx,ay=this.ly;const k=clamp(((b.x-ax)*dx+(b.y-ay)*dy)/(d*d),0,1);const qx=ax+dx*k,qy=ay+dy*k;if(Math.hypot(b.x-qx,b.y-qy)<b.r+22){b.x+=dx;b.y+=dy}}}
+    if(slip&&d>10&&this.t-this.lastWr>.3&&x>this.R.x&&x<this.R.x+this.R.w&&y>this.R.y&&y<this.R.y+this.R.h){this.wr.push({x,y,a:Math.atan2(dy,dx)});this.lastWr=this.t;SFX.bad();coach('速すぎ！しわになったぞ','surprise',true)}
+    this.trail.push({x,y,life:.35});hiss(.3,400);this.lx=x;this.ly=y;this.lt=t}
+  up(){this.touch=false;hiss(0)}
+  update(dt){const R=this.R;this.t+=dt;this.trail.forEach(q=>q.life-=dt);this.trail=this.trail.filter(q=>q.life>0);
+    this.b=this.b.filter(b=>{const out=b.x<R.x||b.x>R.x+R.w||b.y<R.y||b.y>R.y+R.h;if(out){SFX.pop();this.pop('プシュ',clamp(b.x,40,320),clamp(b.y,110,330),'#2f78c4',16)}return !out});
+    if(this.t>1&&!this.touch)coach('中心から外へ、ゆっくり押し出せ','normal');
+    if(this.b.length===0||this.t>=this.p.dur){this.finish(100-this.b.length*11-this.wr.length*9)}}
+  draw(c){
+    const R=this.R;drawBg(c);timerBar(c,1-this.t/this.p.dur);table(c,345);
+    plate(c,R.x,R.y,R.w,R.h);rr(c,R.x+5,R.y+5,R.w-10,R.h-10,3);c.fillStyle='rgba(170,220,180,.35)';c.fill();
+    this.wr.forEach(w=>{c.save();c.translate(w.x,w.y);c.rotate(w.a+Math.PI/2);c.beginPath();for(let i=-20;i<=20;i+=2)c.lineTo(i,Math.sin(i*.6)*3);c.strokeStyle='rgba(61,58,64,.55)';c.lineWidth=2;c.stroke();c.restore()});
+    this.b.forEach(b=>{c.beginPath();c.arc(b.x,b.y,b.r,0,Math.PI*2);c.fillStyle='rgba(255,255,255,.65)';c.fill();c.lineWidth=2;c.strokeStyle='rgba(61,58,64,.45)';c.stroke();c.beginPath();c.arc(b.x-b.r*.35,b.y-b.r*.35,b.r*.25,0,Math.PI*2);c.fillStyle='#fff';c.fill()});
+    this.trail.forEach(q=>{c.globalAlpha=q.life*2;c.beginPath();c.arc(q.x,q.y,18,0,Math.PI*2);c.fillStyle='rgba(255,255,255,.5)';c.fill()});c.globalAlpha=1;
+    if(this.touch){rr(c,this.lx-30,this.ly-12,60,24,12);c.fillStyle='#e8613c';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();rr(c,this.lx-4,this.ly-40,8,30,3);c.fillStyle='#8b96a1';c.fill();c.stroke()}
+    label(c,`気泡 のこり ${this.b.length}`,110,66,14,this.b.length?'#fff':'#dff3e3');label(c,`しわ ${this.wr.length}`,270,66,14,this.wr.length?'#ffe3d6':'#fff');
+  }
+}
+/* --- 温度カーブ追従（オートクレーブ） --- */
+class Curve extends Mini{
+  constructor(p){super(p);this.F=p.pts[0][1];this.set=this.F;this.err=0;this.hist=[]}
+  tgt(tn){const P=this.p.pts;for(let i=1;i<P.length;i++){if(tn<=P[i][0]){const k=(tn-P[i-1][0])/(P[i][0]-P[i-1][0]);return lerp(P[i-1][1],P[i][1],k)}}return P[P.length-1][1]}
+  ty(T){return 340-T/this.p.max*270}xt(tn){return 52+tn*270}
+  setY(y){this.set=clamp((340-y)/270*this.p.max,0,this.p.max)}
+  down(x,y){this.touch=true;this.setY(y)}move(x,y){if(this.touch)this.setY(y)}up(){this.touch=false}
+  update(dt){const p=this.p;this.t+=dt;const tn=this.t/p.dur;
+    this.F+=(this.set-this.F)*(1-Math.exp(-dt/.85));const tg=this.tgt(tn),d=Math.abs(this.F-tg)/p.max*700,crit=tn>p.crit[0]&&tn<p.crit[1];
+    this.err+=d*dt*(crit?1.4:1);if(crit&&this.F<tg-p.max*.05)this.err+=dt*20;this.hist.push({tn,F:this.F});hiss(.2,200);
+    if(d>45)coach(this.F<tg?'温度が低い！設定を上げろ':'温度が高い！設定を下げろ','surprise');else if(d<18)coach('いいぞ、線にピッタリだ','happy');else coach('少し先を読んで操作しろ','normal');
+    if(this.t>=p.dur)this.finish(100-(this.err/p.dur)/1.7)}
   draw(c){
     const p=this.p;drawBg(c);const tn=clamp(this.t/p.dur,0,1);
-    rr(c,14,40,332,330,14);c.fillStyle='#fffdf8';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
-    c.fillStyle='rgba(143,211,244,.25)';c.fillRect(this.xt(.42),70,this.xt(.85)-this.xt(.42),270);txt(c,'ゆっくり冷やす',(this.xt(.42)+this.xt(.85))/2,82,11,'#2f6fb8');
-    c.strokeStyle='rgba(74,52,40,.15)';c.lineWidth=1.5;[100,200,300,400,500,600].forEach(T=>{const y=this.ty(T);c.beginPath();c.moveTo(52,y);c.lineTo(322,y);c.stroke();txt(c,T+'',36,y,10,'#8a7565')});
-    c.strokeStyle=L;c.lineWidth=2.5;c.beginPath();c.moveTo(52,70);c.lineTo(52,340);c.lineTo(322,340);c.stroke();txt(c,'時間 →',300,354,11,'#8a7565');txt(c,'℃',36,60,11,'#8a7565');
-    c.setLineDash([3,4]);c.strokeStyle='#e8613c';c.lineWidth=1.5;c.beginPath();c.moveTo(52,this.ty(560));c.lineTo(322,this.ty(560));c.stroke();c.setLineDash([]);txt(c,'徐冷点 560℃',100,this.ty(560)-10,11,'#e8613c');
-    // target
-    c.setLineDash([8,6]);c.lineWidth=4;c.strokeStyle='rgba(47,111,184,.55)';c.beginPath();for(let i=0;i<=100;i++){const t=i/100;const x=this.xt(t),y=this.ty(this.tgt(t));i?c.lineTo(x,y):c.moveTo(x,y)}c.stroke();c.setLineDash([]);
-    c.lineWidth=6;c.strokeStyle='#2f6fb8';c.beginPath();for(let i=0;i<=20;i++){const t=tn+i/20*.12;if(t>1)break;const x=this.xt(t),y=this.ty(this.tgt(t));i?c.lineTo(x,y):c.moveTo(x,y)}c.stroke();
-    // actual
+    rr(c,14,40,332,330,14);c.fillStyle='#fffefb';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
+    c.fillStyle='rgba(143,211,244,.25)';c.fillRect(this.xt(p.crit[0]),70,this.xt(p.crit[1])-this.xt(p.crit[0]),270);txt(c,'ゆっくり冷やす',(this.xt(p.crit[0])+this.xt(p.crit[1]))/2,82,11,'#2f78c4');
+    c.strokeStyle='rgba(61,58,64,.15)';c.lineWidth=1.5;for(let T=p.step;T<p.max;T+=p.step){const y=this.ty(T);c.beginPath();c.moveTo(52,y);c.lineTo(322,y);c.stroke();txt(c,T+'',36,y,10,'#7d7a85')}
+    c.strokeStyle=L;c.lineWidth=2.5;c.beginPath();c.moveTo(52,70);c.lineTo(52,340);c.lineTo(322,340);c.stroke();txt(c,'時間 →',300,354,11,'#7d7a85');txt(c,'℃',36,60,11,'#7d7a85');
+    c.setLineDash([3,4]);c.strokeStyle='#e8613c';c.lineWidth=1.5;c.beginPath();c.moveTo(52,this.ty(p.mark[0]));c.lineTo(322,this.ty(p.mark[0]));c.stroke();c.setLineDash([]);txt(c,p.mark[1],110,this.ty(p.mark[0])-10,11,'#e8613c');
+    c.setLineDash([8,6]);c.lineWidth=4;c.strokeStyle='rgba(47,120,196,.55)';c.beginPath();for(let i=0;i<=100;i++){const t=i/100;const x=this.xt(t),y=this.ty(this.tgt(t));i?c.lineTo(x,y):c.moveTo(x,y)}c.stroke();c.setLineDash([]);
+    c.lineWidth=6;c.strokeStyle='#2f78c4';c.beginPath();for(let i=0;i<=20;i++){const t=tn+i/20*.12;if(t>1)break;const x=this.xt(t),y=this.ty(this.tgt(t));i?c.lineTo(x,y):c.moveTo(x,y)}c.stroke();
     c.lineWidth=4;c.strokeStyle='#e8613c';c.lineCap='round';c.beginPath();this.hist.forEach((h,i)=>{const x=this.xt(h.tn),y=this.ty(h.F);i?c.lineTo(x,y):c.moveTo(x,y)});c.stroke();
     const cx=this.xt(tn),cy=this.ty(this.F);c.beginPath();c.arc(cx,cy,8,0,Math.PI*2);c.fillStyle='#e8613c';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
-    // setpoint handle
     const sy=this.ty(this.set);c.beginPath();c.moveTo(326,sy);c.lineTo(342,sy-9);c.lineTo(342,sy+9);c.closePath();c.fillStyle='#ffd166';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();
-    c.setLineDash([2,4]);c.beginPath();c.moveTo(cx,sy);c.lineTo(326,sy);c.strokeStyle='rgba(74,52,40,.4)';c.lineWidth=1.5;c.stroke();c.setLineDash([]);
-    label(c,`炉内 ${Math.round(this.F)}℃ ／ 目標 ${Math.round(this.tgt(tn))}℃`,180,24+0,13);
-    // furnace icon
-    rr(c,268,380+8,70,40,8);c.fillStyle='#8d99a6';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();rr(c,280,396,46,22,5);c.fillStyle=glassCol(clamp((this.F-200)/700,0,.9));c.fill();c.stroke();
-    txt(c,'アニール炉',220,410,12,'#fff');
+    label(c,`${p.name} ${Math.round(this.F)}℃ ／ 目標 ${Math.round(this.tgt(tn))}℃`,180,24,13);
+    rr(c,262,392,80,40,18);c.fillStyle='#8b96a1';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();txt(c,'オートクレーブ',190,412,12,'#fff');
   }
 }
-/* --- 切断 --- */
-class Cut extends Mini{
-  constructor(p){super(p);this.s=null;this.cur=null;this.state='aim';this.snap=0}
-  down(x,y){if(this.state!=='aim')return;this.s={x,y};this.cur={x,y};this.touch=true}
-  move(x,y){if(this.touch)this.cur={x,y}}
-  up(x,y){if(!this.touch||this.state!=='aim')return;this.touch=false;const a=this.s,b={x,y};const dy=b.y-a.y,dx=b.x-a.x,ty=220;
-    if(Math.abs(dy)<30||Math.min(a.y,b.y)>ty+10||Math.max(a.y,b.y)<ty-10){coach('管をまたいで、上から下へまっすぐ一気に！','surprise',true);this.s=null;return}
-    const ang=Math.atan2(Math.abs(dx),Math.abs(dy))*180/Math.PI;const xAt=a.x+dx*(ty-a.y)/(dy||1);const off=Math.abs(xAt-180);
-    let s=100-ang*2.4-Math.max(0,off-3)*1.8;if(Math.abs(dy)>170)s-=8;
-    this.line={a,b};this.sc=clamp(s,0,100);this.state='snap';SFX.crack();
-    const[w,col]=judgeWord(this.sc);this.pop(w,180,130,col,26);coach(this.sc>=85?'きれいに切れた！':'ちょっと斜めだな…',this.sc>=85?'happy':'worried',true);
-  }
-  update(dt){this.t+=dt;if(this.state==='snap'){this.snap=Math.min(1,this.snap+dt*2);if(this.snap>=1){this.wait=(this.wait||0)+dt;if(this.wait>.7)this.finish(this.sc)}}
-    else if(this.t>1)coach('白い印の上を、ヤスリで一気に','normal')}
+/* --- 部品の組付け --- */
+const PARTS=[{name:'ミラー台座',x:180,y:152,w:34,h:22,col:'#55606b',sec:3},{name:'センサー台座',x:224,y:156,w:26,h:26,col:'#3d3a40',sec:2},{name:'モール留め具',x:60,y:290,w:16,h:30,col:'#8b96a1',sec:4}];
+class Assemble extends Mini{
+  constructor(p){super(p);this.raw=windShape();this.i=0;this.res=[];this.next()}
+  next(){const q=PARTS[this.i];this.part={...q,px:180,py:400};this.phase='place';this.press=false;this.held=0}
+  down(x,y){if(this.phase!=='place')return;const q=this.part;if(Math.abs(x-q.px)<36&&Math.abs(y-q.py)<36){this.drag=true;this.dx=q.px-x;this.dy=q.py-y}}
+  move(x,y){if(this.drag){this.part.px=x+this.dx;this.part.py=y+this.dy}}
+  up(){if(!this.drag)return;this.drag=false;const q=this.part,e=Math.hypot(q.px-q.x,q.py-q.y);
+    if(e>40){q.px=180;q.py=400;coach('点線の位置まで持っていけ','surprise',true);return}
+    this.posE=e;this.phase='press';SFX.clunk();coach(`${q.sec}秒しっかり押さえろ（時計は見るな）`,'normal',true)}
+  btn(k,d){if(k!=='press'||this.phase!=='press')return;
+    if(d){this.press=true;this.ps=this.t}else if(this.press){this.press=false;this.held=this.t-this.ps;const q=this.part,te=Math.abs(this.held-q.sec);
+      const sp=clamp(100-Math.max(0,this.posE-1.5)*5,0,100),st=clamp(100-Math.max(0,te-.15)*75,0,100),s=sp*.5+st*.5;this.res.push(s);this.judge(s,180,96);
+      this.pop(`${this.held.toFixed(1)}秒`,q.x,q.y-30,'#2f78c4',18);coach(te<.3?'規定どおりの時間だ':this.held<q.sec?'押さえる時間が短い！':'押さえすぎだ',te<.3?'happy':'worried',true);this.phase='wait';this.w=1.2}}
+  update(dt){this.t+=dt;if(this.phase==='wait'){this.w-=dt;if(this.w<=0){this.i++;if(this.i>=PARTS.length)this.finish(this.res.reduce((a,b)=>a+b,0)/this.res.length);else this.next()}}
+    else if(this.phase==='place'&&!this.drag)coach(`「${this.part.name}」を点線の位置へ`,'normal');if(this.press)hiss(.25,300);else hiss(0)}
   draw(c){
-    drawBg(c);const y=220,r=28;
-    if(this.state==='aim'){tubeH(c,24,340,y,r);}
-    else{const o=this.snap*30,rot=this.snap*.12;tubeH(c,24,180,y,r);c.save();c.translate(180+o,y);c.rotate(rot);tubeH(c,0,160,0,r);
-      const q=this.sc/100;c.beginPath();c.moveTo(0,-r);for(let i=1;i<=6;i++){c.lineTo((1-q)*(i%2?8:-2),-r+i*r/3)}c.strokeStyle=L;c.lineWidth=2;c.stroke();c.restore()}
-    c.setLineDash([5,5]);c.beginPath();c.moveTo(180,y-r-18);c.lineTo(180,y+r+18);c.strokeStyle='#fff';c.lineWidth=4;c.stroke();c.strokeStyle='rgba(74,52,40,.5)';c.lineWidth=1.5;c.stroke();c.setLineDash([]);
-    label(c,'印',180,y-r-32,12);
-    drawHand(c,60,y,1);
-    // ruler
-    rr(c,30,300,300,22,4);c.fillStyle='#ffe9a8';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();for(let x=40;x<330;x+=10){c.beginPath();c.moveTo(x,300);c.lineTo(x,x%50===0?314:308);c.lineWidth=1.5;c.stroke()}
-    const ln=this.line||(this.touch&&this.s?{a:this.s,b:this.cur}:null);
-    if(ln){c.beginPath();c.moveTo(ln.a.x,ln.a.y);c.lineTo(ln.b.x,ln.b.y);c.strokeStyle='rgba(255,255,255,.95)';c.lineWidth=3;c.stroke()}
-    if(this.touch&&this.cur){c.save();c.translate(this.cur.x+14,this.cur.y-14);c.rotate(-.6);rr(c,-6,-40,12,50,4);c.fillStyle='#8d99a6';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();rr(c,-7,8,14,26,6);c.fillStyle='#b5562e';c.fill();c.stroke();c.restore()}
-    if(this.state==='aim'&&!this.touch){const k=(this.t*1.2)%1;c.globalAlpha=1-k;c.beginPath();c.arc(180,y-60+k*120,12,0,Math.PI*2);c.fillStyle='#fff';c.fill();c.strokeStyle=L;c.lineWidth=2;c.stroke();c.globalAlpha=1}
+    drawBg(c);pathFill(c,this.raw);c.fillStyle=GLASS;c.fill();c.save();pathFill(c,this.raw);c.clip();c.lineWidth=30;c.strokeStyle='rgba(30,30,34,.8)';c.stroke();c.restore();pathFill(c,this.raw);c.lineWidth=3;c.strokeStyle=L;c.stroke();
+    for(let j=0;j<this.i;j++){const q=PARTS[j];rr(c,q.x-q.w/2,q.y-q.h/2,q.w,q.h,4);c.fillStyle=q.col;c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke()}
+    rr(c,120,388,120,42,8);c.fillStyle='#5b8fc9';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();txt(c,'部品トレイ',180,436-4,10,'#fff');
+    const q=this.part;if(!q)return;
+    if(this.phase==='place'){c.setLineDash([4,4]);rr(c,q.x-q.w/2-3,q.y-q.h/2-3,q.w+6,q.h+6,5);c.lineWidth=2.5;c.strokeStyle='#ffd166';c.stroke();c.setLineDash([]);
+      c.beginPath();c.moveTo(q.x-20,q.y);c.lineTo(q.x+20,q.y);c.moveTo(q.x,q.y-20);c.lineTo(q.x,q.y+20);c.strokeStyle='rgba(255,209,102,.8)';c.lineWidth=1.5;c.stroke()}
+    {rr(c,q.px-q.w/2,q.py-q.h/2,q.w,q.h,4);c.fillStyle=q.col;c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke()}
+    if(this.phase==='press'&&this.press){hand(c,q.px,q.py-4);c.strokeStyle='rgba(232,97,60,.7)';c.lineWidth=2;for(let k=0;k<3;k++){const r=18+((this.t*30+k*8)%24);c.beginPath();c.arc(q.px,q.py,r,0,Math.PI*2);c.stroke()}}
+    rr(c,20,52,320,34,10);c.fillStyle='#fff';c.fill();c.lineWidth=2.5;c.strokeStyle=L;c.stroke();
+    txt(c,`部品 ${this.i+1}/${PARTS.length}：${q.name}　押さえ ${q.sec}秒`,180,70,13);
   }
 }
-const TYPES={heat:Heat,rotate:Rotate,blow:Blow,join:Join,branch:Branch,coil:Coil,anneal:Anneal,cut:Cut};
+/* --- 検査 --- */
+const DEF_TYPES=['傷','気泡','欠け','異物'];
+class Inspect extends Mini{
+  constructor(p){super(p);const prev=S.scores.slice(0,S.stepIdx).filter(v=>v!=null);const avg=prev.length?prev.reduce((a,b)=>a+b,0)/prev.length:70;
+    this.n=clamp(1+Math.round((1-avg/100)*4)+(Math.random()<.4?1:0),1,5);this.R={x:40,y:110,w:280,h:220};this.d=[];
+    for(let i=0;i<this.n;i++){const ty=DEF_TYPES[(Math.random()*4)|0];let x,y;if(ty==='欠け'){const s=(Math.random()*4)|0;x=s<2?rand(60,300):(s===2?40:320);y=s>=2?rand(130,310):(s===0?110:330)}else{x=rand(70,290);y=rand(140,300)}this.d.push({ty,x,y,a:rand(0,3),found:false})}
+    this.lx=180;this.ly=220;this.falses=[];this.dur=20}
+  down(x,y){this.touch=true;this.lx=x;this.ly=y;this.sx=x;this.sy=y;this.st=this.t}
+  move(x,y){if(this.touch){this.lx=x;this.ly=y}}
+  up(x,y){this.touch=false;if(Math.hypot(x-this.sx,y-this.sy)<14&&this.t-this.st<.5){const hit=this.d.find(d=>!d.found&&Math.hypot(d.x-x,d.y-y)<24);
+    if(hit){hit.found=true;SFX.good();this.pop(hit.ty+'発見！',hit.x,hit.y-24,'#e8613c',16);coach('よく見つけた！','happy',true)}else{this.falses.push({x,y});SFX.bad();this.pop('不良なし',x,y-20,'#7d7a85',14);coach('そこは不良じゃないぞ','worried',true)}}}
+  btn(k,d){if(k==='done'&&d)this.end()}
+  end(){if(this.ended)return;this.ended=true;const f=this.d.filter(d=>d.found).length;this.s=f/this.n*100-this.falses.length*12;this.missed=this.n-f;
+    coach(this.missed?`見逃しが${this.missed}個あったぞ`:'見逃しゼロ！',this.missed?'worried':'happy',true);this.finish(this.s)}
+  update(dt){this.t+=dt;if(this.t>1&&!this.touch&&!this.ended)coach('ライトを斜めから当てて、よーく見ろ','normal');if(this.t>=this.dur)this.end()}
+  draw(c){
+    const R=this.R;drawBg(c,true);timerBar(c,1-this.t/this.dur,'のこり','#fff');
+    rr(c,R.x-16,R.y-16,R.w+32,R.h+32,10);const g=c.createLinearGradient(0,R.y,0,R.y+R.h);g.addColorStop(0,'#f6fbff');g.addColorStop(1,'#d8e8f2');c.fillStyle=g;c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
+    plate(c,R.x,R.y,R.w,R.h,'rgba(200,232,248,.55)');
+    this.d.forEach(d=>{const near=clamp(1-Math.hypot(d.x-this.lx,d.y-this.ly)/85,0,1),al=this.done?1:.1+near*.9;c.save();c.globalAlpha=al;c.translate(d.x,d.y);
+      if(d.ty==='傷'){c.rotate(d.a);c.beginPath();c.moveTo(-16,0);c.quadraticCurveTo(0,-4,16,2);c.strokeStyle='#fff';c.lineWidth=2;c.stroke();c.strokeStyle='rgba(61,58,64,.5)';c.lineWidth=.8;c.stroke()}
+      else if(d.ty==='気泡'){c.beginPath();c.ellipse(0,0,5,3.5,d.a,0,Math.PI*2);c.strokeStyle='rgba(61,58,64,.7)';c.lineWidth=1.5;c.stroke();c.fillStyle='rgba(255,255,255,.8)';c.fill()}
+      else if(d.ty==='欠け'){c.beginPath();c.moveTo(-8,-4);c.lineTo(0,6);c.lineTo(8,-4);c.closePath();c.fillStyle='#2c3640';c.fill()}
+      else{c.beginPath();c.arc(0,0,3.5,0,Math.PI*2);c.fillStyle='#5a4a3a';c.fill()}
+      c.restore();
+      if(d.found){c.beginPath();c.arc(d.x,d.y,18,0,Math.PI*2);c.strokeStyle='#e8413c';c.lineWidth=3;c.stroke()}
+      else if(this.done){c.setLineDash([4,4]);c.beginPath();c.arc(d.x,d.y,18,0,Math.PI*2);c.strokeStyle='#ffd166';c.lineWidth=3;c.stroke();c.setLineDash([]);txt(c,'見逃し',d.x,d.y+28,11,'#ffd166','center',L)}});
+    this.falses.forEach(f=>{c.beginPath();c.moveTo(f.x-6,f.y-6);c.lineTo(f.x+6,f.y+6);c.moveTo(f.x+6,f.y-6);c.lineTo(f.x-6,f.y+6);c.strokeStyle='#7d7a85';c.lineWidth=2;c.stroke()});
+    if(!this.done){const rg=c.createRadialGradient(this.lx,this.ly,4,this.lx,this.ly,85);rg.addColorStop(0,'rgba(255,255,220,.55)');rg.addColorStop(1,'rgba(255,255,220,0)');c.fillStyle=rg;c.beginPath();c.arc(this.lx,this.ly,85,0,Math.PI*2);c.fill()}
+    txt(c,`見つけた ${this.d.filter(d=>d.found).length}`,100,362,15,'#fff');txt(c,'傷・気泡・欠け・異物',250,362,12,'#cfe3ef');
+  }
+}
+const TYPES={score:Score,grind:Grind,print:Print,temper:Temper,drill:Drill,seal:Seal,align:Align,bubble:Bubble,curve:Curve,assemble:Assemble,inspect:Inspect};
 const CONTROLS={
-  heat:[{k:'hold',label:'🔥 炎に入れる',hold:true,cls:'red'}],
-  rotate:[],
-  blow:[{k:'hold',label:'💨 吹く',hold:true,cls:'blue'},{k:'done',label:'✓ 完成',cls:'green sub'}],
-  join:[{k:'tap',label:'🤝 つなぐ！',cls:'red'}],
-  branch:[{k:'tap',label:'🔥 穴あけ！',cls:'red'}],
-  coil:[],anneal:[],cut:[],
+  grind:[{k:'press',label:'⚙ 押し付ける',hold:true,cls:'red'}],
+  print:[{k:'ok',label:'✓ 合わせOK',cls:'green'}],
+  temper:[{k:'out',label:'🔥 取り出す！',cls:'red'},{k:'air',label:'💨 風冷',hold:true,cls:'blue'}],
+  drill:[{k:'drill',label:'🔩 削る',hold:true,cls:'red'},{k:'flip',label:'↻ 裏返す',cls:'white sub'}],
+  align:[{k:'drop',label:'⬇ 下ろす',cls:'red'}],
+  assemble:[{k:'press',label:'✋ 押さえる',hold:true,cls:'red'}],
+  inspect:[{k:'done',label:'✓ 検査完了',cls:'green'}],
 };
 
 /* ---------------- product drawing ---------------- */
 function drawProduct(c,id,q,t=0,seed=7){
-  const rnd=mulberry(seed),wob=(1-q)*7;c.lineJoin='round';c.lineCap='round';
-  const fill='rgba(200,236,250,.6)',hl='rgba(255,255,255,.9)';
-  c.save();
-  c.fillStyle='rgba(74,52,40,.12)';c.beginPath();c.ellipse(150,222,90,10,0,0,Math.PI*2);c.fill();
-  if(id==='tube'){
-    const x=150,top=24,r=26,cy=196-r;c.beginPath();c.moveTo(x-r-5,top);c.quadraticCurveTo(x-r,top+3,x-r,top+12);c.lineTo(x-r,cy);c.ellipse(x,cy,r,r+wob*1.2,0,Math.PI,0,true);c.lineTo(x+r,top+12);c.quadraticCurveTo(x+r,top+3,x+r+5,top);
-    c.fillStyle=fill;c.fill();c.lineWidth=3.5;c.strokeStyle=L;c.stroke();
-    c.beginPath();c.moveTo(x-r+8,top+20);c.lineTo(x-r+8,cy);c.strokeStyle=hl;c.lineWidth=4;c.stroke();
-    c.strokeStyle='rgba(74,52,40,.5)';c.lineWidth=2;for(let i=0;i<5;i++){c.beginPath();c.moveTo(x+r-12,70+i*22);c.lineTo(x+r-3,70+i*22);c.stroke()}
-  }else if(id==='dome'){
-    rr(c,50,182,200,22,8);c.fillStyle='#b8c2cc';c.fill();c.lineWidth=3.5;c.strokeStyle=L;c.stroke();
-    const dome=(R,f,lw)=>{c.beginPath();for(let k=0;k<=40;k++){const a=Math.PI+k/40*Math.PI;const rr_=R+wob*Math.sin(a*5+rnd()*0);c.lineTo(150+Math.cos(a)*rr_,182+Math.sin(a)*rr_)}c.closePath();c.fillStyle=f;c.fill();c.lineWidth=lw;c.strokeStyle=L;c.stroke()};
-    dome(92,fill,3.5);dome(64,'rgba(220,245,255,.5)',2.5);
-    c.beginPath();c.arc(150,182,78,Math.PI*1.15,Math.PI*1.4);c.strokeStyle=hl;c.lineWidth=5;c.stroke();
-  }else if(id==='coil'){
-    rr(c,108,20,84,190,16);c.fillStyle=fill;c.fill();c.lineWidth=3.5;c.strokeStyle=L;c.stroke();
-    rr(c,120,6,60,18,6);c.fillStyle='rgba(230,240,245,.9)';c.fill();c.stroke();
-    c.lineWidth=5;c.strokeStyle='rgba(74,110,140,.75)';for(let i=0;i<9;i++){const y=44+i*17+(rnd()-.5)*wob*3;c.beginPath();c.ellipse(150,y,30,6,0,0,Math.PI*2);c.stroke()}
-    c.lineWidth=12;c.strokeStyle=L;[[40,'r'],[188,'r']].forEach(([y])=>{c.beginPath();c.moveTo(192,y);c.lineTo(236,y);c.stroke()});c.lineWidth=7;c.strokeStyle=fill;[40,188].forEach(y=>{c.beginPath();c.moveTo(192,y);c.lineTo(236,y);c.stroke()});
-    c.beginPath();c.moveTo(118,40);c.lineTo(118,190);c.strokeStyle=hl;c.lineWidth=4;c.stroke();
-  }else if(id==='adapter'){
-    const br=(ang,len)=>{c.save();c.translate(150,118);c.rotate(ang+(rnd()-.5)*wob*.04);rr(c,30,-13,len,26,8);c.fillStyle=fill;c.fill();c.lineWidth=3.5;c.strokeStyle=L;c.stroke();rr(c,24+len,-17,12,34,5);c.fill();c.stroke();c.restore()};
-    br(0,58);br(Math.PI,58);br(-Math.PI/2,50);br(Math.PI/2,50);
-    c.beginPath();c.arc(150,118,46,0,Math.PI*2);c.fillStyle=fill;c.fill();c.lineWidth=3.5;c.strokeStyle=L;c.stroke();
-    c.beginPath();c.arc(150,118,34,Math.PI*1.1,Math.PI*1.45);c.strokeStyle=hl;c.lineWidth=5;c.stroke();
+  const rnd=mulberry(seed),wob=(1-q);c.lineJoin='round';c.lineCap='round';c.save();
+  c.fillStyle='rgba(61,58,64,.12)';c.beginPath();c.ellipse(150,224,100,9,0,0,Math.PI*2);c.fill();
+  if(id==='fridge'){
+    plate(c,92,14,116,204,GLASS,8);
+    c.save();rr(c,92,14,116,204,8);c.clip();c.fillStyle='rgba(28,28,32,.92)';
+    const seg=(x,y,w,h)=>{if(wob>.35){for(let k=0;k<6;k++){if(rnd()<wob*.5)continue;const f=k/6;w>h?c.fillRect(x+w*f,y,w/6+1,h):c.fillRect(x,y+h*f,w,h/6+1)}}else c.fillRect(x,y,w,h)};
+    seg(92,14,116,16);seg(92,202,116,16);seg(92,14,14,204);seg(194,14,14,204);c.restore();rr(c,92,14,116,204,8);c.lineWidth=3;c.strokeStyle=L;c.stroke();
+  }else if(id==='school'){
+    rr(c,46,14,208,206,6);c.fillStyle='#c4ccd3';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();plate(c,60,28,180,178,GLASS,3);
+    c.beginPath();c.arc(222,117,8,0,Math.PI*2);c.fillStyle='#eaf1f5';c.fill();c.lineWidth=2.5;c.stroke();rr(c,214,96,16,42,8);c.fillStyle='#8b96a1';c.fill();c.stroke();
+    rr(c,70,178,42,20,5);c.fillStyle='#fff';c.fill();c.lineWidth=2;c.stroke();txt(c,'強化',91,188,11);
+    if(wob>.45){c.strokeStyle='rgba(61,58,64,.5)';c.lineWidth=1.5;c.beginPath();c.moveTo(70,50);c.quadraticCurveTo(130,40+wob*20,230,50);c.stroke()}
+  }else if(id==='igu'){
+    plate(c,78,10,170,186,GLASS,4);plate(c,56,30,170,186,GLASS,4);
+    rr(c,64,38,154,170,3);c.lineWidth=9;c.strokeStyle=`rgba(150,160,170,${.9})`;c.stroke();c.lineWidth=1.5;c.strokeStyle=L;c.stroke();
+    for(let i=0;i<10;i++){c.beginPath();c.arc(70+i*15,43,1.3,0,Math.PI*2);c.fillStyle='#fff';c.fill()}
+    if(wob>.4){c.fillStyle='rgba(255,255,255,.75)';for(let i=0;i<14;i++){c.beginPath();c.arc(90+rnd()*100,150+rnd()*50,1.5+rnd()*2.5,0,Math.PI*2);c.fill()}}
+  }else if(id==='lami'){
+    c.beginPath();c.moveTo(232,24);c.lineTo(252,10);c.lineTo(252,186);c.lineTo(232,200);c.closePath();c.fillStyle='rgba(170,215,235,.9)';c.fill();c.lineWidth=3;c.strokeStyle=L;c.stroke();
+    c.beginPath();c.moveTo(242,17);c.lineTo(242,193);c.strokeStyle='rgba(120,190,140,.9)';c.lineWidth=4;c.stroke();
+    plate(c,52,24,180,176,GLASS,3);c.save();rr(c,52,24,180,176,3);c.clip();c.strokeStyle='rgba(61,58,64,.35)';c.lineWidth=1.3;const ox=96,oy=70;for(let i=0;i<9;i++){const a=i/9*Math.PI*2;c.beginPath();c.moveTo(ox,oy);c.lineTo(ox+Math.cos(a)*34,oy+Math.sin(a)*34);c.stroke()}[12,24].forEach(r=>{c.beginPath();c.arc(ox,oy,r,0,Math.PI*2);c.stroke()});c.restore();
+    if(wob>.4){c.fillStyle='rgba(255,255,255,.8)';for(let i=0;i<8;i++){c.beginPath();c.arc(110+rnd()*100,110+rnd()*70,3+rnd()*4,0,Math.PI*2);c.fill()}}
   }else{
-    c.beginPath();c.moveTo(48,60);c.lineTo(48,182);c.ellipse(150,182,102,22+wob,0,Math.PI,0,true);c.lineTo(252,60);c.fillStyle=fill;c.fill();c.lineWidth=3.5;c.strokeStyle=L;c.stroke();
-    c.beginPath();c.ellipse(150,60,102,22,0,0,Math.PI*2);c.fillStyle='rgba(220,245,255,.7)';c.fill();c.stroke();
-    c.beginPath();c.ellipse(150,182,102,22+wob,0,0,Math.PI);c.strokeStyle='rgba(74,52,40,.35)';c.lineWidth=2;c.stroke();
-    c.beginPath();c.moveTo(66,80);c.lineTo(66,170);c.strokeStyle=hl;c.lineWidth=5;c.stroke();
+    c.translate(-30,-104);c.scale(1,.95);const P=windShape();pathFill(c,P);c.fillStyle=GLASS;c.fill();c.save();pathFill(c,P);c.clip();c.lineWidth=40;c.strokeStyle='rgba(30,30,34,.9)';c.stroke();c.restore();pathFill(c,P);c.lineWidth=3;c.strokeStyle=L;c.stroke();
+    PARTS.forEach(p=>{rr(c,p.x-p.w/2+(rnd()-.5)*wob*14,p.y-p.h/2,p.w,p.h,4);c.fillStyle=p.col;c.fill();c.lineWidth=2.5;c.stroke()});
+    c.strokeStyle='rgba(255,255,255,.8)';c.lineWidth=6;c.beginPath();c.moveTo(120,300);c.lineTo(170,190);c.stroke();
   }
-  if(q<.55){c.fillStyle='rgba(255,255,255,.8)';c.strokeStyle='rgba(74,52,40,.5)';c.lineWidth=1.5;for(let i=0;i<5;i++){c.beginPath();c.arc(110+rnd()*80,60+rnd()*120,2+rnd()*3,0,Math.PI*2);c.fill();c.stroke()}}
-  if(q>=.75){for(let i=0;i<5;i++){const a=t*2+i*1.3,x=60+((i*53)%180),y=30+((i*71)%170),s=(Math.sin(a)+1)*5+2;c.fillStyle='#ffd166';c.strokeStyle=L;c.lineWidth=1.5;c.beginPath();for(let k=0;k<8;k++){const rr_=k%2?s*.35:s;const aa=k*Math.PI/4;c.lineTo(x+Math.cos(aa)*rr_,y+Math.sin(aa)*rr_)}c.closePath();c.fill();c.stroke()}}
   c.restore();
-}
-function drawStrain(c,strain,id){
-  c.fillStyle='#1d1b2e';c.fillRect(0,0,140,140);
-  c.save();c.translate(70,72);
-  c.beginPath();if(id==='tube'||id==='coil')rr(c,-22,-50,44,100,20);else c.arc(0,0,48,0,Math.PI*2);c.clip();
-  c.fillStyle='#2a2840';c.fillRect(-70,-70,140,140);
-  const n=Math.round(strain*7);for(let i=n;i>=1;i--){c.beginPath();c.arc(0,0,i*8,0,Math.PI*2);c.fillStyle=`hsla(${(i*55)%360},90%,60%,${clamp(strain*1.3,0,.85)})`;c.fill()}
-  c.restore();c.strokeStyle='rgba(255,255,255,.5)';c.lineWidth=2;c.beginPath();if(id==='tube'||id==='coil')rr(c,48,22,44,100,20);else c.arc(70,72,48,0,Math.PI*2);c.stroke();
+  if(q>=.75){for(let i=0;i<5;i++){const a=t*2+i*1.3,x=50+((i*53)%200),y=26+((i*71)%170),s=(Math.sin(a)+1)*5+2;c.fillStyle='#ffd166';c.strokeStyle=L;c.lineWidth=1.5;c.beginPath();for(let k=0;k<8;k++){const r=k%2?s*.35:s;const aa=k*Math.PI/4;c.lineTo(x+Math.cos(aa)*r,y+Math.sin(aa)*r)}c.closePath();c.fill();c.stroke()}}
 }
 
 /* ---------------- screens ---------------- */
 let G=null,raf=0,lastTs=0,cv=null,ctx=null,scale=1,ptr=null,finalRaf=0;
 function stopLoop(){cancelAnimationFrame(raf);raf=0;cancelAnimationFrame(finalRaf);finalRaf=0;hiss(0);G=null}
-function setScreen(html){stopLoop();app.innerHTML=html;app.scrollTop=0}
+function setScreen(html){stopLoop();app.innerHTML=html}
 function soundBtn(){return `<button class="btn white small" id="sndBtn" aria-label="音">${soundOn?'🔊':'🔈'}</button>`}
-function bindSound(){const b=$('#sndBtn');if(b)b.onclick=()=>{soundOn=!soundOn;store.set('glass_sound',soundOn);b.textContent=soundOn?'🔊':'🔈';if(soundOn)SFX.tap()}}
-
+function bindSound(){const b=$('#sndBtn');if(b)b.onclick=()=>{soundOn=!soundOn;store.set('plate_sound',soundOn);b.textContent=soundOn?'🔊':'🔈';if(soundOn)SFX.tap()}}
+const FACTORY_SVG=(()=>{
+  const g='rgba(190,228,246,.85)';let s=`<svg viewBox="0 0 340 230" style="width:100%;max-width:400px;max-height:100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">`;
+  s+=`<rect x="0" y="0" width="340" height="14" fill="#ffd166" stroke="${L}" stroke-width="3"/><rect x="150" y="10" width="40" height="18" rx="4" fill="#e8613c" stroke="${L}" stroke-width="3"/><path d="M170 28 V64" stroke="${L}" stroke-width="3"/><rect x="128" y="62" width="84" height="8" rx="3" fill="#8b96a1" stroke="${L}" stroke-width="2.5"/><rect x="110" y="72" width="120" height="8" rx="2" fill="${g}" stroke="${L}" stroke-width="2.5"/>`;
+  s+=`<path d="M14 176 L40 70 L48 70 L22 176 Z" fill="#8b96a1" stroke="${L}" stroke-width="3"/>`;for(let i=0;i<4;i++)s+=`<rect x="${30+i*10}" y="${78+i*4}" width="8" height="${96-i*4}" fill="${g}" stroke="${L}" stroke-width="2" transform="skewX(-14)"/>`;
+  s+=`<rect x="250" y="90" width="80" height="86" rx="6" fill="#6b7783" stroke="${L}" stroke-width="3"/><rect x="260" y="104" width="60" height="38" rx="4" fill="#ffae5c" stroke="${L}" stroke-width="2.5"/><text x="290" y="160" font-size="11" font-weight="800" fill="#fff" text-anchor="middle" font-family="sans-serif">強化炉</text>`;
+  s+=`<rect x="90" y="146" width="150" height="10" rx="3" fill="#8b96a1" stroke="${L}" stroke-width="2.5"/>`;for(let x=96;x<240;x+=16)s+=`<circle cx="${x}" cy="160" r="5" fill="#b9c3cc" stroke="${L}" stroke-width="2"/>`;s+=`<rect x="120" y="136" width="70" height="8" rx="2" fill="${g}" stroke="${L}" stroke-width="2.5"/>`;
+  s+=`<rect x="0" y="176" width="340" height="54" fill="#98a3ad"/><rect x="0" y="176" width="340" height="7" fill="#ffd166"/><path d="M0 176 H340" stroke="${L}" stroke-width="3"/>`;
+  return s+`</svg>`})();
 function screenTitle(){
   setScreen(`<div class="title">
-    <div class="logo fade"><div class="sub">池田硝子 バーナーワーク工房</div><h1>めざせ！<br>ガラス職人</h1><div class="tag">新人研修ゲーム</div></div>
+    <div class="logo fade"><div class="sub">イケダガラス 板ガラス工場</div><h1>めざせ！<br>ガラスのプロ</h1><div class="tag">新人研修ゲーム</div></div>
     <div class="hero" id="hero"></div>
     <div class="titlebtns"><button class="btn wide" id="go">はじめる</button><button class="btn white wide small" id="setting">せってい</button></div>
   </div>`);
-  $('#hero').innerHTML=`<svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="150" cy="206" rx="120" ry="10" fill="rgba(74,52,40,.15)"/>
-    <g transform="translate(170,40)"><path d="M30 0 L50 0 L50 60 L78 130 Q84 150 64 150 L16 150 Q-4 150 2 130 L30 60 Z" fill="rgba(200,236,250,.75)" stroke="${L}" stroke-width="4" stroke-linejoin="round"/><path d="M8 118 L72 118 L78 130 Q84 150 64 150 L16 150 Q-4 150 2 130 Z" fill="rgba(143,211,244,.8)"/><path d="M36 10 L36 58" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M26 0 L54 0" stroke="${L}" stroke-width="6" stroke-linecap="round"/></g>
-    <g transform="translate(118,110)"><path d="M0 70 Q-18 40 0 0 Q18 40 0 70 Z" fill="#ff8a50" opacity=".9"/><path d="M0 70 Q-9 48 0 26 Q9 48 0 70 Z" fill="#4c86ff"/><rect x="-12" y="70" width="24" height="26" rx="4" fill="#b8c2cc" stroke="${L}" stroke-width="3"/></g>
-    <g transform="translate(-6,70) scale(1.25)">${chibi('me','happy').replace('<svg','<svg width="100" height="112"')}</g>
-  </svg>`;
-  $('#go').onclick=()=>{ac();SFX.tap();if(!store.get('glass_intro',false))screenIntro();else screenSelect()};
+  $('#hero').innerHTML=`<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg"><ellipse cx="160" cy="206" rx="130" ry="10" fill="rgba(61,58,64,.15)"/>
+    <path d="M150 200 L196 40 L206 40 L162 200 Z" fill="#8b96a1" stroke="${L}" stroke-width="4" stroke-linejoin="round"/>
+    <g transform="skewX(-14) translate(48,0)"><rect x="160" y="34" width="110" height="150" rx="4" fill="rgba(190,228,246,.85)" stroke="${L}" stroke-width="4"/><path d="M180 170 L230 50" stroke="#fff" stroke-width="8" stroke-linecap="round"/><path d="M200 172 L246 66" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g>
+    <g transform="translate(10,64) scale(1.3)">${chibi('me','happy').replace('<svg','<svg width="100" height="112"')}</g></svg>`;
+  $('#go').onclick=()=>{ac();SFX.tap();if(!store.get('plate_intro',false))screenIntro();else screenSelect()};
   $('#setting').onclick=()=>{SFX.tap();screenSettings()};
 }
-const FACTORY_SVG=(()=>{
-  const g='rgba(200,236,250,.85)';let s=`<svg viewBox="0 0 340 230" style="width:100%;max-width:400px;max-height:100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">`;
-  s+=`<rect x="20" y="14" width="120" height="78" rx="8" fill="#cfe9f7" stroke="${L}" stroke-width="3"/><path d="M80 14 V92 M20 53 H140" stroke="${L}" stroke-width="3"/><path d="M34 28 L52 46 M96 26 L116 46" stroke="#fff" stroke-width="4" stroke-linecap="round"/>`;
-  s+=`<rect x="170" y="20" width="150" height="10" rx="3" fill="#b9825a" stroke="${L}" stroke-width="3"/><rect x="170" y="78" width="150" height="10" rx="3" fill="#b9825a" stroke="${L}" stroke-width="3"/>`;
-  s+=`<path d="M185 20 v-14 h8 v14 Z" fill="${g}" stroke="${L}" stroke-width="2.5"/><path d="M205 20 q-8 -6 0 -18 h6 q8 12 0 18 Z" fill="${g}" stroke="${L}" stroke-width="2.5"/><circle cx="240" cy="10" r="10" fill="${g}" stroke="${L}" stroke-width="2.5"/><path d="M270 20 l6 -16 h8 l6 16 Z" fill="${g}" stroke="${L}" stroke-width="2.5"/><rect x="298" y="2" width="10" height="18" rx="4" fill="${g}" stroke="${L}" stroke-width="2.5"/>`;
-  s+=`<path d="M186 78 v-30 h10 v12 l14 18 Z" fill="${g}" stroke="${L}" stroke-width="2.5"/><rect x="222" y="40" width="22" height="38" rx="6" fill="${g}" stroke="${L}" stroke-width="2.5"/><path d="M226 46 q7 4 14 0 M226 54 q7 4 14 0 M226 62 q7 4 14 0 M226 70 q7 4 14 0" stroke="#5a8fb0" stroke-width="2" fill="none"/><path d="M262 78 q-10 -16 6 -30 h4 q16 14 6 30 Z" fill="${g}" stroke="${L}" stroke-width="2.5"/><path d="M296 78 v-34 h10 v34 Z" fill="${g}" stroke="${L}" stroke-width="2.5"/>`;
-  s+=`<rect x="0" y="176" width="340" height="54" fill="#b9825a"/><rect x="0" y="176" width="340" height="8" fill="#d39a6c"/><path d="M0 176 H340" stroke="${L}" stroke-width="3"/>`;
-  [70,270].forEach(x=>{s+=`<path d="M${x} 120 Q${x-14} 98 ${x} 70 Q${x+14} 98 ${x} 120 Z" fill="#ff9a5c" opacity=".85"/><path d="M${x} 120 Q${x-7} 106 ${x} 92 Q${x+7} 106 ${x} 120 Z" fill="#4c86ff"/><rect x="${x-7}" y="120" width="14" height="44" rx="3" fill="#b8c2cc" stroke="${L}" stroke-width="3"/><rect x="${x-20}" y="160" width="40" height="18" rx="5" fill="#8d99a6" stroke="${L}" stroke-width="3"/>`});
-  return s+`</svg>`})();
 const INTRO=[
-  ['boss','happy','ようこそ、池田硝子へ！ わしが工場長だ。今日から君もガラス職人の仲間だな。'],
-  ['boss','normal','うちではバーナーの炎でガラス管を溶かして、研究や実験で使う「理化学ガラス器具」を作っている。'],
-  ['boss','normal','温度、タイミング、息の加減…。どの工程にも、人の手でしかできない“さじ加減”がある。'],
-  ['boss','happy','工程ごとにコツを教えるから、ひとつずつ体で覚えていこう。'],
-  ['pres','happy','社長です。いい製品ができたら、ぜひ私にも見せてくださいね。'],
-  ['pres','normal','ひとつの仕事を何度も繰り返して身につけ、次の仕事につないでいく。焦らずいきましょう。'],
+  ['boss','happy','ようこそ！ わしが工場長だ。今日から君も、板ガラスづくりの仲間だな。'],
+  ['boss','normal','うちは板ガラスの総合メーカー。家電や建物、自動車に使うガラスを、切って、磨いて、強くして、貼り合わせて届けている。'],
+  ['boss','normal','大きな機械が動く工場でも、仕上がりを決めるのは人の目と手の“さじ加減”だ。'],
+  ['boss','happy','川越・川本・太田、それぞれの工場の仕事を、ひとつずつ体で覚えていこう。'],
+  ['pres','happy','社長です。いいガラスができたら、ぜひ私にも見せてくださいね。'],
+  ['pres','normal','絶えず挑戦し、成長し、相手を思って仕事をする。それが私たちのやり方です。焦らずいきましょう。'],
   ['me','happy','はい！ よろしくお願いします！'],
 ];
 function screenIntro(i=0){
   const[who,mood,text]=INTRO[i];
-  setScreen(`<div class="dlg" id="dlg"><div style="flex:1;display:flex;align-items:center;justify-content:center;min-height:0">${FACTORY_SVG}</div><div class="who pop">${chibi(who,mood)}</div><div class="box fade"><span class="name" style="${who==='me'?'background:#5fae73':who==='pres'?'background:#3b7dd8':''}">${NAMES[who]}</span>${text}<span class="next">タップで次へ ▼</span></div></div>`);
-  $('#dlg').onclick=()=>{SFX.tap();if(i+1<INTRO.length)screenIntro(i+1);else{store.set('glass_intro',true);screenSelect()}};
+  setScreen(`<div class="dlg" id="dlg"><div style="flex:1;display:flex;align-items:center;justify-content:center;min-height:0">${FACTORY_SVG}</div><div class="who pop">${chibi(who,mood)}</div><div class="box fade"><span class="name" style="${who==='me'?'background:#5b8fc9':who==='pres'?'background:#3d3a40':''}">${NAMES[who]}</span>${text}<span class="next">タップで次へ ▼</span></div></div>`);
+  $('#dlg').onclick=()=>{SFX.tap();if(i+1<INTRO.length)screenIntro(i+1);else{store.set('plate_intro',true);screenSelect()}};
 }
 function screenSelect(){
   setScreen(`<div class="topbar"><button class="btn white small" id="back">◀</button><h2>製品をえらぶ</h2>${soundBtn()}</div>
-  <div class="scroll"><div class="talk" style="margin-bottom:16px"><div class="face">${chibi('boss','normal')}</div><div class="bub"><small>工場長</small>注文が入っているぞ。まずは試験管から始めよう。Bランク以上で次の製品に進めるぞ。</div></div>
+  <div class="scroll"><div class="talk" style="margin-bottom:16px"><div class="face">${chibi('boss','normal')}</div><div class="bub"><small>工場長</small>注文が入っているぞ。まずは冷蔵庫用の強化ガラスからだ。Bランク以上で次の製品に進めるぞ。</div></div>
   <div class="col" id="list"></div></div>`);
   bindSound();$('#back').onclick=()=>{SFX.tap();screenTitle()};
   const list=$('#list');
   PRODUCTS.forEach((pd,i)=>{
     const un=isUnlocked(i),b=S.best[pd.id];
     const el=document.createElement('div');el.className='card pcard fade'+(un?'':' locked');el.style.animationDelay=(i*60)+'ms';
-    el.innerHTML=`<canvas width="192" height="154"></canvas><div style="flex:1;min-width:0"><div class="lv">${'★'.repeat(pd.lv)}${'☆'.repeat(5-pd.lv)} ・ ${pd.steps.length}工程</div><h3>${pd.name}</h3><p>${un?pd.desc:'🔒 ひとつ前の製品でBランク以上をとると解放'}</p></div>${b?`<div class="best rank${b.rank}">${b.rank}</div>`:''}`;
+    el.innerHTML=`<canvas width="192" height="154"></canvas><div style="flex:1;min-width:0"><div class="lv">${'★'.repeat(pd.lv)}${'☆'.repeat(5-pd.lv)}<span class="fac">${pd.fac}</span></div><h3>${pd.name}</h3><p>${un?pd.desc:'🔒 ひとつ前の製品でBランク以上をとると解放'}</p></div>${b?`<div class="best rank${b.rank}">${b.rank}</div>`:''}`;
     const cc=el.querySelector('canvas').getContext('2d');cc.scale(.64,.64);drawProduct(cc,pd.id,1,0);
     el.onclick=()=>{if(!un){SFX.bad();return}SFX.tap();S.prod=pd;screenOrder()};
     list.appendChild(el);
   });
 }
-function flowChips(pd,cur=-1){return pd.steps.map((s,i)=>`${i?'<span class="arrow">›</span>':''}<span class="chip ${i<cur?'done':i===cur?'now':''}">${STEP_ICON[s.type]} ${s.name}</span>`).join('')}
+function flowChips(pd,cur=-1){return pd.steps.map((s,i)=>`${i?'<span class="arrow">›</span>':''}<span class="chip ${i<cur?'done':i===cur?'now':''}">${ICON[s.type]} ${s.name}</span>`).join('')}
 function screenOrder(){
   const pd=S.prod;
   setScreen(`<div class="topbar"><button class="btn white small" id="back">◀</button><h2>注文票</h2>${soundBtn()}</div>
-  <div class="scroll"><div class="order fade"><div class="stamp">受注<br>OK</div><div class="muted" style="font-size:13px;font-weight:800">ご注文品</div><h2 style="font-size:24px;margin:4px 0 8px">${pd.name}</h2>
-  <canvas id="pv" width="300" height="240" style="width:100%;max-width:300px;display:block;margin:0 auto;background:#f4ecdf;border-radius:14px"></canvas>
+  <div class="scroll"><div class="order fade"><div class="stamp">受注<br>OK</div><div class="muted" style="font-size:13px;font-weight:800">ご注文品 ・ 製造：${pd.fac}</div><h2 style="font-size:22px;margin:4px 0 8px;padding-right:60px">${pd.name}</h2>
+  <canvas id="pv" width="300" height="240" style="width:100%;max-width:300px;display:block;margin:0 auto;background:#eaf1f5;border-radius:14px"></canvas>
   <p style="font-weight:800;line-height:1.6;margin:10px 0 0">${pd.desc}</p></div>
   <div class="talk" style="margin:18px 0"><div class="face">${chibi('pres','normal')}</div><div class="bub"><small>社長</small>${pd.order}</div></div>
   <div class="card"><div style="font-weight:800">工程マップ（全${pd.steps.length}工程）</div><div class="flow">${flowChips(pd)}</div></div>
   <div style="height:16px"></div><button class="btn wide" id="start">作業開始！</button></div>`);
   bindSound();drawProduct($('#pv').getContext('2d'),pd.id,1,0);
   $('#back').onclick=()=>{SFX.tap();screenSelect()};
-  $('#start').onclick=()=>{SFX.tap();S.stepIdx=0;S.scores=[];screenTip()};
+  $('#start').onclick=()=>{SFX.tap();S.stepIdx=0;S.scores=[];S.temperScore=null;screenTip()};
 }
 function screenTip(){
   const pd=S.prod,st=pd.steps[S.stepIdx];
   setScreen(`<div class="topbar"><button class="btn white small" id="back">✕</button><h2>工程 ${S.stepIdx+1}/${pd.steps.length}</h2>${soundBtn()}</div>
   <div class="scroll"><div class="flow" style="margin:0 0 14px">${flowChips(pd,S.stepIdx)}</div>
-  <div class="card fade"><div style="font-size:40px;text-align:center">${STEP_ICON[st.type]}</div><h2 style="text-align:center;font-size:26px">${st.name}</h2>
+  <div class="card fade"><div style="font-size:40px;text-align:center">${ICON[st.type]}</div><h2 style="text-align:center;font-size:24px">${st.name}</h2>
   <div class="tipsec"><b>どんな工程？</b><p>${st.what}</p></div>
   <div class="tipsec kotsu"><b>👐 人の手の見せどころ</b><p>${st.kotsu}</p></div>
   <div class="tipsec"><b>🎮 そうさ</b><p>${st.how}</p></div></div>
-  <div class="talk" style="margin:16px 0"><div class="face">${chibi('boss','normal')}</div><div class="bub"><small>工場長</small>準備はいいか？ 落ち着いていけよ。</div></div>
+  <div class="talk" style="margin:16px 0"><div class="face">${chibi('boss','normal')}</div><div class="bub"><small>工場長</small>安全第一、落ち着いていけよ。</div></div>
   <button class="btn wide" id="go">やってみる！</button></div>`);
   bindSound();
   $('#back').onclick=()=>{SFX.tap();if(confirm('作業を中断して製品えらびにもどりますか？'))screenSelect()};
@@ -866,24 +826,25 @@ function screenTip(){
 }
 function screenGame(){
   const pd=S.prod,st=pd.steps[S.stepIdx];
-  setScreen(`<div class="ghead"><div class="flow">${flowChips(pd,S.stepIdx)}</div><div class="sname"><span>${STEP_ICON[st.type]} ${st.name}</span><span class="muted" style="font-size:13px">${pd.name}</span></div></div>
+  setScreen(`<div class="ghead"><div class="flow">${flowChips(pd,S.stepIdx)}</div><div class="sname"><span>${ICON[st.type]} ${st.name}</span><span class="muted" style="font-size:13px">${pd.fac}</span></div></div>
   <div class="coach"><div class="face" id="coachFace">${chibi('boss','normal')}</div><div class="bub" id="coachText">よーい…</div></div>
   <div class="stage" id="stage"><canvas id="cv"></canvas></div>
   <div class="ctrl"><div class="how">${st.how}</div><div class="btns" id="btns"></div></div>`);
   coachText='';coachLast=0;
-  G=new TYPES[st.type](st.p);G.t=-1.4;G.ready=true;
+  G=new TYPES[st.type](st.p);G.t=-1.4;
   cv=$('#cv');ctx=cv.getContext('2d');fitCanvas();
   const btns=$('#btns');
-  (CONTROLS[st.type]||[]).forEach(b=>{const e=document.createElement('button');e.className='btn '+(b.cls||'');e.textContent=b.label;
+  (CONTROLS[st.type]||[]).forEach(b=>{const e=document.createElement('button');e.className='btn '+(b.cls||'');e.textContent=b.label;e.dataset.k=b.k;
     const on=ev=>{ev.preventDefault();if(!G||G.t<0||G.done)return;try{e.setPointerCapture(ev.pointerId)}catch(_){}e.classList.add('on');G.btn(b.k,true)};
-    const off=ev=>{e.classList.remove('on');if(G&&b.hold)G.btn(b.k,false)};
+    const off=()=>{if(!e.classList.contains('on'))return;e.classList.remove('on');if(G)G.btn(b.k,false)};
     e.addEventListener('pointerdown',on);e.addEventListener('pointerup',off);e.addEventListener('pointercancel',off);e.addEventListener('lostpointercapture',off);
     e.addEventListener('contextmenu',ev=>ev.preventDefault());btns.appendChild(e)});
   if(!btns.children.length)btns.innerHTML='<div style="flex:1;text-align:center;font-weight:800;color:var(--muted);font-size:13px;padding:6px 0">👆 上の作業台を直接さわって操作</div>';
+  G.start();
   const pos=ev=>{const r=cv.getBoundingClientRect();return[(ev.clientX-r.left)/r.width*CW,(ev.clientY-r.top)/r.height*CH]};
-  cv.addEventListener('pointerdown',ev=>{ev.preventDefault();if(!G||G.t<0||G.done)return;try{cv.setPointerCapture(ev.pointerId)}catch(_){}ptr=ev.pointerId;const[x,y]=pos(ev);G.touch=true;G.down(x,y)});
+  cv.addEventListener('pointerdown',ev=>{ev.preventDefault();if(!G||G.t<0||G.done)return;try{cv.setPointerCapture(ev.pointerId)}catch(_){}ptr=ev.pointerId;const[x,y]=pos(ev);G.down(x,y)});
   cv.addEventListener('pointermove',ev=>{if(!G||ev.pointerId!==ptr||G.done)return;const[x,y]=pos(ev);G.move(x,y)});
-  const upH=ev=>{if(!G||ev.pointerId!==ptr)return;ptr=null;const[x,y]=pos(ev);G.up(x,y);G.touch=false};
+  const upH=ev=>{if(!G||ev.pointerId!==ptr)return;ptr=null;const[x,y]=pos(ev);G.up(x,y)};
   cv.addEventListener('pointerup',upH);cv.addEventListener('pointercancel',upH);
   cv.addEventListener('contextmenu',ev=>ev.preventDefault());
   lastTs=performance.now();raf=requestAnimationFrame(frame);
@@ -896,23 +857,23 @@ function fitCanvas(){
 window.addEventListener('resize',()=>{fitCanvas()});
 function frame(ts){
   if(!G)return;const dt=Math.min(.05,(ts-lastTs)/1000||0);lastTs=ts;
-  if(G.t<0){const before=G.t;G.t+=dt;if(before<-.4&&G.t>=-.4){SFX.tap();coach('スタート！','happy',true)}}
+  if(G.t<0){const before=G.t;G.t+=dt;if(G.t>=0)G.t=0;if(before<-.4&&G.t>=-.4){SFX.tap();coach('スタート！','happy',true)}}
   else if(!G.done)G.update(dt);
-  else{G.after=(G.after||0)+dt;if(G.after>1.1&&!G.reported){G.reported=true;const g=G;stepDone(g);return}}
+  else{G.after=(G.after||0)+dt;if(G.after>1.4&&!G.reported){G.reported=true;stepDone(G);return}}
   G.tickFx(dt);
   ctx.setTransform(scale,0,0,scale,0,0);ctx.clearRect(0,0,CW,CH);G.draw(ctx);G.drawFx(ctx);
-  if(G.t<0){ctx.fillStyle='rgba(74,52,40,.35)';ctx.fillRect(0,0,CW,CH);txt(ctx,G.t<-.4?'よーい…':'スタート！',CW/2,CH/2,40,'#fff','center',L)}
-  if(G.done){ctx.fillStyle='rgba(255,255,255,.25)';ctx.fillRect(0,0,CW,CH);label(ctx,'そこまで！',CW/2,CH/2,26,'#ffd166')}
+  if(G.t<0){ctx.fillStyle='rgba(36,50,61,.4)';ctx.fillRect(0,0,CW,CH);txt(ctx,G.t<-.4?'よーい…':'スタート！',CW/2,CH/2,40,'#fff','center',L)}
+  if(G.done){label(ctx,'そこまで！',CW/2,CH-30,22,'#ffd166')}
   raf=requestAnimationFrame(frame);
 }
 function stepDone(g){
   const pd=S.prod,st=pd.steps[S.stepIdx],s=g.score;
-  S.scores[S.stepIdx]=s;if(st.type===T_ANNEAL)S.strain=1-s/100;
+  S.scores[S.stepIdx]=s;
   const lvl=s>=80?2:s>=55?1:0,stars=s>=85?3:s>=60?2:s>=35?1:0,mood=['worried','normal','happy'][lvl];
   if(s>=60)SFX.good();else SFX.bad();
   const last=S.stepIdx===pd.steps.length-1;
   setScreen(`<div class="topbar"><span></span><h2>工程 ${S.stepIdx+1}/${pd.steps.length} の結果</h2>${soundBtn()}</div>
-  <div class="scroll"><div class="card pop" style="text-align:center"><div style="font-weight:800;font-size:20px">${STEP_ICON[st.type]} ${st.name}</div>
+  <div class="scroll"><div class="card pop" style="text-align:center"><div style="font-weight:800;font-size:20px">${ICON[st.type]} ${st.name}</div>
   <div class="stars">${[0,1,2].map(i=>`<span class="${i<stars?'':'off'}">★</span>`).join('')}</div>
   <div class="score">${s}<small> 点</small></div></div>
   <div class="talk" style="margin:18px 0"><div class="face">${chibi('boss',mood)}</div><div class="bub"><small>工場長</small>${COMMENTS[st.type][lvl]}</div></div>
@@ -924,30 +885,31 @@ function stepDone(g){
 function screenFinal(){
   const pd=S.prod,avg=Math.round(S.scores.reduce((a,b)=>a+b,0)/S.scores.length),rk=rankOf(avg),q=avg/100;
   const prev=S.best[pd.id];let isNew=false;
-  if(!prev||avg>prev.score){S.best[pd.id]={score:avg,rank:rk};store.set('glass_best',S.best);isNew=true}
+  if(!prev||avg>prev.score){S.best[pd.id]={score:avg,rank:rk};store.set('plate_best',S.best);isNew=true}
   const fc=FINAL[rk],pass=RANK_ORDER.indexOf(rk)>=2;
   const idx=PRODUCTS.indexOf(pd),unlockedNext=pass&&idx+1<PRODUCTS.length&&(!prev||RANK_ORDER.indexOf(prev.rank)<2)&&!S.unlockAll;
+  const hasTemper=S.temperScore!=null;
   setScreen(`<div class="topbar"><span></span><h2>完成！</h2>${soundBtn()}</div>
   <div class="scroll"><div class="card" style="text-align:center"><div style="font-weight:800">${pd.name}</div>
-  <canvas id="fin" width="600" height="480" style="width:100%;max-width:320px;background:#f4ecdf;border-radius:14px;border:3px solid ${L};margin:8px auto 4px;display:block"></canvas>
+  <canvas id="fin" width="600" height="480" style="width:100%;max-width:320px;background:#eaf1f5;border-radius:14px;border:3px solid ${L};margin:8px auto 4px;display:block"></canvas>
   <div class="row" style="justify-content:center;gap:16px;margin-top:6px"><div><div class="muted" style="font-weight:800;font-size:13px">品質ランク</div><div class="rankbig rank${rk} pop">${rk}</div></div>
-  <div><div class="muted" style="font-weight:800;font-size:13px;margin-bottom:4px">偏光検査（歪み）</div><canvas id="strain" width="140" height="140" style="width:96px;height:96px;border-radius:12px;border:3px solid ${L}"></canvas><div style="font-size:12px;font-weight:800">${S.strain<.15?'歪みなし ◎':S.strain<.35?'わずか ○':'歪みあり △'}</div></div></div>
-  <div style="margin-top:8px"><span class="badge" style="background:${pass?'#9be0a8':'#ffd9cc'}">${pass?'✓ 出荷OK':'✕ 出荷NG'}</span> <span class="badge" style="background:#fff">平均 ${avg}点</span>${isNew?' <span class="badge" style="background:#ffd166">NEW 自己ベスト</span>':''}</div></div>
+  ${hasTemper?`<div><div class="muted" style="font-weight:800;font-size:13px;margin-bottom:4px">破砕試験</div><canvas id="frag" width="200" height="140" style="width:110px;height:77px;border-radius:10px"></canvas><div style="font-size:12px;font-weight:800">${Math.round(20+S.temperScore*1.6)>=100?'基準クリア ◎':'基準未満 △'}</div></div>`:''}</div>
+  <div style="margin-top:8px"><span class="badge" style="background:${pass?'#9be0a8':'#ffd9cc'}">${pass?'✓ 出荷OK':'✕ 出荷NG'}</span><span class="badge" style="background:#fff">平均 ${avg}点</span>${isNew?'<span class="badge" style="background:#ffd166">NEW 自己ベスト</span>':''}</div></div>
   <div class="talk" style="margin:18px 0 10px"><div class="face">${chibi('boss',fc.boss[0])}</div><div class="bub"><small>工場長</small>${fc.boss[1]}</div></div>
   <div class="talk" style="margin:0 0 18px"><div class="face">${chibi('pres',fc.pres[0])}</div><div class="bub"><small>社長</small>${fc.pres[1]}</div></div>
   ${unlockedNext?`<div class="card pop" style="text-align:center;background:#fff4cf;margin-bottom:16px;font-weight:800">🔓 新しい製品「${PRODUCTS[idx+1].name}」が作れるようになった！</div>`:''}
-  <div class="card"><div style="font-weight:800;margin-bottom:6px">工程ごとの成績</div><table class="steplist">${pd.steps.map((s,i)=>`<tr><td>${STEP_ICON[s.type]} ${s.name}</td><td style="width:40%"><div class="bar"><i style="width:${S.scores[i]}%"></i></div></td><td>${S.scores[i]}点</td></tr>`).join('')}</table></div>
+  <div class="card"><div style="font-weight:800;margin-bottom:6px">工程ごとの成績</div><table class="steplist">${pd.steps.map((s,i)=>`<tr><td>${ICON[s.type]} ${s.name}</td><td style="width:34%"><div class="bar"><i style="width:${S.scores[i]}%"></i></div></td><td>${S.scores[i]}点</td></tr>`).join('')}</table></div>
   <div style="height:16px"></div><div class="col"><button class="btn wide" id="sel">製品えらびへ</button><button class="btn white wide small" id="again">↺ もう一度つくる</button></div></div>`);
   bindSound();
   if(pass)SFX.fanfare();else SFX.bad();
-  drawStrain($('#strain').getContext('2d'),S.strain,pd.id);
+  if(hasTemper){const fc2=$('#frag').getContext('2d');drawFrag(fc2,4,4,192,132,Math.round(20+S.temperScore*1.6))}
   const fcx=$('#fin').getContext('2d');const conf=[];if(rk==='S'||rk==='A')for(let i=0;i<60;i++)conf.push({x:rand(0,300),y:rand(-240,0),v:rand(40,90),c:['#ffd166','#e8613c','#8fd3f4','#9be0a8'][i%4],r:rand(0,6)});
   const t0=performance.now();
   const loop=ts=>{const t=(ts-t0)/1000;fcx.setTransform(2,0,0,2,0,0);fcx.clearRect(0,0,300,240);drawProduct(fcx,pd.id,q,t,avg);
     conf.forEach(p=>{p.y+=p.v/60;p.r+=.1;if(p.y>250)p.y=-10;fcx.save();fcx.translate(p.x+Math.sin(t*2+p.r)*8,p.y);fcx.rotate(p.r);fcx.fillStyle=p.c;fcx.fillRect(-4,-2,8,4);fcx.restore()});
     finalRaf=requestAnimationFrame(loop)};finalRaf=requestAnimationFrame(loop);
   $('#sel').onclick=()=>{SFX.tap();screenSelect()};
-  $('#again').onclick=()=>{SFX.tap();S.stepIdx=0;S.scores=[];screenTip()};
+  $('#again').onclick=()=>{SFX.tap();S.stepIdx=0;S.scores=[];S.temperScore=null;screenTip()};
 }
 function screenSettings(){
   setScreen(`<div class="topbar"><button class="btn white small" id="back">◀</button><h2>せってい</h2><span style="width:44px"></span></div>
@@ -956,12 +918,12 @@ function screenSettings(){
   <div class="setrow"><span>🔓 すべての製品を解放<br><small class="muted">研修担当者・体験会用</small></span><div class="toggle ${S.unlockAll?'on':''}" id="tUn" role="switch"></div></div>
   <div class="setrow"><span>📖 はじめの会話をもう一度見る</span><button class="btn white small" id="intro">見る</button></div>
   <div class="setrow" style="border:0"><span>🗑 記録をリセット</span><button class="btn red small" id="reset">リセット</button></div></div>
-  <p class="muted" style="font-size:12px;line-height:1.6;margin-top:16px">このゲームは株式会社池田硝子の新人研修用に、実際のバーナーワーク工程（切断・予熱・底止め・蛇管巻き・封じ・枝付け・板付け・徐冷）をもとにデフォルメして作ったものです。数値や操作は学習用に簡略化しています。記録はこの端末の中だけに保存されます。</p></div>`);
+  <p class="muted" style="font-size:12px;line-height:1.6;margin-top:16px">このゲームは新人研修用に、板ガラス工場の実際の工程（切断・面取り・セラミック印刷・強化・孔あけ・複層ガラスの封着・合わせガラスの貼り合わせと加熱圧着・自動車ガラスのアッセンブリー・検査）をもとにデフォルメして作ったものです。数値や操作は学習用に簡略化しています。記録はこの端末の中だけに保存されます。</p></div>`);
   $('#back').onclick=()=>{SFX.tap();screenTitle()};
-  $('#tSnd').onclick=e=>{soundOn=!soundOn;store.set('glass_sound',soundOn);e.currentTarget.classList.toggle('on',soundOn);ac();SFX.tap()};
-  $('#tUn').onclick=e=>{S.unlockAll=!S.unlockAll;store.set('glass_unlock',S.unlockAll);e.currentTarget.classList.toggle('on',S.unlockAll);SFX.tap()};
+  $('#tSnd').onclick=e=>{soundOn=!soundOn;store.set('plate_sound',soundOn);e.currentTarget.classList.toggle('on',soundOn);ac();SFX.tap()};
+  $('#tUn').onclick=e=>{S.unlockAll=!S.unlockAll;store.set('plate_unlock',S.unlockAll);e.currentTarget.classList.toggle('on',S.unlockAll);SFX.tap()};
   $('#intro').onclick=()=>{SFX.tap();screenIntro()};
-  $('#reset').onclick=()=>{if(confirm('自己ベストの記録をすべて消しますか？')){S.best={};store.set('glass_best',{});SFX.bad()}};
+  $('#reset').onclick=()=>{if(confirm('自己ベストの記録をすべて消しますか？')){S.best={};store.set('plate_best',{});SFX.bad()}};
 }
 document.addEventListener('visibilitychange',()=>{if(document.hidden)hiss(0)});
 screenTitle();
