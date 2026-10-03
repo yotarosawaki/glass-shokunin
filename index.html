@@ -75,8 +75,8 @@ h1,h2,h3{margin:0}
 .coach .face{width:48px;flex:none}
 .coach .bub{flex:1;font-size:14px;padding:6px 10px;min-height:38px;display:flex;align-items:center}
 .coach .bub:before{bottom:10px}
-.stage{flex:1;display:flex;align-items:center;justify-content:center;min-height:0;position:relative}
-.stage canvas{display:block;border-radius:16px;border:3px solid var(--ink);touch-action:none;background:#e7eef3}
+.stage{flex:1;min-height:0;position:relative;overflow:hidden}
+.stage canvas{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:block;border-radius:16px;border:3px solid var(--ink);touch-action:none;background:#e7eef3}
 .ctrl{padding:8px 14px calc(14px + env(safe-area-inset-bottom));border-top:3px solid var(--ink);background:var(--head)}
 .ctrl .how{font-size:13px;font-weight:800;text-align:center;margin-bottom:8px;line-height:1.4}
 .ctrl .btns{display:flex;gap:10px}
@@ -832,7 +832,7 @@ function screenGame(){
   <div class="ctrl"><div class="how">${st.how}</div><div class="btns" id="btns"></div></div>`);
   coachText='';coachLast=0;
   G=new TYPES[st.type](st.p);G.t=-1.4;
-  cv=$('#cv');ctx=cv.getContext('2d');fitCanvas();
+  cv=$('#cv');ctx=cv.getContext('2d');fitCanvas();watchStage();
   const btns=$('#btns');
   (CONTROLS[st.type]||[]).forEach(b=>{const e=document.createElement('button');e.className='btn '+(b.cls||'');e.textContent=b.label;e.dataset.k=b.k;
     const on=ev=>{ev.preventDefault();if(!G||G.t<0||G.done)return;try{e.setPointerCapture(ev.pointerId)}catch(_){}e.classList.add('on');G.btn(b.k,true)};
@@ -851,10 +851,12 @@ function screenGame(){
 }
 function fitCanvas(){
   if(!cv)return;const st=$('#stage');if(!st)return;const r=st.getBoundingClientRect();
-  const w=Math.max(100,Math.min(r.width-16,(r.height-12)*CW/CH));const h=w*CH/CW;const dpr=Math.min(3,window.devicePixelRatio||1);
+  const w=Math.max(100,Math.min(r.width-16,(r.height-16)*CW/CH));const h=w*CH/CW;const dpr=Math.min(3,window.devicePixelRatio||1);
   cv.style.width=w+'px';cv.style.height=h+'px';cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);scale=w/CW*dpr;
 }
 window.addEventListener('resize',()=>{fitCanvas()});
+let stageRO=null;
+function watchStage(){if(stageRO)stageRO.disconnect();const st=$('#stage');if(!st)return;if(window.ResizeObserver){stageRO=new ResizeObserver(()=>fitCanvas());stageRO.observe(st)}if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>fitCanvas())}
 function frame(ts){
   if(!G)return;const dt=Math.min(.05,(ts-lastTs)/1000||0);lastTs=ts;
   if(G.t<0){const before=G.t;G.t+=dt;if(G.t>=0)G.t=0;if(before<-.4&&G.t>=-.4){SFX.tap();coach('スタート！','happy',true)}}
